@@ -1,0 +1,21 @@
+|Decoder
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+double7segment[13] <= <VCC>
+double7segment[12] <= <GND>
+double7segment[11] <= <GND>
+double7segment[10] <= <GND>
+double7segment[9] <= <GND>
+double7segment[8] <= <GND>
+double7segment[7] <= <GND>
+double7segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
