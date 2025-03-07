@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/simulation/modelsim
+Eripplecarryadder1b
+Z1 w1741282184
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z4 8C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder1b.vhd
+Z5 FC:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder1b.vhd
+l0
+L4 1
+VFlZU>G<6LB1O]EiUTbcTX3
+!s100 CFioWE?mOIICg5Vm^e_2>3
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1741282845
+!i10b 1
+Z8 !s108 1741282845.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder1b.vhd|
+Z10 !s107 C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder1b.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Agate_level
+R2
+R3
+DEx4 work 18 ripplecarryadder1b 0 22 FlZU>G<6LB1O]EiUTbcTX3
+!i122 1
+l14
+L12 8
+Vln=bSA4G4BFhBWU8m8KQ[0
+!s100 RMC8bbhHb@V=<0NMazggJ0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eripplecarryadder4b
+Z13 w1741282176
+R2
+R3
+!i122 0
+R0
+Z14 8C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b.vhd
+Z15 FC:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b.vhd
+l0
+L4 1
+V3RKBd0@:9@z?eAbo2?cX72
+!s100 Y9zG0Z[czM345lKZ>:j;f3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b.vhd|
+Z17 !s107 C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R2
+R3
+DEx4 work 18 ripplecarryadder4b 0 22 3RKBd0@:9@z?eAbo2?cX72
+!i122 0
+l26
+L12 23
+VoS==BGCfleWFd[:VMcT683
+!s100 ]DTV?:R>[8S0Qbz[a=MMn3
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Eripplecarryadder4b_tb
+Z18 w1741282476
+R2
+R3
+!i122 2
+R0
+Z19 8C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b_tb.vhd
+Z20 FC:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b_tb.vhd
+l0
+L4 1
+VZ]8C7g?Y9bR5I51XHdXAU3
+!s100 :XeXN`BfgNfzRcSkEY3`Y2
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b_tb.vhd|
+!s107 C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b_tb.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R2
+R3
+DEx4 work 21 ripplecarryadder4b_tb 0 22 Z]8C7g?Y9bR5I51XHdXAU3
+!i122 2
+l28
+L7 61
+V8gCKGJEU_SA`Zm08lbjH<2
+!s100 8b1BmZdz>`^kljDj]igI52
+R6
+31
+R7
+!i10b 1
+R8
+R21
+Z22 !s107 C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/RippleCarryAdder4b_tb.vhd|
+!i113 1
+R11
+R12
