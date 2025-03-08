@@ -12,8 +12,8 @@
 
 ### Profesor
 
-- Jeferson González Gómez
+- Jeferson González Gómez <jgonzalez@itcr.ac.cr>
 
 ### Profesor Asociado
 
-- Leonardo Andres Araya Martínez
+- Leonardo Andres Araya Martínez <learaya@itcr.ac.cr>
