@@ -1,25 +1,97 @@
-module Decoder (input logic [3:0]BCD,
-					 output logic [0:13]double7segment);
-	always @(BCD) begin
-	
-		case(BCD)
-		  4'b0000 : double7segment= 14'b00000010000001; //00
-		  4'b0001 : double7segment= 14'b10011110000001; //01
-		  4'b0010 : double7segment= 14'b00100100000001; //02
-		  4'b0011 : double7segment= 14'b00001100000001; //03
-		  4'b0100 : double7segment= 14'b10011000000001; //04 
-		  4'b0101 : double7segment= 14'b01001000000001; //05
-		  4'b0110 : double7segment= 14'b01000000000001; //06
-		  4'b0111 : double7segment= 14'b00011110000001; //07
-		  4'b1000 : double7segment= 14'b00000000000001; //08
-		  4'b1001 : double7segment= 14'b00001000000001; //09
-		  4'b1010 : double7segment= 14'b00010000000001; //10
-		  4'b1011 : double7segment= 14'b11000000000001; //11
-		  4'b1100 : double7segment= 14'b01100010000001; //12
-		  4'b1101 : double7segment= 14'b10000100000001; //13
-		  4'b1110 : double7segment= 14'b01100000000001; //14
-		  4'b1111 : double7segment= 14'b01100000000001; //15
-		  default : double7segment= 14'b00000010000001; //16
-	endcase
-	end
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+						 Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+
+
+/* Module: Binario_a_BCD
+   Convierte una entrada binaria de 4 bits a un BCD de 8 bits
+	de la forma 4 bits para el numero de las decenas (0 o 1)
+	y 4 bits pare el numero de las unidades (0 a 9)
+
+   Params:
+     - bin_in: Logic input [4 bits] - Entrada binaria del numero segun los swtihes, enviada
+     - bcd_out: Logic Output [8 bits]- Salida del numero convertido a BCD (DECENAS_UNIDADES)
+      
+   Restriction: 
+     La entrada máxima en bin_in es de 4 bits
+	  
+   Example:
+		(COLOCAR LAS ENTRADAS Y Y SALIDAS DEL TESTBENCH DE ESTE MODULO)
+
+   Problems:
+     Sin problemas mayores
+	  
+   References:
+     [1] "Decimal codificado en binario," Wikipedia, la enciclopedia libre. [En línea]. 
+				Disponible en: https://es.wikipedia.org/wiki/Decimal_codificado_en_binario. [Accedido: 07-03-2025]
+*/
+module Binario_a_BCD(
+    input  logic [3:0] bin_in,
+    output logic [7:0] bcd_out
+);
+    always_comb begin
+        // Convierte la entrada binaria a BCD usando división y módulo
+        bcd_out[7:4] = bin_in / 10; // Decenas
+        bcd_out[3:0] = bin_in % 10; // Unidades
+    end
+endmodule
+
+
+
+module Decoder (
+    input  logic [7:0] BCD,
+    output logic [0:13] double7segment
+);
+    always_comb begin
+        case (BCD)
+            // 00 a 09 en BIG-ENDIAN (Unidades_Decenas)
+            8'b0000_0000: double7segment = 14'b0000001_0000001; // 00
+            8'b0000_0001: double7segment = 14'b1001111_0000001; // 01
+            8'b0000_0010: double7segment = 14'b0010010_0000001; // 02
+            8'b0000_0011: double7segment = 14'b0000110_0000001; // 03
+            8'b0000_0100: double7segment = 14'b1001100_0000001; // 04 
+            8'b0000_0101: double7segment = 14'b0100100_0000001; // 05
+            8'b0000_0110: double7segment = 14'b0100000_0000001; // 06
+            8'b0000_0111: double7segment = 14'b0001111_0000001; // 07
+            8'b0000_1000: double7segment = 14'b0000000_0000001; // 08
+            8'b0000_1001: double7segment = 14'b0000100_0000001; // 09
+
+            // 10 a 15 EN BIG-ENDIAN (Unidades_Decenas)
+            8'b0001_0000: double7segment = 14'b0000001_1001111; // 10
+            8'b0001_0001: double7segment = 14'b1001111_1001111; // 11
+            8'b0001_0010: double7segment = 14'b0010010_1001111; // 12
+            8'b0001_0011: double7segment = 14'b0000110_1001111; // 13
+            8'b0001_0100: double7segment = 14'b1001100_1001111; // 14
+            8'b0001_0101: double7segment = 14'b0100100_1001111; // 15
+
+            default:      double7segment = 14'b00000010000001; // Por defecto, muestra 00
+        endcase
+    end
+endmodule
+
+
+module TopModule(
+    input  logic [3:0] binary_input,
+    output logic [0:13] segment_output
+);
+    // Señal intermedia para conectar Binario_a_BCD con Decoder
+    logic [7:0] bcd_value;
+    
+    // Instancia del módulo Binario_a_BCD
+    Binario_a_BCD bcd_converter(
+        .bin_in (binary_input),
+        .bcd_out(bcd_value)
+    );
+    
+    // Instancia del módulo Decoder
+    Decoder segment_decoder(
+        .BCD           (bcd_value),
+        .double7segment(segment_output)
+    );
 endmodule

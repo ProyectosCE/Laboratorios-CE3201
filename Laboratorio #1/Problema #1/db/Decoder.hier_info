@@ -1,20 +1,64 @@
-|Decoder
-BCD[0] => Decoder0.IN3
-BCD[1] => Decoder0.IN2
-BCD[2] => Decoder0.IN1
-BCD[3] => Decoder0.IN0
+|TopModule
+binary_input[0] => binary_input[0].IN1
+binary_input[1] => binary_input[1].IN1
+binary_input[2] => binary_input[2].IN1
+binary_input[3] => binary_input[3].IN1
+segment_output[13] <= Decoder:segment_decoder.double7segment
+segment_output[12] <= Decoder:segment_decoder.double7segment
+segment_output[11] <= Decoder:segment_decoder.double7segment
+segment_output[10] <= Decoder:segment_decoder.double7segment
+segment_output[9] <= Decoder:segment_decoder.double7segment
+segment_output[8] <= Decoder:segment_decoder.double7segment
+segment_output[7] <= Decoder:segment_decoder.double7segment
+segment_output[6] <= Decoder:segment_decoder.double7segment
+segment_output[5] <= Decoder:segment_decoder.double7segment
+segment_output[4] <= Decoder:segment_decoder.double7segment
+segment_output[3] <= Decoder:segment_decoder.double7segment
+segment_output[2] <= Decoder:segment_decoder.double7segment
+segment_output[1] <= Decoder:segment_decoder.double7segment
+segment_output[0] <= Decoder:segment_decoder.double7segment
+
+
+|TopModule|Binario_a_BCD:bcd_converter
+bin_in[0] => Div0.IN7
+bin_in[0] => Mod0.IN7
+bin_in[1] => Div0.IN6
+bin_in[1] => Mod0.IN6
+bin_in[2] => Div0.IN5
+bin_in[2] => Mod0.IN5
+bin_in[3] => Div0.IN4
+bin_in[3] => Mod0.IN4
+bcd_out[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[4] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[5] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopModule|Decoder:segment_decoder
+BCD[0] => Decoder0.IN7
+BCD[1] => Decoder0.IN6
+BCD[2] => Decoder0.IN5
+BCD[3] => Decoder0.IN4
+BCD[4] => Decoder0.IN3
+BCD[5] => Decoder0.IN2
+BCD[6] => Decoder0.IN1
+BCD[7] => Decoder0.IN0
 double7segment[13] <= <VCC>
-double7segment[12] <= <GND>
-double7segment[11] <= <GND>
-double7segment[10] <= <GND>
+double7segment[12] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[11] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[10] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 double7segment[9] <= <GND>
 double7segment[8] <= <GND>
-double7segment[7] <= <GND>
-double7segment[6] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[5] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[4] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[2] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[7] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[6] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[5] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[2] <= double7segment.DB_MAX_OUTPUT_PORT_TYPE
 double7segment[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 double7segment[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for Decoder
-Fri Mar  7 12:04:38 2025
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fri Mar  7 20:14:27 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -14,16 +14,17 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Parameter Settings for Inferred Entity Instance: Binario_a_BCD:bcd_converter|lpm_divide:Mod0
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -43,10 +44,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar  7 12:04:38 2025          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar  7 20:14:27 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Decoder                                        ;
-; Top-level Entity Name           ; Decoder                                        ;
+; Top-level Entity Name           ; TopModule                                      ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
 ; Total registers                 ; 0                                              ;
@@ -69,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; Decoder            ; Decoder            ;
+; Top-level entity name                                                           ; TopModule          ; Decoder            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -155,8 +156,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -166,49 +167,62 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; Decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; Decoder.sv                       ; yes             ; User SystemVerilog HDL File  ; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv                 ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; e:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; e:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; e:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; e:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/lpm_divide_42m.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/alt_u_div_kse.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 4            ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 7            ;
-;     -- 7 input functions                    ; 0            ;
-;     -- 6 input functions                    ; 0            ;
-;     -- 5 input functions                    ; 0            ;
-;     -- 4 input functions                    ; 7            ;
-;     -- <=3 input functions                  ; 0            ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 18           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; BCD[0]~input ;
-; Maximum fan-out                             ; 7            ;
-; Total fan-out                               ; 53           ;
-; Average fan-out                             ; 1.23         ;
-+---------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                                                              ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                                                                      ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 9                                                                                                                                          ;
+;                                             ;                                                                                                                                            ;
+; Combinational ALUT usage for logic          ; 18                                                                                                                                         ;
+;     -- 7 input functions                    ; 0                                                                                                                                          ;
+;     -- 6 input functions                    ; 0                                                                                                                                          ;
+;     -- 5 input functions                    ; 6                                                                                                                                          ;
+;     -- 4 input functions                    ; 2                                                                                                                                          ;
+;     -- <=3 input functions                  ; 10                                                                                                                                         ;
+;                                             ;                                                                                                                                            ;
+; Dedicated logic registers                   ; 0                                                                                                                                          ;
+;                                             ;                                                                                                                                            ;
+; I/O pins                                    ; 18                                                                                                                                         ;
+;                                             ;                                                                                                                                            ;
+; Total DSP Blocks                            ; 0                                                                                                                                          ;
+;                                             ;                                                                                                                                            ;
+; Maximum fan-out node                        ; Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~0 ;
+; Maximum fan-out                             ; 7                                                                                                                                          ;
+; Total fan-out                               ; 90                                                                                                                                         ;
+; Average fan-out                             ; 1.67                                                                                                                                       ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |Decoder                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |Decoder            ; Decoder     ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                    ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |TopModule                                ; 18 (0)              ; 0 (0)                     ; 0                 ; 0          ; 18   ; 0            ; |TopModule                                                                                                                             ; TopModule           ; work         ;
+;    |Binario_a_BCD:bcd_converter|          ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Binario_a_BCD:bcd_converter                                                                                                 ; Binario_a_BCD       ; work         ;
+;       |lpm_divide:Mod0|                   ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Binario_a_BCD:bcd_converter|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 9 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;    |Decoder:segment_decoder|              ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopModule|Decoder:segment_decoder                                                                                                     ; Decoder             ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -227,20 +241,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Binario_a_BCD:bcd_converter|lpm_divide:Mod0 ;
++------------------------+----------------+----------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                               ;
++------------------------+----------------+----------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                            ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                     ;
++------------------------+----------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 10                          ;
-;     normal            ; 10                          ;
+; arriav_lcell_comb     ; 25                          ;
+;     normal            ; 20                          ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 1                           ;
-;         4 data inputs ; 7                           ;
+;         1 data inputs ; 5                           ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 2                           ;
+;         5 data inputs ; 6                           ;
+;     shared            ; 5                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
 ; boundary_port         ; 18                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.29                        ;
+; Max LUT depth         ; 4.40                        ;
+; Average LUT depth     ; 3.96                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,33 +300,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Mar  7 12:04:31 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Fri Mar  7 20:14:19 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Decoder -c Decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: Decoder File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 1
-Info (12127): Elaborating entity "Decoder" for the top level hierarchy
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 3 design units, including 3 entities, in source file decoder.sv
+    Info (12023): Found entity 1: Binario_a_BCD File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 34
+    Info (12023): Found entity 2: Decoder File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 47
+    Info (12023): Found entity 3: TopModule File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 79
+Info (12127): Elaborating entity "TopModule" for the top level hierarchy
+Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:bcd_converter" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at Decoder.sv(40): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 40
+Warning (10230): Verilog HDL assignment warning at Decoder.sv(41): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 41
+Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:segment_decoder" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 96
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:bcd_converter|Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 41
+Info (12130): Elaborated megafunction instantiation "Binario_a_BCD:bcd_converter|lpm_divide:Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 41
+Info (12133): Instantiated megafunction "Binario_a_BCD:bcd_converter|lpm_divide:Mod0" with the following parameter: File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 41
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info (12023): Found entity 1: lpm_divide_42m File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/lpm_divide_42m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/alt_u_div_kse.tdf Line: 23
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "double7segment[13]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[12]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[11]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[10]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[9]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[8]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
-    Warning (13410): Pin "double7segment[7]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/Decoder.sv Line: 2
+    Warning (13410): Pin "segment_output[13]" is stuck at VCC File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 82
+    Warning (13410): Pin "segment_output[9]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 82
+    Warning (13410): Pin "segment_output[8]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 82
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 25 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Fri Mar  7 12:04:38 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:16
+    Info (21061): Implemented 18 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Fri Mar  7 20:14:27 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:22
 
 

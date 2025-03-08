@@ -1,11 +1,11 @@
-Fitter Status : Successful - Fri Mar  7 12:05:14 2025
-Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fitter Status : Successful - Fri Mar  7 20:14:55 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Decoder
-Top-level Entity Name : Decoder
+Top-level Entity Name : TopModule
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 4 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 10 / 41,910 ( < 1 % )
 Total registers : 0
 Total pins : 18 / 499 ( 4 % )
 Total virtual pins : 0

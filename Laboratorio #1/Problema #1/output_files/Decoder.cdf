@@ -1,4 +1,4 @@
-/* Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition */
+/* Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition */
 JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/valva/Desktop/U/IS-2025/TDD/Laboratorio #1/Problema #1/output_files/") File("Decoder.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/output_files/") File("Decoder.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
