@@ -38,20 +38,24 @@
 
 # software binary files
 
+
+## ARCHIVOS QUE NO SE DEBEN IGNORAR:
+
 /*
-!/*.gitignore
-##
-!*.qpf
-!*.qsf
-!*.qws
-!*.bdf
-!*.vhd
-!*.v
-!*.ptf
-!*.bsf
+!**/.gitignore
+!**/*.qpf
+!**/*.qsf
+!**/*.qws
+!**/*.bdf
+!**/*.vhd
+!**/*.v
+!**/*.ptf
+!**/*.bsf
 !**/class.ptf
-!*.tbd
-!*.sof
+!**/*.tbd
+!**/*.sof
+!**/*.tcl
+!**/*.sv
 ## tbd
 
 !*.tcl
