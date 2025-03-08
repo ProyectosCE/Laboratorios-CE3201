@@ -1,25 +1,25 @@
-|TopModule
+|BCD_Decoder
 binary_input[0] => binary_input[0].IN1
 binary_input[1] => binary_input[1].IN1
 binary_input[2] => binary_input[2].IN1
 binary_input[3] => binary_input[3].IN1
-segment_output[13] <= Decoder:segment_decoder.double7segment
-segment_output[12] <= Decoder:segment_decoder.double7segment
-segment_output[11] <= Decoder:segment_decoder.double7segment
-segment_output[10] <= Decoder:segment_decoder.double7segment
-segment_output[9] <= Decoder:segment_decoder.double7segment
-segment_output[8] <= Decoder:segment_decoder.double7segment
-segment_output[7] <= Decoder:segment_decoder.double7segment
-segment_output[6] <= Decoder:segment_decoder.double7segment
-segment_output[5] <= Decoder:segment_decoder.double7segment
-segment_output[4] <= Decoder:segment_decoder.double7segment
-segment_output[3] <= Decoder:segment_decoder.double7segment
-segment_output[2] <= Decoder:segment_decoder.double7segment
-segment_output[1] <= Decoder:segment_decoder.double7segment
-segment_output[0] <= Decoder:segment_decoder.double7segment
+segment_output[13] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[12] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[11] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[10] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[9] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[8] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[7] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[6] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[5] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[4] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[3] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[2] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[1] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[0] <= BCD_Print_Segment:segment_decoder.double7segment
 
 
-|TopModule|Binario_a_BCD:bcd_converter
+|BCD_Decoder|Binario_a_BCD:bcd_converter
 bin_in[0] => Div0.IN7
 bin_in[0] => Mod0.IN7
 bin_in[1] => Div0.IN6
@@ -38,7 +38,7 @@ bcd_out[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 bcd_out[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TopModule|Decoder:segment_decoder
+|BCD_Decoder|BCD_Print_Segment:segment_decoder
 BCD[0] => Decoder0.IN7
 BCD[1] => Decoder0.IN6
 BCD[2] => Decoder0.IN5

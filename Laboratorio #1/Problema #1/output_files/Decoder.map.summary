@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Fri Mar  7 20:14:27 2025
+Analysis & Synthesis Status : Successful - Sat Mar  8 00:37:42 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Decoder
-Top-level Entity Name : TopModule
+Top-level Entity Name : BCD_Decoder
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0

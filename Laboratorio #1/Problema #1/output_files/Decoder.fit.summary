@@ -1,7 +1,7 @@
-Fitter Status : Successful - Fri Mar  7 20:14:55 2025
+Fitter Status : Successful - Sat Mar  8 00:38:19 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Decoder
-Top-level Entity Name : TopModule
+Top-level Entity Name : BCD_Decoder
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
