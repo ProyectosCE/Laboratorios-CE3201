@@ -63,38 +63,39 @@ endmodule
    References: 
     [1] Terasic, DE10-Standard Development User Manual. 2017. [En línea]. 
         Disponible en: https://ftp.intel.com/Public/Pub/fpgaup/pub/Intel_Material/Boards/DE10-Standard/DE10_Standard_User_Manual.pdf [Accedido: 07-03-2025]
+    [2] S. Harris y D. Harris, Diseño digital y arquitectura de computadoras: Edición ARM. Morgan Kaufman, 2015.
+
 */
 module BCD_Print_Segment (
     input  logic [7:0] BCD,
     output logic [0:13] double7segment
 );
+    logic [6:0] unidades_segment;
+    logic [6:0] decenas_segment;
+
     always_comb begin
-        case (BCD)
-            // 00 a 09 en BIG-ENDIAN (Unidades_Decenas)
-            8'b0000_0000: double7segment = 14'b0000001_0000001; // 00
-            8'b0000_0001: double7segment = 14'b1001111_0000001; // 01
-            8'b0000_0010: double7segment = 14'b0010010_0000001; // 02
-            8'b0000_0011: double7segment = 14'b0000110_0000001; // 03
-            8'b0000_0100: double7segment = 14'b1001100_0000001; // 04 
-            8'b0000_0101: double7segment = 14'b0100100_0000001; // 05
-            8'b0000_0110: double7segment = 14'b0100000_0000001; // 06
-            8'b0000_0111: double7segment = 14'b0001111_0000001; // 07
-            8'b0000_1000: double7segment = 14'b0000000_0000001; // 08
-            8'b0000_1001: double7segment = 14'b0000100_0000001; // 09
+        // Decodificación de las unidades
+        if (BCD[3:0] == 4'd0) unidades_segment = 7'b0000001;
+        else if (BCD[3:0] == 4'd1) unidades_segment = 7'b1001111;
+        else if (BCD[3:0] == 4'd2) unidades_segment = 7'b0010010;
+        else if (BCD[3:0] == 4'd3) unidades_segment = 7'b0000110;
+        else if (BCD[3:0] == 4'd4) unidades_segment = 7'b1001100;
+        else if (BCD[3:0] == 4'd5) unidades_segment = 7'b0100100;
+        else if (BCD[3:0] == 4'd6) unidades_segment = 7'b0100000;
+        else if (BCD[3:0] == 4'd7) unidades_segment = 7'b0001111;
+        else if (BCD[3:0] == 4'd8) unidades_segment = 7'b0000000;
+        else if (BCD[3:0] == 4'd9) unidades_segment = 7'b0000100;
+        else unidades_segment = 7'b0000001; // Por defecto, muestra 0
 
-            // 10 a 15 EN BIG-ENDIAN (Unidades_Decenas)
-            8'b0001_0000: double7segment = 14'b0000001_1001111; // 10
-            8'b0001_0001: double7segment = 14'b1001111_1001111; // 11
-            8'b0001_0010: double7segment = 14'b0010010_1001111; // 12
-            8'b0001_0011: double7segment = 14'b0000110_1001111; // 13
-            8'b0001_0100: double7segment = 14'b1001100_1001111; // 14
-            8'b0001_0101: double7segment = 14'b0100100_1001111; // 15
+        // Decodificación de las decenas
+        if (BCD[7:4] == 4'd0) decenas_segment = 7'b0000001;
+        else if (BCD[7:4] == 4'd1) decenas_segment = 7'b1001111;
+        else decenas_segment = 7'b0000001; // Por defecto, muestra 0
 
-            default:      double7segment = 14'b00000010000001; // Por defecto, muestra 00
-        endcase
+        // Combinación de los segmentos en BIG-ENDIAN
+        double7segment = {decenas_segment, unidades_segment};
     end
 endmodule
-
 
 /* Module: BCD_Decoder
    
