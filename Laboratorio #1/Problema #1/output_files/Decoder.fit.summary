@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sat Mar  8 00:38:19 2025
+Fitter Status : Successful - Mon Mar 10 20:14:03 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : Decoder
 Top-level Entity Name : BCD_Decoder
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 10 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 11 / 41,910 ( < 1 % )
 Total registers : 0
 Total pins : 18 / 499 ( 4 % )
 Total virtual pins : 0

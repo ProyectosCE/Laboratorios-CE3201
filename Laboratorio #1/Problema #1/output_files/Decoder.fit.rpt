@@ -1,5 +1,5 @@
 Fitter report for Decoder
-Sat Mar  8 00:38:19 2025
+Mon Mar 10 20:14:03 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -58,14 +58,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Sat Mar  8 00:38:19 2025          ;
+; Fitter Status                   ; Successful - Mon Mar 10 20:14:03 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Decoder                                        ;
 ; Top-level Entity Name           ; BCD_Decoder                                    ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 10 / 41,910 ( < 1 % )                          ;
+; Logic utilization (in ALMs)     ; 11 / 41,910 ( < 1 % )                          ;
 ; Total registers                 ; 0                                              ;
 ; Total pins                      ; 18 / 499 ( 4 % )                               ;
 ; Total virtual pins              ; 0                                              ;
@@ -154,7 +154,8 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.1%      ;
-;     Processors 3-12        ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processors 4-12        ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -164,8 +165,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 55 ) ; 0.00 % ( 0 / 55 )          ; 0.00 % ( 0 / 55 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 55 ) ; 0.00 % ( 0 / 55 )          ; 0.00 % ( 0 / 55 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 58 ) ; 0.00 % ( 0 / 58 )          ; 0.00 % ( 0 / 58 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 58 ) ; 0.00 % ( 0 / 58 )          ; 0.00 % ( 0 / 58 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -188,7 +189,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 55 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 58 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -204,11 +205,11 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 10 / 41,910        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 10                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 10 / 41,910        ; < 1 % ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 11 / 41,910        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 11                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 11 / 41,910        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 10                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 11                 ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 41,910         ; 0 %   ;
@@ -220,16 +221,16 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 2 / 4,191          ; < 1 % ;
-;     -- Logic LABs                                           ; 2                  ;       ;
+; Total LABs:  partially or completely used                   ; 3 / 4,191          ; < 1 % ;
+;     -- Logic LABs                                           ; 3                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 19                 ;       ;
+; Combinational ALUT usage for logic                          ; 22                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
 ;     -- 6 input functions                                    ; 0                  ;       ;
-;     -- 5 input functions                                    ; 6                  ;       ;
-;     -- 4 input functions                                    ; 2                  ;       ;
-;     -- <=3 input functions                                  ; 11                 ;       ;
+;     -- 5 input functions                                    ; 0                  ;       ;
+;     -- 4 input functions                                    ; 7                  ;       ;
+;     -- <=3 input functions                                  ; 15                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Dedicated logic registers                                   ; 0                  ;       ;
@@ -300,11 +301,11 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.2% / 0.2% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.2% / 0.3% / 0.3% ;       ;
 ; Maximum fan-out                                             ; 7                  ;       ;
 ; Highest non-global fan-out                                  ; 7                  ;       ;
-; Total fan-out                                               ; 90                 ;       ;
-; Average fan-out                                             ; 1.64               ;       ;
+; Total fan-out                                               ; 85                 ;       ;
+; Average fan-out                                             ; 1.47               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -313,11 +314,11 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 10 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 10                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 10 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 11 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 11                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 11 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 10                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 11                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 41910 ( 0 % )    ; 0 / 41910 ( 0 % )              ;
@@ -329,16 +330,16 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 ;                                                             ;                      ;                                ;
 ; Difficulty packing design                                   ; Low                  ; Low                            ;
 ;                                                             ;                      ;                                ;
-; Total LABs:  partially or completely used                   ; 2 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
-;     -- Logic LABs                                           ; 2                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 3 / 4191 ( < 1 % )   ; 0 / 4191 ( 0 % )               ;
+;     -- Logic LABs                                           ; 3                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
-; Combinational ALUT usage for logic                          ; 19                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 22                   ; 0                              ;
 ;     -- 7 input functions                                    ; 0                    ; 0                              ;
 ;     -- 6 input functions                                    ; 0                    ; 0                              ;
-;     -- 5 input functions                                    ; 6                    ; 0                              ;
-;     -- 4 input functions                                    ; 2                    ; 0                              ;
-;     -- <=3 input functions                                  ; 11                   ; 0                              ;
+;     -- 5 input functions                                    ; 0                    ; 0                              ;
+;     -- 4 input functions                                    ; 7                    ; 0                              ;
+;     -- <=3 input functions                                  ; 15                   ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
 ; Memory ALUT usage                                           ; 0                    ; 0                              ;
 ;     -- 64-address deep                                      ; 0                    ; 0                              ;
@@ -366,7 +367,7 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 ;     -- Registered Output Connections                        ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; Internal Connections                                        ;                      ;                                ;
-;     -- Total Connections                                    ; 94                   ; 0                              ;
+;     -- Total Connections                                    ; 93                   ; 0                              ;
 ;     -- Registered Connections                               ; 0                    ; 0                              ;
 ;                                                             ;                      ;                                ;
 ; External Connections                                        ;                      ;                                ;
@@ -399,7 +400,7 @@ The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; binary_input[0] ; AC28  ; 5B       ; 89           ; 20           ; 77           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; binary_input[0] ; AC28  ; 5B       ; 89           ; 20           ; 77           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; binary_input[1] ; AD30  ; 5B       ; 89           ; 25           ; 37           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; binary_input[2] ; AC29  ; 5B       ; 89           ; 20           ; 94           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; binary_input[3] ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 3                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
@@ -1375,10 +1376,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; segment_output[2]  ; Incomplete set of assignments ;
 ; segment_output[1]  ; Incomplete set of assignments ;
 ; segment_output[0]  ; Incomplete set of assignments ;
-; binary_input[3]    ; Incomplete set of assignments ;
 ; binary_input[2]    ; Incomplete set of assignments ;
-; binary_input[1]    ; Incomplete set of assignments ;
 ; binary_input[0]    ; Incomplete set of assignments ;
+; binary_input[3]    ; Incomplete set of assignments ;
+; binary_input[1]    ; Incomplete set of assignments ;
 +--------------------+-------------------------------+
 
 
@@ -1387,13 +1388,17 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                      ; Entity Name         ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |BCD_Decoder                              ; 9.5 (0.5)            ; 9.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 19 (1)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 18   ; 0            ; |BCD_Decoder                                                                                                                             ; BCD_Decoder         ; work         ;
-;    |BCD_Print_Segment:segment_decoder|    ; 5.0 (5.0)            ; 5.0 (5.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|BCD_Print_Segment:segment_decoder                                                                                           ; BCD_Print_Segment   ; work         ;
-;    |Binario_a_BCD:bcd_converter|          ; 4.0 (0.0)            ; 4.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter                                                                                                 ; Binario_a_BCD       ; work         ;
-;       |lpm_divide:Mod0|                   ; 4.0 (0.0)            ; 4.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
-;          |lpm_divide_42m:auto_generated|  ; 4.0 (0.0)            ; 4.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 4.0 (0.0)            ; 4.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
-;                |alt_u_div_kse:divider|    ; 4.0 (4.0)            ; 4.0 (4.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+; |BCD_Decoder                              ; 11.0 (0.5)           ; 11.0 (0.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (1)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 18   ; 0            ; |BCD_Decoder                                                                                                                             ; BCD_Decoder         ; work         ;
+;    |BCD_Print_Segment:segment_decoder|    ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 7 (7)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|BCD_Print_Segment:segment_decoder                                                                                           ; BCD_Print_Segment   ; work         ;
+;    |Binario_a_BCD:bcd_converter|          ; 7.0 (0.0)            ; 7.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter                                                                                                 ; Binario_a_BCD       ; work         ;
+;       |lpm_divide:Div0|                   ; 2.5 (0.0)            ; 2.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_1am:auto_generated|  ; 2.5 (0.0)            ; 2.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 2.5 (0.0)            ; 2.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 2.5 (2.5)            ; 2.5 (2.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
+;       |lpm_divide:Mod0|                   ; 4.5 (0.0)            ; 4.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_42m:auto_generated|  ; 4.5 (0.0)            ; 4.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m      ; work         ;
+;             |sign_div_unsign_7kh:divider| ; 4.5 (0.0)            ; 4.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh ; work         ;
+;                |alt_u_div_kse:divider|    ; 4.5 (4.5)            ; 4.5 (4.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 9 (9)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |BCD_Decoder|Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse       ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1417,10 +1422,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segment_output[2]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; segment_output[1]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; segment_output[0]  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; binary_input[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; binary_input[2]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; binary_input[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; binary_input[0]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; binary_input[3]    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; binary_input[1]    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +--------------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -1429,21 +1434,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                                                                                                                           ; Pad To Core Index ; Setting ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
-; binary_input[3]                                                                                                                                               ;                   ;         ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[3]~1  ; 0                 ; 0       ;
-;      - BCD_Print_Segment:segment_decoder|Decoder0~0                                                                                                           ; 0                 ; 0       ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[15]~1             ; 0                 ; 0       ;
 ; binary_input[2]                                                                                                                                               ;                   ;         ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[2]~13 ; 1                 ; 0       ;
-;      - BCD_Print_Segment:segment_decoder|Decoder0~0                                                                                                           ; 1                 ; 0       ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[14]~2             ; 1                 ; 0       ;
-; binary_input[1]                                                                                                                                               ;                   ;         ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[1]~9  ; 1                 ; 0       ;
-;      - BCD_Print_Segment:segment_decoder|Decoder0~0                                                                                                           ; 1                 ; 0       ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[13]~3             ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[2]~10 ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[2]~5  ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[14]~0             ; 1                 ; 0       ;
 ; binary_input[0]                                                                                                                                               ;                   ;         ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[0]~17 ; 1                 ; 0       ;
-;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~0             ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[0]~18 ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[0]~9  ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~1             ; 1                 ; 0       ;
+; binary_input[3]                                                                                                                                               ;                   ;         ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[3]~6  ; 0                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[3]~13 ; 0                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[15]~2             ; 0                 ; 0       ;
+; binary_input[1]                                                                                                                                               ;                   ;         ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[1]~14 ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_3_result_int[1]~17 ; 1                 ; 0       ;
+;      - Binario_a_BCD:bcd_converter|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[13]~3             ; 1                 ; 0       ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1452,14 +1458,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+------------------------+
 ; Routing Resource Type                       ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Block interconnects                         ; 15 / 289,320 ( < 1 % ) ;
-; C12 interconnects                           ; 6 / 13,420 ( < 1 % )   ;
-; C2 interconnects                            ; 10 / 119,108 ( < 1 % ) ;
-; C4 interconnects                            ; 8 / 56,300 ( < 1 % )   ;
+; Block interconnects                         ; 19 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 4 / 13,420 ( < 1 % )   ;
+; C2 interconnects                            ; 15 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 13 / 56,300 ( < 1 % )  ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
-; Direct links                                ; 1 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 0 / 289,320 ( 0 % )    ;
 ; Global clocks                               ; 0 / 16 ( 0 % )         ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
@@ -1515,12 +1521,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
-; Local interconnects                         ; 10 / 84,580 ( < 1 % )  ;
+; Local interconnects                         ; 5 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
-; R14 interconnects                           ; 12 / 12,676 ( < 1 % )  ;
-; R14/C12 interconnect drivers                ; 15 / 20,720 ( < 1 % )  ;
-; R3 interconnects                            ; 22 / 130,992 ( < 1 % ) ;
-; R6 interconnects                            ; 5 / 266,960 ( < 1 % )  ;
+; R14 interconnects                           ; 10 / 12,676 ( < 1 % )  ;
+; R14/C12 interconnect drivers                ; 11 / 20,720 ( < 1 % )  ;
+; R3 interconnects                            ; 18 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 15 / 266,960 ( < 1 % ) ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )        ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
 +---------------------------------------------+------------------------+
@@ -1599,10 +1605,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segment_output[2]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; segment_output[1]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; segment_output[0]  ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; binary_input[3]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; binary_input[2]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; binary_input[1]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; binary_input[0]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; binary_input[3]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; binary_input[1]    ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1686,7 +1692,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.31 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1694,10 +1700,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/output_files/Decoder.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 7269 megabytes
-    Info: Processing ended: Sat Mar  8 00:38:20 2025
-    Info: Elapsed time: 00:00:37
-    Info: Total CPU time (on all processors): 00:01:58
+    Info: Peak virtual memory: 7260 megabytes
+    Info: Processing ended: Mon Mar 10 20:14:03 2025
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:55
 
 
 +----------------------------+
