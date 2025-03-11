@@ -27,3 +27,54 @@ module Restador #(
         end
     end
 endmodule
+
+
+module Binario_a_BCD(
+    input  logic [5:0] bin_in,   // Entrada binaria de 6 bits
+    output logic [7:0] bcd_out   // Salida BCD: [7:4]=decenas, [3:0]=unidades
+);
+    always_comb begin
+        bcd_out[7:4] = bin_in / 10; // Decenas
+        bcd_out[3:0] = bin_in % 10; // Unidades
+    end
+endmodule
+
+
+module Decodificador7Segmentos (
+    input  logic [7:0] BCD,         // Entrada BCD: [7:4] decenas, [3:0] unidades
+    output logic [13:0] seg_out     // Salida para dos displays de 7 segmentos
+);
+    logic [6:0] seg_unidades, seg_decenas;
+
+    always_comb begin
+        // Decodificación para unidades
+        case(BCD[3:0])
+            4'd0: seg_unidades = 7'b0000001;
+            4'd1: seg_unidades = 7'b1001111;
+            4'd2: seg_unidades = 7'b0010010;
+            4'd3: seg_unidades = 7'b0000110;
+            4'd4: seg_unidades = 7'b1001100;
+            4'd5: seg_unidades = 7'b0100100;
+            4'd6: seg_unidades = 7'b0100000;
+            4'd7: seg_unidades = 7'b0001111;
+            4'd8: seg_unidades = 7'b0000000;
+            4'd9: seg_unidades = 7'b0000100;
+            default: seg_unidades = 7'b0000001;
+        endcase
+
+        // Decodificación para decenas
+        case(BCD[7:4])
+            4'd0: seg_decenas = 7'b0000001;
+            4'd1: seg_decenas = 7'b1001111;
+            4'd2: seg_decenas = 7'b0010010;
+            4'd3: seg_decenas = 7'b0000110;
+            4'd4: seg_decenas = 7'b1001100;
+            4'd5: seg_decenas = 7'b0100100;
+            4'd6: seg_decenas = 7'b0100000;
+            default: seg_decenas = 7'b0000001;
+        endcase
+
+        // Concatena decenas y unidades (big-endian)
+        seg_out = {seg_decenas, seg_unidades};
+    end
+endmodule
