@@ -1,5 +1,5 @@
 Flow report for RestadorParametrizadoN
-Tue Mar 11 09:34:40 2025
+Tue Mar 11 14:42:10 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Tue Mar 11 09:34:40 2025          ;
+; Flow Status                 ; Successful - Tue Mar 11 14:42:10 2025          ;
 ; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name               ; RestadorParametrizadoN                         ;
 ; Top-level Entity Name       ; RestadorParametrizableN                        ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+------------------------+
 ; Option            ; Setting                ;
 +-------------------+------------------------+
-; Start date & time ; 03/11/2025 09:34:34    ;
+; Start date & time ; 03/11/2025 14:42:03    ;
 ; Main task         ; Compilation            ;
 ; Revision Name     ; RestadorParametrizadoN ;
 +-------------------+------------------------+
@@ -74,19 +74,19 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------------+-------------------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value          ; Entity Name             ; Section Id                        ;
 +--------------------------------------+----------------------------------------+------------------------+-------------------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 4931007164039.174170727305080          ; --                     ; --                      ; --                                ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                     ; --                      ; RestadorParametrizadoN_tb         ;
+; COMPILER_SIGNATURE_ID                ; 4931007164039.174172572329692          ; --                     ; --                      ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --                     ; --                      ; Restador_tb                       ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                     ; --                      ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                     ; --                      ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                     ; --                      ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --                     ; --                      ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RestadorParametrizadoN_tb              ; --                     ; --                      ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Restador_tb                            ; --                     ; --                      ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --                     ; --                      ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (SystemVerilog)      ; <None>                 ; --                      ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --                     ; --                      ; eda_simulation                    ;
-; EDA_TEST_BENCH_FILE                  ; RestadorParametrizadoN_tb.sv           ; --                     ; --                      ; RestadorParametrizadoN_tb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; RestadorParametrizadoN_tb              ; --                     ; --                      ; RestadorParametrizadoN_tb         ;
-; EDA_TEST_BENCH_NAME                  ; RestadorParametrizadoN_tb              ; --                     ; --                      ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; RestadorParametrizadoN_tb.sv           ; --                     ; --                      ; Restador_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Restador_tb                            ; --                     ; --                      ; Restador_tb                       ;
+; EDA_TEST_BENCH_NAME                  ; Restador_tb                            ; --                     ; --                      ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --                     ; --                      ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --                     ; --                      ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --                     ; --                      ; --                                ;
@@ -105,7 +105,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4778 MB             ; 00:00:16                           ;
+; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4770 MB             ; 00:00:16                           ;
 ; Total                  ; 00:00:07     ; --                      ; --                  ; 00:00:16                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 

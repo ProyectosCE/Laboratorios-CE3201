@@ -1,5 +1,5 @@
 Analysis & Elaboration report for RestadorParametrizadoN
-Tue Mar 11 09:34:40 2025
+Tue Mar 11 14:42:10 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -9,8 +9,9 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  4. Parameter Settings for User Entity Instance: Restador:u_restador
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
 
 
 
@@ -37,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue Mar 11 09:34:40 2025          ;
+; Analysis & Elaboration Status ; Successful - Tue Mar 11 14:42:10 2025          ;
 ; Quartus Prime Version         ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                 ; RestadorParametrizadoN                         ;
 ; Top-level Entity Name         ; RestadorParametrizableN                        ;
@@ -66,6 +67,16 @@ https://fpgasoftware.intel.com/eula.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 +----------------------------+-------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Restador:u_restador ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 6     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -161,23 +172,27 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 09:34:33 2025
+    Info: Processing started: Tue Mar 11 14:42:03 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RestadorParametrizadoN -c RestadorParametrizadoN --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file restadorparametrizadon_tb.sv
-    Info (12023): Found entity 1: RestadorParametrizadoN_tb File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv Line: 1
-Info (12021): Found 5 design units, including 5 entities, in source file restadorparametrizadon.sv
-    Info (12023): Found entity 1: Subtractor File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 1
-    Info (12023): Found entity 2: ResetHandler File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 35
-    Info (12023): Found entity 3: Binario_a_BCD File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 53
-    Info (12023): Found entity 4: BCD_Print_Segment File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 64
-    Info (12023): Found entity 5: RestadorParametrizableN File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 100
+    Info (12023): Found entity 1: Restador_tb File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv Line: 1
+Info (12021): Found 4 design units, including 4 entities, in source file restadorparametrizadon.sv
+    Info (12023): Found entity 1: Restador File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 1
+    Info (12023): Found entity 2: Binario_a_BCD File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 32
+    Info (12023): Found entity 3: Decodificador7Segmentos File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 43
+    Info (12023): Found entity 4: RestadorParametrizableN File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 82
 Info (12127): Elaborating entity "RestadorParametrizableN" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(127): truncated value with size 32 to match size of target (6) File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 127
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4778 megabytes
-    Info: Processing ended: Tue Mar 11 09:34:40 2025
+Info (12128): Elaborating entity "Restador" for hierarchy "Restador:u_restador" File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 101
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(25): truncated value with size 32 to match size of target (6) File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 25
+Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:u_bin2bcd" File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 107
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(37): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(38): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 38
+Info (12128): Elaborating entity "Decodificador7Segmentos" for hierarchy "Decodificador7Segmentos:u_decodificador" File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv Line: 113
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Tue Mar 11 14:42:10 2025
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:16
 
