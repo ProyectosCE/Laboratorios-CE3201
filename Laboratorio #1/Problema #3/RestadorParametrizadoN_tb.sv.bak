@@ -1,0 +1,69 @@
+module RestadorParametrizadoN_tb;
+
+    // Inputs
+    logic [5:0] data_in;
+    logic clk;
+    logic btn_sub;
+    logic rst;
+
+    // Outputs
+    logic [5:0] data_out;
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // 10ns period
+    end
+
+    // Test sequence
+    initial begin
+        // Test for number 25
+        test_subtractor(6'd25);
+        // Test for number 3
+        test_subtractor(6'd3);
+        // Test for number 12
+        test_subtractor(6'd12);
+        // Test for number 54
+        test_subtractor(6'd54);
+
+    end
+
+    // Task to test the subtractor for different initial values
+    task test_subtractor(input logic [5:0] initial_value);
+        // Initialize Inputs
+        data_in = initial_value;
+        btn_sub = 0;
+        rst = 0;
+
+        // Wait for global reset
+        #10;
+
+        // Apply reset
+        rst = 1;
+        #10;
+        rst = 0;
+        #10;
+
+        // Check initial value
+        $display("Initial value: %d", data_out);
+
+        // Subtract 1 three times
+        repeat (3) begin
+            btn_sub = 1;
+            #10;
+            btn_sub = 0;
+            #10;
+            $display("Value after subtraction: %d", data_out);
+        end
+
+        // Apply reset again
+        rst = 1;
+        #10;
+        rst = 0;
+        #10;
+
+        // Check reset value
+        $display("Value after reset: %d", data_out);
+    endtask
+
+endmodule
