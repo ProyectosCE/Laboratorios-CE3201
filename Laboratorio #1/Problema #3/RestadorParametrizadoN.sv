@@ -78,3 +78,38 @@ module Decodificador7Segmentos (
         seg_out = {seg_decenas, seg_unidades};
     end
 endmodule
+
+module RestadorParametrizableN (
+    input  logic       clk,      // Reloj
+    input  logic       rst,      // Reset asíncrono
+    input  logic       btn_sub,  // Botón para restar
+    input  logic [5:0] data_in,  // Valor inicial (switches)
+    output logic [13:0] seg_out   // Salida para displays de 7 segmentos
+);
+
+    // Señales internas para interconexión
+    logic [5:0] data_out;
+    logic [7:0] bcd;
+
+    // Instanciación del módulo Restador (lógica principal)
+    Restador #(.N(6)) u_restador (
+        .clk(clk),
+        .rst(rst),
+        .btn_sub(btn_sub),
+        .data_in(data_in),
+        .data_out(data_out)
+    );
+
+    // Instanciación del módulo de conversión a BCD
+    Binario_a_BCD u_bin2bcd (
+        .bin_in(data_out),
+        .bcd_out(bcd)
+    );
+
+    // Instanciación del módulo decodificador a 7 segmentos
+    Decodificador7Segmentos u_decodificador (
+        .BCD(bcd),
+        .seg_out(seg_out)
+    );
+
+endmodule
