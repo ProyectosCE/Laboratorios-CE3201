@@ -1,0 +1,202 @@
+m255
+K4
+z2
+!s12c _opt1
+Z0 !s99 nomlopt
+!s12c _opt
+R0
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/amv22/Dev/repos/Problema #3/simulation/questa
+T_opt
+!s110 1741706638
+VD]@_LL>Q[T2<z9j<i6gXF2
+Z2 04 25 4 work RestadorParametrizadoN_tb fast 0
+=1-047c16ee2e87-67d0558e-1a1-40f4
+R0
+Z3 !s12b OEM100
+!s124 OEM10U1 
+Z4 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2023.3;77
+R1
+T_opt1
+!s110 1741707313
+VW2OEdOdam8U_A9TYFgK`C1
+R2
+=1-047c16ee2e87-67d05830-2ed-3a8c
+R0
+R3
+!s124 OEM10U2 
+R4
+R5
+n@_opt1
+R6
+vBCD_Print_Segment
+Z7 2C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv
+Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z9 !s110 1741707311
+!i10b 1
+!s100 Ya_dVWeLCUMA27@=S[YiE3
+I5S8Q<E]iBJjml3k87DB[Y0
+S1
+R1
+Z10 w1741664597
+Z11 8C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv
+Z12 FC:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv
+!i122 0
+L0 64 35
+Z13 VDg1SIo80bB@j0V0VzS_@n1
+Z14 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z15 !s108 1741707311.000000
+Z16 !s107 C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv|
+Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/repos/Problema #3|C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv|
+!i113 0
+Z18 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z19 !s92 -sv -work work {+incdir+C:/Users/amv22/Dev/repos/Problema #3} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+n@b@c@d_@print_@segment
+vBinario_a_BCD
+R7
+R8
+R9
+!i10b 1
+!s100 2NU`dJ5i>M1ca1BlOUi7i3
+IMYl6F_GUBA9kG`^Ki??SM1
+S1
+R1
+R10
+R11
+R12
+!i122 0
+L0 53 10
+R13
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R18
+R19
+R5
+n@binario_a_@b@c@d
+vResetHandler
+R7
+R8
+R9
+!i10b 1
+!s100 DF591<hH=o<dX5[ifEJK;2
+IXm4z[mZ]nC:<;dIFam8JH0
+S1
+R1
+R10
+R11
+R12
+!i122 0
+L0 35 17
+R13
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R18
+R19
+R5
+n@reset@handler
+vRestadorParametrizableN
+R7
+R8
+R9
+!i10b 1
+!s100 ZEo1L<]R<C`bK:aiiC7;P0
+IEL9>?TiOGE:?2<Jg=^:dM3
+S1
+R1
+R10
+R11
+R12
+!i122 0
+L0 100 32
+R13
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R18
+R19
+R5
+n@restador@parametrizable@n
+vRestadorParametrizadoN_tb
+2C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv
+R8
+R9
+!i10b 1
+!s100 PO2n4?zVlb^3L1U<EjmTM2
+I`4A6k<EPVVN7PEEg4Dz[Y1
+S1
+R1
+w1741707271
+8C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv
+FC:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv
+!i122 1
+L0 1 74
+R13
+R14
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/repos/Problema #3|C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv|
+!i113 0
+R18
+R19
+R5
+n@restador@parametrizado@n_tb
+vSubtractor
+R7
+R8
+R9
+!i10b 1
+!s100 <n:^Xo=2n`^KD0W3e4@=X1
+IIPojO`9655?1EgFJR0Dd[0
+S1
+R1
+R10
+R11
+R12
+!i122 0
+L0 1 33
+R13
+R14
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R18
+R19
+R5
+n@subtractor
