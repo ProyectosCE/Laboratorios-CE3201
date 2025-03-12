@@ -1,5 +1,5 @@
 Flow report for RippleCarryAdder4b
-Tue Mar 11 23:41:40 2025
+Wed Mar 12 07:19:14 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Tue Mar 11 23:41:40 2025          ;
+; Flow Status                     ; Successful - Wed Mar 12 07:19:14 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; RippleCarryAdder4b                             ;
 ; Top-level Entity Name           ; RippleCarryAdder4b                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/11/2025 23:40:07 ;
+; Start date & time ; 03/12/2025 07:18:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RippleCarryAdder4b  ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 53671021772497.174175800707136         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 145320169156502.174178550504972        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; RippleCarryAdder4b_tb             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -109,12 +109,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4873 MB             ; 00:00:31                           ;
-; Fitter               ; 00:00:52     ; 1.0                     ; 6881 MB             ; 00:02:02                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 4869 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5154 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4717 MB             ; 00:00:01                           ;
-; Total                ; 00:01:28     ; --                      ; --                  ; 00:02:49                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4857 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:27     ; 1.0                     ; 6460 MB             ; 00:00:52                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4868 MB             ; 00:00:05                           ;
+; Timing Analyzer      ; 00:00:04     ; 1.0                     ; 5123 MB             ; 00:00:04                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4716 MB             ; 00:00:01                           ;
+; Total                ; 00:00:46     ; --                      ; --                  ; 00:01:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,11 +123,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

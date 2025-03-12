@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RestadorParametrizadoN
-Tue Mar 11 21:31:56 2025
+Wed Mar 12 07:23:56 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 11 21:31:56 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 12 07:23:56 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; RestadorParametrizadoN                         ;
 ; Top-level Entity Name           ; RestadorParametrizableN                        ;
@@ -352,29 +352,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 21:31:47 2025
+    Info: Processing started: Wed Mar 12 07:23:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RestadorParametrizadoN -c RestadorParametrizadoN
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file restadorparametrizadon_tb.sv
-    Info (12023): Found entity 1: Restador_tb File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN_tb.sv Line: 1
+    Info (12023): Found entity 1: Restador_tb File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN_tb.sv Line: 34
 Info (12021): Found 4 design units, including 4 entities, in source file restadorparametrizadon.sv
-    Info (12023): Found entity 1: Restador File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 1
-    Info (12023): Found entity 2: Binario_a_BCD File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 24
-    Info (12023): Found entity 3: Decodificador7Segmentos File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 35
-    Info (12023): Found entity 4: RestadorParametrizableN File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 74
+    Info (12023): Found entity 1: Restador File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 48
+    Info (12023): Found entity 2: Binario_a_BCD File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 92
+    Info (12023): Found entity 3: Decodificador7Segmentos File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 128
+    Info (12023): Found entity 4: RestadorParametrizableN File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 192
 Info (12127): Elaborating entity "RestadorParametrizableN" for the top level hierarchy
-Info (12128): Elaborating entity "Restador" for hierarchy "Restador:u_restador" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 92
-Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(16): truncated value with size 32 to match size of target (6) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 16
-Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:u_bin2bcd" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 98
-Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(29): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(30): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 30
-Info (12128): Elaborating entity "Decodificador7Segmentos" for hierarchy "Decodificador7Segmentos:u_decodificador" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 104
+Info (12128): Elaborating entity "Restador" for hierarchy "Restador:u_restador" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 209
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(63): truncated value with size 32 to match size of target (6) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 63
+Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:u_bin2bcd" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 215
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(97): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 97
+Warning (10230): Verilog HDL assignment warning at RestadorParametrizadoN.sv(98): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 98
+Info (12128): Elaborating entity "Decodificador7Segmentos" for hierarchy "Decodificador7Segmentos:u_decodificador" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 221
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:u_bin2bcd|Div0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 29
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:u_bin2bcd|Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 30
-Info (12130): Elaborated megafunction instantiation "Binario_a_BCD:u_bin2bcd|lpm_divide:Div0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 29
-Info (12133): Instantiated megafunction "Binario_a_BCD:u_bin2bcd|lpm_divide:Div0" with the following parameter: File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 29
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:u_bin2bcd|Div0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 97
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:u_bin2bcd|Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 98
+Info (12130): Elaborated megafunction instantiation "Binario_a_BCD:u_bin2bcd|lpm_divide:Div0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 97
+Info (12133): Instantiated megafunction "Binario_a_BCD:u_bin2bcd|lpm_divide:Div0" with the following parameter: File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 97
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -385,8 +385,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
     Info (12023): Found entity 1: alt_u_div_ose File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/db/alt_u_div_ose.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Binario_a_BCD:u_bin2bcd|lpm_divide:Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 30
-Info (12133): Instantiated megafunction "Binario_a_BCD:u_bin2bcd|lpm_divide:Mod0" with the following parameter: File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 30
+Info (12130): Elaborated megafunction instantiation "Binario_a_BCD:u_bin2bcd|lpm_divide:Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 98
+Info (12133): Instantiated megafunction "Binario_a_BCD:u_bin2bcd|lpm_divide:Mod0" with the following parameter: File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 98
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -394,12 +394,12 @@ Info (12133): Instantiated megafunction "Binario_a_BCD:u_bin2bcd|lpm_divide:Mod0
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
     Info (12023): Found entity 1: lpm_divide_62m File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/db/lpm_divide_62m.tdf Line: 25
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "Restador:u_restador|data_out[0]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[0]~_emulated" and latch "Restador:u_restador|data_out[0]~1" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
-    Warning (13310): Register "Restador:u_restador|data_out[1]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[1]~_emulated" and latch "Restador:u_restador|data_out[1]~5" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
-    Warning (13310): Register "Restador:u_restador|data_out[2]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[2]~_emulated" and latch "Restador:u_restador|data_out[2]~9" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
-    Warning (13310): Register "Restador:u_restador|data_out[3]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[3]~_emulated" and latch "Restador:u_restador|data_out[3]~13" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
-    Warning (13310): Register "Restador:u_restador|data_out[4]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[4]~_emulated" and latch "Restador:u_restador|data_out[4]~17" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
-    Warning (13310): Register "Restador:u_restador|data_out[5]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[5]~_emulated" and latch "Restador:u_restador|data_out[5]~21" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 15
+    Warning (13310): Register "Restador:u_restador|data_out[0]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[0]~_emulated" and latch "Restador:u_restador|data_out[0]~1" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
+    Warning (13310): Register "Restador:u_restador|data_out[1]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[1]~_emulated" and latch "Restador:u_restador|data_out[1]~5" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
+    Warning (13310): Register "Restador:u_restador|data_out[2]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[2]~_emulated" and latch "Restador:u_restador|data_out[2]~9" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
+    Warning (13310): Register "Restador:u_restador|data_out[3]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[3]~_emulated" and latch "Restador:u_restador|data_out[3]~13" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
+    Warning (13310): Register "Restador:u_restador|data_out[4]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[4]~_emulated" and latch "Restador:u_restador|data_out[4]~17" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
+    Warning (13310): Register "Restador:u_restador|data_out[5]" is converted into an equivalent circuit using register "Restador:u_restador|data_out[5]~_emulated" and latch "Restador:u_restador|data_out[5]~21" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv Line: 62
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -408,8 +408,8 @@ Info (21057): Implemented 112 device resources after synthesis - the final resou
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 90 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4832 megabytes
-    Info: Processing ended: Tue Mar 11 21:31:56 2025
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Wed Mar 12 07:23:56 2025
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:22
 
