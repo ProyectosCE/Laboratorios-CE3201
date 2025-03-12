@@ -3,20 +3,20 @@ binary_input[0] => binary_input[0].IN1
 binary_input[1] => binary_input[1].IN1
 binary_input[2] => binary_input[2].IN1
 binary_input[3] => binary_input[3].IN1
-segment_output[13] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[12] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[11] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[10] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[9] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[8] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[7] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[6] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[5] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[4] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[3] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[2] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[1] << BCD_Print_Segment:segment_decoder.double7segment
-segment_output[0] << BCD_Print_Segment:segment_decoder.double7segment
+segment_output[13] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[12] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[11] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[10] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[9] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[8] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[7] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[6] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[5] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[4] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[3] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[2] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[1] <= BCD_Print_Segment:segment_decoder.double7segment
+segment_output[0] <= BCD_Print_Segment:segment_decoder.double7segment
 
 
 |BCD_Decoder|Binario_a_BCD:bcd_converter
@@ -87,19 +87,19 @@ BCD[6] => Equal10.IN1
 BCD[6] => Equal11.IN1
 BCD[7] => Equal10.IN0
 BCD[7] => Equal11.IN0
-double7segment[13] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[12] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[11] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[10] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[9] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[8] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[7] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[6] <= <VCC>
-double7segment[5] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[4] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[3] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
-double7segment[2] <= <GND>
-double7segment[1] <= <GND>
-double7segment[0] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[13] <= <VCC>
+double7segment[12] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[11] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[10] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[9] <= <GND>
+double7segment[8] <= <GND>
+double7segment[7] <= decenas_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[6] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[5] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[4] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[3] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[2] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[1] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
+double7segment[0] <= unidades_segment.DB_MAX_OUTPUT_PORT_TYPE
 
 

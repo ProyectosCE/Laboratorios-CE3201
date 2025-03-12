@@ -93,7 +93,7 @@ module BCD_Print_Segment (
         else decenas_segment = 7'b0000001; // Por defecto, muestra 0
 
         // Combinación de los segmentos en BIG-ENDIAN
-        double7segment = {decenas_segment, unidades_segment};
+        double7segment = {unidades_segment,decenas_segment};
     end
 endmodule
 

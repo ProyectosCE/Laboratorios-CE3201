@@ -120,7 +120,6 @@ module Restador_tb();
         rst6 = 1; #10; rst6 = 0; #10;
         $display("6-bit: Después de reset = %d", data_out6);
         #20;
-        $finish;
     end
 
 endmodule

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Tue Mar 11 10:34:40 2025
+Fitter Status : Successful - Tue Mar 11 21:32:34 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : RestadorParametrizadoN
 Top-level Entity Name : RestadorParametrizableN
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 47 / 41,910 ( < 1 % )
-Total registers : 8
-Total pins : 23 / 499 ( 5 % )
+Logic utilization (in ALMs) : 46 / 41,910 ( < 1 % )
+Total registers : 6
+Total pins : 22 / 499 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
