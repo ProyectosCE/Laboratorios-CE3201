@@ -1,3 +1,13 @@
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+
 /* Module: Restador
      Módulo que decrementa en 1 un valor de N bits al detectar un flanco negativo 
      en el botón btn_sub (activo en bajo). Adicionalmente, permite un reset asíncrono 
@@ -76,9 +86,6 @@ module Restador #(
     end
 
 endmodule
-
-
-
 
 
 /* Module: Binario_a_BCD
