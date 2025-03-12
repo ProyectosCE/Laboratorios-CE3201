@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Decoder
-Tue Mar 11 16:53:00 2025
+Wed Mar 12 07:16:00 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Mar 11 16:53:00 2025          ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 12 07:16:00 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; Decoder                                        ;
 ; Top-level Entity Name           ; BCD_Decoder                                    ;
@@ -340,21 +340,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 16:52:51 2025
+    Info: Processing started: Wed Mar 12 07:15:50 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Decoder -c Decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 3 design units, including 3 entities, in source file decoder.sv
     Info (12023): Found entity 1: Binario_a_BCD File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 33
     Info (12023): Found entity 2: BCD_Print_Segment File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 69
-    Info (12023): Found entity 3: BCD_Decoder File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 103
+    Info (12023): Found entity 3: BCD_Decoder File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 118
 Info (12021): Found 1 design units, including 1 entities, in source file decoder_tb.sv
-    Info (12023): Found entity 1: Binario_a_BCD_tb File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder_tb.sv Line: 1
+    Info (12023): Found entity 1: Binario_a_BCD_tb File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder_tb.sv Line: 33
 Info (12127): Elaborating entity "BCD_Decoder" for the top level hierarchy
-Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:bcd_converter" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 114
+Info (12128): Elaborating entity "Binario_a_BCD" for hierarchy "Binario_a_BCD:bcd_converter" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 133
 Warning (10230): Verilog HDL assignment warning at Decoder.sv(39): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at Decoder.sv(40): truncated value with size 32 to match size of target (4) File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 40
-Info (12128): Elaborating entity "BCD_Print_Segment" for hierarchy "BCD_Print_Segment:segment_decoder" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 120
+Info (12128): Elaborating entity "BCD_Print_Segment" for hierarchy "BCD_Print_Segment:segment_decoder" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 143
 Info (278001): Inferred 2 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:bcd_converter|Div0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 39
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Binario_a_BCD:bcd_converter|Mod0" File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 40
@@ -379,9 +379,9 @@ Info (12133): Instantiated megafunction "Binario_a_BCD:bcd_converter|lpm_divide:
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
     Info (12023): Found entity 1: lpm_divide_42m File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/db/lpm_divide_42m.tdf Line: 25
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "segment_output[13]" is stuck at VCC File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 106
-    Warning (13410): Pin "segment_output[9]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 106
-    Warning (13410): Pin "segment_output[8]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 106
+    Warning (13410): Pin "segment_output[13]" is stuck at VCC File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 121
+    Warning (13410): Pin "segment_output[9]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 121
+    Warning (13410): Pin "segment_output[8]" is stuck at GND File: E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/Decoder.sv Line: 121
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -391,8 +391,8 @@ Info (21057): Implemented 39 device resources after synthesis - the final resour
     Info (21061): Implemented 21 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Tue Mar 11 16:53:00 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Processing ended: Wed Mar 12 07:16:00 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

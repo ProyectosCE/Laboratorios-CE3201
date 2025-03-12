@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
--- DATE "03/11/2025 23:41:40"
+-- DATE "03/12/2025 07:19:14"
 
 -- 
 -- Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -39,9 +39,9 @@ ENTITY 	RippleCarryAdder4b IS
 	A : IN std_logic_vector(3 DOWNTO 0);
 	B : IN std_logic_vector(3 DOWNTO 0);
 	Cin : IN std_logic;
-	S : OUT std_logic_vector(3 DOWNTO 0);
-	Cout : OUT std_logic;
-	SSD : OUT std_logic_vector(6 DOWNTO 0)
+	S : BUFFER std_logic_vector(3 DOWNTO 0);
+	Cout : BUFFER std_logic;
+	SSD : BUFFER std_logic_vector(6 DOWNTO 0)
 	);
 END RippleCarryAdder4b;
 
@@ -108,10 +108,10 @@ SIGNAL \DECODER|Mux3~0_combout\ : std_logic;
 SIGNAL \DECODER|Mux2~0_combout\ : std_logic;
 SIGNAL \DECODER|Mux1~0_combout\ : std_logic;
 SIGNAL \DECODER|Mux0~0_combout\ : std_logic;
-SIGNAL \ALT_INV_A[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_B[2]~input_o\ : std_logic;
-SIGNAL \ALT_INV_A[3]~input_o\ : std_logic;
 SIGNAL \ALT_INV_B[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_A[3]~input_o\ : std_logic;
+SIGNAL \ALT_INV_B[2]~input_o\ : std_logic;
+SIGNAL \ALT_INV_A[2]~input_o\ : std_logic;
 SIGNAL \ALT_INV_B[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_A[1]~input_o\ : std_logic;
 SIGNAL \ALT_INV_Cin~input_o\ : std_logic;
@@ -135,10 +135,10 @@ SSD <= ww_SSD;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_A[2]~input_o\ <= NOT \A[2]~input_o\;
-\ALT_INV_B[2]~input_o\ <= NOT \B[2]~input_o\;
-\ALT_INV_A[3]~input_o\ <= NOT \A[3]~input_o\;
 \ALT_INV_B[3]~input_o\ <= NOT \B[3]~input_o\;
+\ALT_INV_A[3]~input_o\ <= NOT \A[3]~input_o\;
+\ALT_INV_B[2]~input_o\ <= NOT \B[2]~input_o\;
+\ALT_INV_A[2]~input_o\ <= NOT \A[2]~input_o\;
 \ALT_INV_B[1]~input_o\ <= NOT \B[1]~input_o\;
 \ALT_INV_A[1]~input_o\ <= NOT \A[1]~input_o\;
 \ALT_INV_Cin~input_o\ <= NOT \Cin~input_o\;

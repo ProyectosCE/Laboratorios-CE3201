@@ -66,27 +66,6 @@ module Restador #(
 
 endmodule
 
-module Restador #(
-    parameter N = 6  // Ancho de bits
-)(
-    input  logic         btn_sub,  // Botón para restar (activo bajo)
-    input  logic         btn_rst,  // Botón de reset (activo bajo)
-    input  logic [N-1:0] data_in,  // Valor inicial (switches)
-    output logic [N-1:0] data_out  // Valor actual
-);
-
-
-    // Bloque secuencial para la resta y el reset
-    always_ff @(negedge btn_sub, negedge btn_rst) begin
-        if (!btn_rst) begin
-            data_out <= data_in; // Reset: cargar el valor de data_in
-        end else if (!btn_sub) begin
-            data_out <= data_out - 1; // Restar en flanco negativo de btn_sub
-        end
-    end
-
-endmodule
-
 
 /* Module: Binario_a_BCD
    Convierte una entrada binaria de 6 bits a un BCD de 8 bits
