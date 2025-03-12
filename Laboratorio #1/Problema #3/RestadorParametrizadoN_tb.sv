@@ -1,3 +1,36 @@
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+
+/* Module: Restador_tb
+   Descripción:
+     Testbench que valida el comportamiento del módulo Restador en sus variantes 
+     parametrizadas a 2, 4 y 6 bits. Para cada instancia se comprueba:
+       - El reset asíncrono (btn_rstX), que carga el valor inicial (data_inX) en data_outX.
+       - La resta en flanco negativo de btn_subX, que decrementa data_outX.
+       
+   Procedimiento de prueba:
+     1) Se inicializan las señales (data_inX, btn_subX, btn_rstX).
+     2) Se aplica un pulso de reset (btn_rstX = 0) para cargar data_inX en data_outX.
+     3) Se generan pulsos en btn_subX (bajándolo a 0) para verificar la operación de resta.
+     4) Finalmente, se reacondiciona btn_rstX a 0 para regresar a data_inX y comprobar 
+        que el reset funciona nuevamente.
+
+   Notas:
+     - Cada bloque inicial atiende la instancia específica (2, 4 o 6 bits).
+     - Se usan retardos (#) para escalonar los eventos y no solaparlos entre instancias.
+     - No se incluye una señal de reloj, ya que el diseño es asíncrono 
+       (btn_rst y btn_sub activos en bajo).
+     - Se pueden observar comportamientos de underflow si data_outX llega a 0 
+       y se sigue restando, debido a la representación binaria.
+
+*/
 module Restador_tb();
 
     // -------------------------
