@@ -1,3 +1,13 @@
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+
 /* Module: Restador_tb
    Descripción:
      Testbench que valida el comportamiento del módulo Restador en sus variantes 
