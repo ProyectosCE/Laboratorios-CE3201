@@ -1,6 +1,6 @@
 Flow report for RippleCarryAdder4b
-Fri Mar  7 05:12:42 2025
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Tue Mar 11 23:41:40 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,8 +41,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Fri Mar  7 05:12:42 2025          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Flow Status                     ; Successful - Tue Mar 11 23:41:40 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; RippleCarryAdder4b                             ;
 ; Top-level Entity Name           ; RippleCarryAdder4b                             ;
 ; Family                          ; Cyclone V                                      ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/07/2025 05:11:46 ;
+; Start date & time ; 03/11/2025 23:40:07 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RippleCarryAdder4b  ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 27214217066600.174134590636812         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 53671021772497.174175800707136         ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; RippleCarryAdder4b_tb             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -87,7 +87,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; RippleCarryAdder4b_tb                  ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation                    ;
-; EDA_SIMULATION_TOOL                  ; ModelSim (VHDL)                        ; <None>        ; --          ; --                                ;
+; EDA_SIMULATION_TOOL                  ; QuestaSim (VHDL)                       ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; RippleCarryAdder4b_tb.vhd              ; --            ; --          ; RippleCarryAdder4b_tb             ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; RippleCarryAdder4b_tb                  ; --            ; --          ; RippleCarryAdder4b_tb             ;
@@ -109,12 +109,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 4943 MB             ; 00:00:15                           ;
-; Fitter               ; 00:00:36     ; 1.0                     ; 7356 MB             ; 00:02:13                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 5235 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:04     ; 1.1                     ; 5386 MB             ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4741 MB             ; 00:00:01                           ;
-; Total                ; 00:00:52     ; --                      ; --                  ; 00:02:39                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4873 MB             ; 00:00:31                           ;
+; Fitter               ; 00:00:52     ; 1.0                     ; 6881 MB             ; 00:02:02                           ;
+; Assembler            ; 00:00:15     ; 1.0                     ; 4869 MB             ; 00:00:09                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5154 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4717 MB             ; 00:00:01                           ;
+; Total                ; 00:01:28     ; --                      ; --                  ; 00:02:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -123,11 +123,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Graxyo           ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Graxyo           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Graxyo           ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Graxyo           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; Graxyo           ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

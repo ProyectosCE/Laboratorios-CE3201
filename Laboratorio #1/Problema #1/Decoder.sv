@@ -98,7 +98,22 @@ module BCD_Print_Segment (
 endmodule
 
 /* Module: BCD_Decoder
-   
+   Convierte una entrada binaria de 4 bits en su representación en un display doble de 7 segmentos.
+   Para lograr esto, primero convierte la entrada binaria a su equivalente en BCD y luego genera
+   la señal de salida correspondiente a los segmentos del display.
+
+   Params:
+     - binary_input: Logic input [4 bits] - Número binario de entrada a convertir
+     - segment_output: Logic Output [14 bits] - Representación de salida para un display doble de 7 segmentos
+
+   Restriction: 
+     - La entrada binary_input debe estar en el rango de 0 a 9, ya que solo se soporta un dígito decimal.
+     - La salida segment_output está en formato BIG-ENDIAN, lo que significa que los primeros 7 bits corresponden
+       a las decenas y los últimos 7 bits a las unidades.
+
+   Problems:
+     
+   References:
 */
 module BCD_Decoder(
     input  logic [3:0] binary_input,
@@ -107,13 +122,21 @@ module BCD_Decoder(
     // Señal intermedia para conectar Binario_a_BCD con Decoder
     logic [7:0] bcd_value;
     
-    // Instancia del módulo Binario_a_BCD
+    /* Instancia del módulo Binario_a_BCD
+       Convierte el número binario de entrada a su representación en código BCD.
+       - bin_in: Entrada binaria de 4 bits.
+       - bcd_out: Salida BCD de 8 bits (decenas y unidades).
+    */
     Binario_a_BCD bcd_converter(
         .bin_in (binary_input),
         .bcd_out(bcd_value)
     );
     
-    // Instancia del módulo BCD_Print_Segment
+    /* Instancia del módulo BCD_Print_Segment
+       Convierte el número en BCD en una señal de salida para un display de 7 segmentos.
+       - BCD: Entrada en formato BCD de 8 bits.
+       - double7segment: Salida de 14 bits en formato BIG-ENDIAN para el display doble.
+    */
     BCD_Print_Segment segment_decoder(
         .BCD           (bcd_value),
         .double7segment(segment_output)

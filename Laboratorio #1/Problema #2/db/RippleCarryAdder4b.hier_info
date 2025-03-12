@@ -8,18 +8,18 @@ B[1] => RippleCarryAdder1b:RCA2.B
 B[2] => RippleCarryAdder1b:RCA3.B
 B[3] => RippleCarryAdder1b:RCA4.B
 Cin => RippleCarryAdder1b:RCA1.Cin
-S[0] << RippleCarryAdder1b:RCA1.S
-S[1] << RippleCarryAdder1b:RCA2.S
-S[2] << RippleCarryAdder1b:RCA3.S
-S[3] << RippleCarryAdder1b:RCA4.S
-Cout << RippleCarryAdder1b:RCA4.Cout
-SSD[0] << SevenSegmentDecoder:DECODER.SSD[0]
-SSD[1] << SevenSegmentDecoder:DECODER.SSD[1]
-SSD[2] << SevenSegmentDecoder:DECODER.SSD[2]
-SSD[3] << SevenSegmentDecoder:DECODER.SSD[3]
-SSD[4] << SevenSegmentDecoder:DECODER.SSD[4]
-SSD[5] << SevenSegmentDecoder:DECODER.SSD[5]
-SSD[6] << SevenSegmentDecoder:DECODER.SSD[6]
+S[0] <= RippleCarryAdder1b:RCA1.S
+S[1] <= RippleCarryAdder1b:RCA2.S
+S[2] <= RippleCarryAdder1b:RCA3.S
+S[3] <= RippleCarryAdder1b:RCA4.S
+Cout <= RippleCarryAdder1b:RCA4.Cout
+SSD[0] <= SevenSegmentDecoder:DECODER.SSD[0]
+SSD[1] <= SevenSegmentDecoder:DECODER.SSD[1]
+SSD[2] <= SevenSegmentDecoder:DECODER.SSD[2]
+SSD[3] <= SevenSegmentDecoder:DECODER.SSD[3]
+SSD[4] <= SevenSegmentDecoder:DECODER.SSD[4]
+SSD[5] <= SevenSegmentDecoder:DECODER.SSD[5]
+SSD[6] <= SevenSegmentDecoder:DECODER.SSD[6]
 
 
 |RippleCarryAdder4b|RippleCarryAdder1b:RCA1
