@@ -1,0 +1,5 @@
+module Decoder (input logic [3:0]BCD,
+					 output logic [13:0]double7segment);
+	
+			
+endmodule

@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "seg_out[13]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[12]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[11]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[10]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[9]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[8]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_rst",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[0]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[1]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[2]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[3]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_sub",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_in[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
