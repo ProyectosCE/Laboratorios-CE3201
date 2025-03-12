@@ -4,31 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "data_out[0]",
+					"name" : "seg_out[13]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[1]",
+					"name" : "seg_out[12]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[2]",
+					"name" : "seg_out[11]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[3]",
+					"name" : "seg_out[10]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[4]",
+					"name" : "seg_out[9]",
 					"strict" : false
 				},
 				{
-					"name" : "data_out[5]",
+					"name" : "seg_out[8]",
 					"strict" : false
 				},
 				{
-					"name" : "rst",
+					"name" : "seg_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_rst",
 					"strict" : false
 				},
 				{
@@ -48,7 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "data_in[4]",
+					"name" : "btn_sub",
 					"strict" : false
 				},
 				{
@@ -56,11 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
-					"name" : "btn_sub",
+					"name" : "data_in[4]",
 					"strict" : false
 				}
 			]

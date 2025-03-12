@@ -1,30 +1,100 @@
 |RestadorParametrizableN
-clk => data_out[0]~reg0.CLK
-clk => data_out[1]~reg0.CLK
-clk => data_out[2]~reg0.CLK
-clk => data_out[3]~reg0.CLK
-clk => data_out[4]~reg0.CLK
-clk => data_out[5]~reg0.CLK
-clk => btn_sync_2.CLK
-clk => btn_sync.CLK
-rst => data_out[0]~reg0.ALOAD
-rst => data_out[1]~reg0.ALOAD
-rst => data_out[2]~reg0.ALOAD
-rst => data_out[3]~reg0.ALOAD
-rst => data_out[4]~reg0.ALOAD
-rst => data_out[5]~reg0.ALOAD
+btn_rst => btn_rst.IN1
+btn_sub => btn_sub.IN1
+data_in[0] => data_in[0].IN1
+data_in[1] => data_in[1].IN1
+data_in[2] => data_in[2].IN1
+data_in[3] => data_in[3].IN1
+data_in[4] => data_in[4].IN1
+data_in[5] => data_in[5].IN1
+seg_out[13] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[12] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[11] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[10] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[9] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[8] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[7] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[6] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[5] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[4] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[3] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[2] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[1] <= Decodificador7Segmentos:u_decodificador.seg_out
+seg_out[0] <= Decodificador7Segmentos:u_decodificador.seg_out
+
+
+|RestadorParametrizableN|Restador:u_restador
+btn_sub => data_out[0]~reg0.CLK
+btn_sub => data_out[1]~reg0.CLK
+btn_sub => data_out[2]~reg0.CLK
+btn_sub => data_out[3]~reg0.CLK
+btn_sub => data_out[4]~reg0.CLK
+btn_sub => data_out[5]~reg0.CLK
+btn_rst => data_out[0]~reg0.ALOAD
+btn_rst => data_out[1]~reg0.ALOAD
+btn_rst => data_out[2]~reg0.ALOAD
+btn_rst => data_out[3]~reg0.ALOAD
+btn_rst => data_out[4]~reg0.ALOAD
+btn_rst => data_out[5]~reg0.ALOAD
 data_in[0] => data_out[0]~reg0.ADATA
 data_in[1] => data_out[1]~reg0.ADATA
 data_in[2] => data_out[2]~reg0.ADATA
 data_in[3] => data_out[3]~reg0.ADATA
 data_in[4] => data_out[4]~reg0.ADATA
 data_in[5] => data_out[5]~reg0.ADATA
-btn_sub => btn_sync.DATAIN
-data_out[0] << data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[1] << data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[2] << data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[3] << data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[4] << data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-data_out[5] << data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[0] <= data_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= data_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= data_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= data_out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= data_out[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= data_out[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RestadorParametrizableN|Binario_a_BCD:u_bin2bcd
+bin_in[0] => Div0.IN9
+bin_in[0] => Mod0.IN9
+bin_in[1] => Div0.IN8
+bin_in[1] => Mod0.IN8
+bin_in[2] => Div0.IN7
+bin_in[2] => Mod0.IN7
+bin_in[3] => Div0.IN6
+bin_in[3] => Mod0.IN6
+bin_in[4] => Div0.IN5
+bin_in[4] => Mod0.IN5
+bin_in[5] => Div0.IN4
+bin_in[5] => Mod0.IN4
+bcd_out[0] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[1] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[2] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[3] <= Mod0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[4] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[5] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[6] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[7] <= Div0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RestadorParametrizableN|Decodificador7Segmentos:u_decodificador
+BCD[0] => Decoder0.IN3
+BCD[1] => Decoder0.IN2
+BCD[2] => Decoder0.IN1
+BCD[3] => Decoder0.IN0
+BCD[4] => Decoder1.IN3
+BCD[5] => Decoder1.IN2
+BCD[6] => Decoder1.IN1
+BCD[7] => Decoder1.IN0
+seg_out[13] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[12] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[11] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[10] <= seg_decenas.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[9] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[8] <= seg_decenas.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[7] <= seg_decenas.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= seg_unidades.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[0] <= seg_unidades.DB_MAX_OUTPUT_PORT_TYPE
 
 

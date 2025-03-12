@@ -1,32 +1,24 @@
 module Restador #(
     parameter N = 6  // Ancho de bits
 )(
-    input  logic        clk,      // Reloj
-    input  logic        rst,      // Reset asíncrono
-    input  logic        btn_sub,  // Botón para restar
-    input  logic [N-1:0] data_in, // Valor inicial (switches)
-    output logic [N-1:0] data_out // Valor actual
+    input  logic         btn_sub,  // Botón para restar (activo bajo)
+    input  logic         btn_rst,  // Botón de reset (activo bajo)
+    input  logic [N-1:0] data_in,  // Valor inicial (switches)
+    output logic [N-1:0] data_out  // Valor actual
 );
 
-    // Registro para almacenar el valor y sincronizar el botón
-    // Se usan dos registros para sincronización y detección de flanco
-    logic btn_sync, btn_sync_2, btn_edge;
-    
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
-            data_out   <= data_in;  // Inicializa data_out con data_in
-            btn_sync   <= 1'b0;
-            btn_sync_2 <= 1'b0;
-        end else begin
-            btn_sync   <= btn_sub;
-            btn_sync_2 <= btn_sync;
-            // Detecta el flanco ascendente del botón
-            if (btn_sync & ~btn_sync_2) begin
-                data_out <= data_out - 1;
-            end
+
+    // Bloque secuencial para la resta y el reset
+    always_ff @(negedge btn_sub, negedge btn_rst) begin
+        if (!btn_rst) begin
+            data_out <= data_in; // Reset: cargar el valor de data_in
+        end else if (!btn_sub) begin
+            data_out <= data_out - 1; // Restar en flanco negativo de btn_sub
         end
     end
+
 endmodule
+
 
 
 module Binario_a_BCD(
@@ -42,7 +34,7 @@ endmodule
 
 module Decodificador7Segmentos (
     input  logic [7:0] BCD,         // Entrada BCD: [7:4] decenas, [3:0] unidades
-    output logic [13:0] seg_out     // Salida para dos displays de 7 segmentos
+    output logic [0:13] seg_out     // Salida para dos displays de 7 segmentos
 );
     logic [6:0] seg_unidades, seg_decenas;
 
@@ -75,16 +67,16 @@ module Decodificador7Segmentos (
         endcase
 
         // Concatena decenas y unidades (big-endian)
-        seg_out = {seg_decenas, seg_unidades};
+        seg_out = {seg_unidades,seg_decenas};
     end
 endmodule
 
 module RestadorParametrizableN (
-    input  logic       clk,      // Reloj
-    input  logic       rst,      // Reset asíncrono
+    //input  logic       clk,      // Reloj
+    input  logic       btn_rst,      // Reset asíncrono
     input  logic       btn_sub,  // Botón para restar
     input  logic [5:0] data_in,  // Valor inicial (switches)
-    output logic [13:0] seg_out   // Salida para displays de 7 segmentos
+    output logic [0:13] seg_out   // Salida para displays de 7 segmentos
 );
 
     // Señales internas para interconexión
@@ -93,8 +85,7 @@ module RestadorParametrizableN (
 
     // Instanciación del módulo Restador (lógica principal)
     Restador #(.N(6)) u_restador (
-        .clk(clk),
-        .rst(rst),
+        .btn_rst(btn_rst),
         .btn_sub(btn_sub),
         .data_in(data_in),
         .data_out(data_out)
@@ -113,3 +104,4 @@ module RestadorParametrizableN (
     );
 
 endmodule
+

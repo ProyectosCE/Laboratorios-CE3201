@@ -18,91 +18,77 @@
 # 	vdel -lib rtl_work -all
 # }
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is amv22@ALEXTW.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is amv22@ALEXPB.
 # vlib rtl_work
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Errors: 0, Warnings: 1
 # vmap work rtl_work
 # Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
 # vmap work rtl_work 
-# Copying C:/intelFPGA/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Copying e:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/amv22/Dev/repos/Problema\ #3 {C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv}
+# vlog -sv -work work +incdir+E:/DEV/TEC/CE3201_LAB01/Laboratorio\ #1/Problema\ #3 {E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:35:11 on Mar 11,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/repos/Problema #3" C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv 
-# -- Compiling module Subtractor
-# -- Compiling module ResetHandler
+# Start time: 16:22:18 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3" E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN.sv 
+# -- Compiling module Restador
 # -- Compiling module Binario_a_BCD
-# -- Compiling module BCD_Print_Segment
+# -- Compiling module Decodificador7Segmentos
 # -- Compiling module RestadorParametrizableN
 # 
 # Top level modules:
-# 	Subtractor
-# 	ResetHandler
-# 	Binario_a_BCD
-# 	BCD_Print_Segment
 # 	RestadorParametrizableN
-# End time: 09:35:11 on Mar 11,2025, Elapsed time: 0:00:00
+# End time: 16:22:18 on Mar 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/amv22/Dev/repos/Problema\ #3 {C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv}
+# vlog -sv -work work +incdir+E:/DEV/TEC/CE3201_LAB01/Laboratorio\ #1/Problema\ #3 {E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:35:11 on Mar 11,2025
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/repos/Problema #3" C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv 
-# -- Compiling module RestadorParametrizadoN_tb
+# Start time: 16:22:18 on Mar 11,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3" E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/RestadorParametrizadoN_tb.sv 
+# -- Compiling module Restador_tb
 # 
 # Top level modules:
-# 	RestadorParametrizadoN_tb
-# End time: 09:35:11 on Mar 11,2025, Elapsed time: 0:00:00
+# 	Restador_tb
+# End time: 16:22:18 on Mar 11,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  RestadorParametrizadoN_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" RestadorParametrizadoN_tb 
-# Start time: 09:35:12 on Mar 11,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Restador_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Restador_tb 
+# Start time: 16:22:18 on Mar 11,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
 # Loading sv_std.std
-# Loading work.RestadorParametrizadoN_tb(fast)
-# Loading work.RestadorParametrizableN(fast)
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (6) for port 'clk'. The port definition is at: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv(101).
-#    Time: 0 ps  Iteration: 0  Instance: /RestadorParametrizadoN_tb/modulo File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv Line: 13
-# ** Warning: (vsim-3015) [PCDPC] - Port size (6) does not match connection size (1) for port 'data_in'. The port definition is at: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN.sv(103).
-#    Time: 0 ps  Iteration: 0  Instance: /RestadorParametrizadoN_tb/modulo File: C:/Users/amv22/Dev/repos/Problema #3/RestadorParametrizadoN_tb.sv Line: 13
+# Loading work.Restador_tb(fast)
+# Loading work.Restador(fast)
+# Loading work.Restador(fast__1)
+# Loading work.Restador(fast__2)
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: amv22  Hostname: ALEXTW  ProcessID: 16628
-#           Attempting to use alternate WLF file "./wlft19ewfn".
+#           Attempting to use alternate WLF file "./wlft846ykg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft19ewfn
+#           Using alternate file: ./wlft846ykg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Initial value:  X
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after reset:  0
-# Initial value:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after reset:  0
-# Initial value:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after reset:  0
-# Initial value:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after subtraction:  0
-# Value after reset:  0
+# 2-bit: Valor inicial = 3
+# 2-bit: Después de 1 resta = 2
+# 2-bit: Después de 2 restas = 1
+# 2-bit: Después de reset = 3
+# 4-bit: Valor inicial = 13
+# 4-bit: Después de 1 resta = 12
+# 4-bit: Después de 2 restas = 11
+# 4-bit: Después de reset = 13
+# 6-bit: Valor inicial = 47
+# 6-bit: Después de 1 resta = 46
+# 6-bit: Después de 2 restas = 45
+# 6-bit: Después de reset = 47
 # Break key hit
 # Simulation stop requested.
-# End time: 09:37:43 on Mar 11,2025, Elapsed time: 0:02:31
-# Errors: 0, Warnings: 5
+# End time: 16:26:49 on Mar 11,2025, Elapsed time: 0:04:31
+# Errors: 0, Warnings: 3

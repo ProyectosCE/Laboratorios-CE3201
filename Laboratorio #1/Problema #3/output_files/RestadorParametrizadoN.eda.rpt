@@ -1,5 +1,5 @@
 EDA Netlist Writer report for RestadorParametrizadoN
-Tue Mar 11 09:32:37 2025
+Tue Mar 11 21:32:48 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Mar 11 09:32:37 2025 ;
+; EDA Netlist Writer Status ; Successful - Tue Mar 11 21:32:48 2025 ;
 ; Revision Name             ; RestadorParametrizadoN                ;
 ; Top-level Entity Name     ; RestadorParametrizableN               ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-----------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Simulation Generated Files                                                        ;
-+-----------------------------------------------------------------------------------+
-; Generated Files                                                                   ;
-+-----------------------------------------------------------------------------------+
-; C:/Users/amv22/Dev/repos/Problema #3/simulation/questa/RestadorParametrizadoN.svo ;
-+-----------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                      ;
++-------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                 ;
++-------------------------------------------------------------------------------------------------+
+; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/simulation/questa/RestadorParametrizadoN.svo ;
++-------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Mar 11 09:32:36 2025
+    Info: Processing started: Tue Mar 11 21:32:47 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off RestadorParametrizadoN -c RestadorParametrizadoN
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file RestadorParametrizadoN.svo in folder "C:/Users/amv22/Dev/repos/Problema #3/simulation/questa/" for EDA simulation tool
+Info (204019): Generated file RestadorParametrizadoN.svo in folder "E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #3/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4724 megabytes
-    Info: Processing ended: Tue Mar 11 09:32:37 2025
+    Info: Peak virtual memory: 4719 megabytes
+    Info: Processing ended: Tue Mar 11 21:32:48 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

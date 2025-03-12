@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Decoder
-Mon Mar 10 20:14:21 2025
+Tue Mar 11 16:53:40 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Mar 10 20:14:21 2025 ;
+; EDA Netlist Writer Status ; Successful - Tue Mar 11 16:53:40 2025 ;
 ; Revision Name             ; Decoder                               ;
 ; Top-level Entity Name     ; BCD_Decoder                           ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+-----------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                   ;
-+----------------------------------------------------------------------------------------------+
-; Generated Files                                                                              ;
-+----------------------------------------------------------------------------------------------+
-; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/simulation/questa/Decoder.svo ;
-+----------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Simulation Generated Files                                                       ;
++----------------------------------------------------------------------------------+
+; Generated Files                                                                  ;
++----------------------------------------------------------------------------------+
+; E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/simulation/questa/Decoder.svo ;
++----------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Mar 10 20:14:20 2025
+    Info: Processing started: Tue Mar 11 16:53:39 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Decoder -c Decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Decoder.svo in folder "C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/simulation/questa/" for EDA simulation tool
+Info (204019): Generated file Decoder.svo in folder "E:/DEV/TEC/CE3201_LAB01/Laboratorio #1/Problema #1/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4725 megabytes
-    Info: Processing ended: Mon Mar 10 20:14:21 2025
+    Info: Peak virtual memory: 4723 megabytes
+    Info: Processing ended: Tue Mar 11 16:53:40 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
