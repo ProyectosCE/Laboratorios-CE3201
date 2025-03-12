@@ -1,4 +1,3 @@
-
 /* Module: Restador
      Módulo que decrementa en 1 un valor de N bits al detectar un flanco negativo 
      en el botón btn_sub (activo en bajo). Adicionalmente, permite un reset asíncrono 
@@ -179,8 +178,32 @@ module Decodificador7Segmentos (
     end
 endmodule
 
+
+/* Module: RestadorParametrizableN
+   Descripción:
+     Módulo principal que integra:
+       1) Un Restador parametrizable (N=6) que decrementa el valor de data_in 
+          en cada flanco negativo de btn_sub, con reset asíncrono (btn_rst).
+       2) Un módulo Binario_a_BCD para convertir el resultado (6 bits binario) 
+          a un valor BCD de 8 bits (2 dígitos).
+       3) Un módulo Decodificador7Segmentos que recibe el BCD y genera la 
+          activación correspondiente en seg_out para displays de 7 segmentos.
+
+   Puertos:
+     - btn_rst:   Input logic
+         Reset asíncrono (activo en bajo). Cuando se detecta un flanco negativo, 
+         se recarga el valor inicial en el restador.
+     - btn_sub:   Input logic
+         Botón (activo en bajo) para decrementar data_out en cada flanco negativo.
+     - data_in:   Input logic [5:0]
+         Valor inicial para el restador (proveído típicamente por switches).
+     - seg_out:   Output logic [0:13]
+         Salida que controla los segmentos de dos dígitos de 7 segmentos 
+         (14 líneas, 7 segmentos por dígito). 
+         Los bits [0:6] pueden corresponder al primer dígito, 
+         y [7:13] al segundo, dependiendo de la implementación del decodificador.
+*/
 module RestadorParametrizableN (
-    //input  logic       clk,      // Reloj
     input  logic       btn_rst,      // Reset asíncrono
     input  logic       btn_sub,  // Botón para restar
     input  logic [5:0] data_in,  // Valor inicial (switches)
