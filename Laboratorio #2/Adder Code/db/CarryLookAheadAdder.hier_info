@@ -1,26 +1,45 @@
 |CarryLookAheadAdder
-A[0] => Ci.IN0
-A[0] => Ci.IN0
-A[1] => Ci.IN0
-A[1] => Ci.IN0
-A[2] => Ci.IN0
-A[2] => Ci.IN0
-A[3] => Cout.IN0
-A[3] => S.IN0
-B[0] => Ci.IN1
-B[0] => Ci.IN1
-B[1] => Ci.IN1
-B[1] => Ci.IN1
-B[2] => Ci.IN1
-B[2] => Ci.IN1
-B[3] => Cout.IN1
-B[3] => S.IN1
-Cin => Ci.IN1
-Cin => S.IN1
-S[0] << S.DB_MAX_OUTPUT_PORT_TYPE
-S[1] << S.DB_MAX_OUTPUT_PORT_TYPE
-S[2] << S.DB_MAX_OUTPUT_PORT_TYPE
-S[3] << S.DB_MAX_OUTPUT_PORT_TYPE
-Cout << Cout.DB_MAX_OUTPUT_PORT_TYPE
+i_add1[0] => i_add1[0].IN1
+i_add1[1] => i_add1[1].IN1
+i_add1[2] => i_add1[2].IN1
+i_add1[3] => i_add1[3].IN1
+i_add2[0] => i_add2[0].IN1
+i_add2[1] => i_add2[1].IN1
+i_add2[2] => i_add2[2].IN1
+i_add2[3] => i_add2[3].IN1
+i_carry_in => w_C[0].IN1
+o_result[0] <= Full_Adder:FA0.o_sum
+o_result[1] <= Full_Adder:FA1.o_sum
+o_result[2] <= Full_Adder:FA2.o_sum
+o_result[3] <= Full_Adder:FA3.o_sum
+o_result[4] <= w_C.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|Full_Adder:FA0
+i_bit1 => o_sum.IN0
+i_bit2 => o_sum.IN1
+i_carry => o_sum.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|Full_Adder:FA1
+i_bit1 => o_sum.IN0
+i_bit2 => o_sum.IN1
+i_carry => o_sum.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|Full_Adder:FA2
+i_bit1 => o_sum.IN0
+i_bit2 => o_sum.IN1
+i_carry => o_sum.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CarryLookAheadAdder|Full_Adder:FA3
+i_bit1 => o_sum.IN0
+i_bit2 => o_sum.IN1
+i_carry => o_sum.IN1
+o_sum <= o_sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
