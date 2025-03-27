@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU_N_bits
-Thu Mar 27 13:56:40 2025
+Thu Mar 27 17:34:12 2025
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -17,11 +17,13 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   9. Parameter Settings for User Entity Instance: Top-level Entity: |ALU_N_bits
  10. Parameter Settings for User Entity Instance: ripple_carry_adder_N_bits:alu_sum
  11. Parameter Settings for User Entity Instance: mux10:alu_controller
- 12. Port Connectivity Checks: "ripple_carry_adder_N_bits:alu_sum"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
- 16. Analysis & Synthesis Suppressed Messages
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 13. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 14. Port Connectivity Checks: "ripple_carry_adder_N_bits:alu_sum"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 27 13:56:40 2025          ;
+; Analysis & Synthesis Status     ; Successful - Thu Mar 27 17:34:12 2025          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; ALU_N_bits                                     ;
 ; Top-level Entity Name           ; ALU_N_bits                                     ;
@@ -171,57 +173,71 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
-; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv ;         ;
-; mux10.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv      ;         ;
-; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv        ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv              ;         ;
+; mux10.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv                   ;         ;
+; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                         ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/abs_divider.inc                        ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/aglobal221.inc                         ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                    ;
-+---------------------------------------------+------------------+
-; Resource                                    ; Usage            ;
-+---------------------------------------------+------------------+
-; Estimate of Logic utilization (ALMs needed) ; 22               ;
-;                                             ;                  ;
-; Combinational ALUT usage for logic          ; 27               ;
-;     -- 7 input functions                    ; 3                ;
-;     -- 6 input functions                    ; 13               ;
-;     -- 5 input functions                    ; 5                ;
-;     -- 4 input functions                    ; 3                ;
-;     -- <=3 input functions                  ; 3                ;
-;                                             ;                  ;
-; Dedicated logic registers                   ; 0                ;
-;                                             ;                  ;
-; I/O pins                                    ; 20               ;
-;                                             ;                  ;
-; Total DSP Blocks                            ; 0                ;
-;                                             ;                  ;
-; Maximum fan-out node                        ; control[0]~input ;
-; Maximum fan-out                             ; 14               ;
-; Total fan-out                               ; 172              ;
-; Average fan-out                             ; 2.57             ;
-+---------------------------------------------+------------------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimate of Logic utilization (ALMs needed) ; 48         ;
+;                                             ;            ;
+; Combinational ALUT usage for logic          ; 83         ;
+;     -- 7 input functions                    ; 7          ;
+;     -- 6 input functions                    ; 5          ;
+;     -- 5 input functions                    ; 20         ;
+;     -- 4 input functions                    ; 15         ;
+;     -- <=3 input functions                  ; 36         ;
+;                                             ;            ;
+; Dedicated logic registers                   ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 20         ;
+;                                             ;            ;
+; Total DSP Blocks                            ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; b[3]~input ;
+; Maximum fan-out                             ; 23         ;
+; Total fan-out                               ; 350        ;
+; Average fan-out                             ; 2.85       ;
++---------------------------------------------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                        ; Entity Name               ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+---------------------------+--------------+
-; |ALU_N_bits                            ; 27 (12)             ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |ALU_N_bits                                                                ; ALU_N_bits                ; work         ;
-;    |mux10:alu_controller|              ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|mux10:alu_controller                                           ; mux10                     ; work         ;
-;    |ripple_carry_adder_N_bits:alu_sum| ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum                              ; ripple_carry_adder_N_bits ; work         ;
-;       |full_adder:adder_stage[0].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa ; full_adder                ; work         ;
-;       |full_adder:adder_stage[1].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa ; full_adder                ; work         ;
-;       |full_adder:adder_stage[2].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa ; full_adder                ; work         ;
-;       |full_adder:adder_stage[3].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa ; full_adder                ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------+---------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                      ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name               ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
+; |ALU_N_bits                            ; 83 (13)             ; 0 (0)                     ; 0                 ; 0          ; 20   ; 0            ; |ALU_N_bits                                                                                                 ; ALU_N_bits                ; work         ;
+;    |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0                                                                                 ; lpm_divide                ; work         ;
+;       |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am            ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
+;             |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
+;    |lpm_divide:Mod0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0                                                                                 ; lpm_divide                ; work         ;
+;       |lpm_divide_42m:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m            ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
+;             |alt_u_div_kse:divider|    ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
+;    |mux10:alu_controller|              ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|mux10:alu_controller                                                                            ; mux10                     ; work         ;
+;    |ripple_carry_adder_N_bits:alu_sum| ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum                                                               ; ripple_carry_adder_N_bits ; work         ;
+;       |full_adder:adder_stage[1].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa                                  ; full_adder                ; work         ;
+;       |full_adder:adder_stage[2].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa                                  ; full_adder                ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -270,6 +286,52 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "ripple_carry_adder_N_bits:alu_sum"                                                                                      ;
 +------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
@@ -284,19 +346,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 27                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 24                          ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 3                           ;
-;         5 data inputs ; 5                           ;
-;         6 data inputs ; 13                          ;
+; arriav_lcell_comb     ; 83                          ;
+;     arith             ; 12                          ;
+;         0 data inputs ; 4                           ;
+;         2 data inputs ; 2                           ;
+;         5 data inputs ; 6                           ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 46                          ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 9                           ;
+;         5 data inputs ; 14                          ;
+;         6 data inputs ; 5                           ;
+;     shared            ; 18                          ;
+;         0 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         4 data inputs ; 6                           ;
 ; boundary_port         ; 20                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 4.08                        ;
+; Max LUT depth         ; 11.50                       ;
+; Average LUT depth     ; 8.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -315,7 +385,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Mar 27 13:56:33 2025
+    Info: Processing started: Thu Mar 27 17:34:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -327,27 +397,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux10.s
     Info (12023): Found entity 1: mux10 File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv Line: 18
 Info (12021): Found 2 design units, including 2 entities, in source file sum.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 15
-    Info (12023): Found entity 2: ripple_carry_adder_N_bits File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 22
+    Info (12023): Found entity 2: ripple_carry_adder_N_bits File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file alu_n_bits_tb.sv
     Info (12023): Found entity 1: ALU_N_bits_tb File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv Line: 3
 Info (12127): Elaborating entity "ALU_N_bits" for the top level hierarchy
-Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ripple_carry_adder_N_bits:alu_sum" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 38
-Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 39
-Info (12128): Elaborating entity "mux10" for hierarchy "mux10:alu_controller" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 53
+Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ripple_carry_adder_N_bits:alu_sum" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 30
+Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 37
+Info (12128): Elaborating entity "mux10" for hierarchy "mux10:alu_controller" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 49
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 32
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 34
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 32
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 32
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 34
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 34
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 47 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 103 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 27 logic cells
+    Info (21061): Implemented 83 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4865 megabytes
-    Info: Processing ended: Thu Mar 27 13:56:40 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Thu Mar 27 17:34:12 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+

@@ -1,14 +1,16 @@
 |ALU_N_bits
-a[0] => a[0].IN4
-a[1] => a[1].IN4
-a[2] => a[2].IN4
-a[3] => a[3].IN4
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+a[2] => a[2].IN2
+a[3] => a[3].IN2
 b[0] => b_sum.DATAA
 b[0] => res_and.IN0
 b[0] => res_or.IN0
 b[0] => res_xor.IN0
 b[0] => ShiftRight0.IN8
 b[0] => ShiftLeft0.IN8
+b[0] => Mod0.IN7
+b[0] => Div0.IN7
 b[0] => b_sum.DATAB
 b[1] => b_sum.DATAA
 b[1] => res_and.IN0
@@ -16,6 +18,8 @@ b[1] => res_or.IN0
 b[1] => res_xor.IN0
 b[1] => ShiftRight0.IN7
 b[1] => ShiftLeft0.IN7
+b[1] => Mod0.IN6
+b[1] => Div0.IN6
 b[1] => b_sum.DATAB
 b[2] => b_sum.DATAA
 b[2] => res_and.IN0
@@ -23,6 +27,8 @@ b[2] => res_or.IN0
 b[2] => res_xor.IN0
 b[2] => ShiftRight0.IN6
 b[2] => ShiftLeft0.IN6
+b[2] => Mod0.IN5
+b[2] => Div0.IN5
 b[2] => b_sum.DATAB
 b[3] => b_sum.DATAA
 b[3] => res_and.IN0
@@ -30,20 +36,22 @@ b[3] => res_or.IN0
 b[3] => res_xor.IN0
 b[3] => ShiftRight0.IN5
 b[3] => ShiftLeft0.IN5
+b[3] => Mod0.IN4
+b[3] => Div0.IN4
 b[3] => v.IN1
 b[3] => b_sum.DATAB
 control[0] => control[0].IN2
 control[1] => control[1].IN1
 control[2] => control[2].IN1
 control[3] => control[3].IN1
-result[0] << mux10:alu_controller.y
-result[1] << mux10:alu_controller.y
-result[2] << mux10:alu_controller.y
-result[3] << mux10:alu_controller.y
-v << v.DB_MAX_OUTPUT_PORT_TYPE
-c << c.DB_MAX_OUTPUT_PORT_TYPE
-n << mux10:alu_controller.y
-z << WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] <= mux10:alu_controller.y
+result[1] <= mux10:alu_controller.y
+result[2] <= mux10:alu_controller.y
+result[3] <= mux10:alu_controller.y
+v <= v.DB_MAX_OUTPUT_PORT_TYPE
+c <= c.DB_MAX_OUTPUT_PORT_TYPE
+n <= mux10:alu_controller.y
+z <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum
