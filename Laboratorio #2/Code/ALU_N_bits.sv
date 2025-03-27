@@ -44,7 +44,7 @@ module ALU_N_bits
 										  .s(control),
 										  .y(result)); 
 	
-	/* Flags */
+	/* FLAGS */
 	assign z = &(~result);
 	assign n = result[N-1];
 	assign c = ~control[1] & sum_carry;

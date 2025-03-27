@@ -1,0 +1,117 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/simulation/modelsim
+vALU_N_bits
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1743072871
+!i10b 1
+!s100 LhKWPKl74<A[TT4QTDVl^2
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<?OL`24C^CVWSDEGG:FL83
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1743071548
+8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+!i122 0
+L0 1 53
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1743072871.000000
+!s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code}
+Z9 tCvgOpt 0
+n@a@l@u_@n_bits
+vALU_N_bits_tb
+R1
+R2
+!i10b 1
+!s100 UFe;`oJQgNcG[]W2Me;QH2
+R3
+InHNX98k2:eSA[26>m[WTi0
+R4
+S1
+R0
+w1743072836
+8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
+FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
+!i122 3
+L0 3 22
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
+!i113 1
+R7
+R8
+R9
+n@a@l@u_@n_bits_tb
+vmux10
+R1
+R2
+!i10b 1
+!s100 HBOYXVQQ5cJA9Tf;N=JhP2
+R3
+I<?O^@PSczD>TSSQk029HM1
+R4
+S1
+R0
+w1743059970
+8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
+FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
+!i122 1
+L0 18 8
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
+!i113 1
+R7
+R8
+R9
+vsum
+R1
+R2
+!i10b 1
+!s100 d<78cJ;i;k<P7m5hh78lV2
+R3
+I28Cgmn3RCE^A@0[<JS5][2
+R4
+S1
+R0
+w1743057953
+8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+!i122 2
+L0 3 9
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+!i113 1
+R7
+R8
+R9
