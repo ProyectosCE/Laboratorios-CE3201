@@ -17,8 +17,10 @@ module ALU_N_bits_tb ();
 	
 	// test
 	initial begin
-		select=4'b0100; a=8'b00010001; b=8'b10001000;
+		a=8'b00010001; b=8'b10001000; select=4'b0100; // OR, expects result=8'b10011001
 		#10;
+		a=8'b01010011; b=8'b01001001; select=4'b0000; // SUB, expects result=8'b10011100 v=1 n=1
+		#10; 
 	end
 
 endmodule

@@ -36,14 +36,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "a[0]",
-					"strict" : false
-				},
-				{
-					"name" : "control[3]",
-					"strict" : false
-				},
-				{
 					"name" : "b[1]",
 					"strict" : false
 				},
@@ -53,6 +45,10 @@
 				},
 				{
 					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
 					"strict" : false
 				},
 				{
@@ -81,6 +77,10 @@
 				},
 				{
 					"name" : "control[2]",
+					"strict" : false
+				},
+				{
+					"name" : "control[3]",
 					"strict" : false
 				}
 			]

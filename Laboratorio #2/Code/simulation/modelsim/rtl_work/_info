@@ -11,58 +11,84 @@ cModel Technology
 Z0 dC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/simulation/modelsim
 vALU_N_bits
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1743072871
+Z2 !s110 1743106175
 !i10b 1
-!s100 LhKWPKl74<A[TT4QTDVl^2
+!s100 8lAmnOPNC;VoVTQ0TOoAM2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I<?OL`24C^CVWSDEGG:FL83
+IH25DcgR6DjkEz_^^D`za@3
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1743071548
+w1743104892
 8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
 FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
 !i122 0
-L0 1 53
+L0 1 61
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1743072871.000000
+!s108 1743106174.000000
 !s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code}
-Z9 tCvgOpt 0
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code}
+Z8 tCvgOpt 0
 n@a@l@u_@n_bits
 vALU_N_bits_tb
 R1
 R2
 !i10b 1
-!s100 UFe;`oJQgNcG[]W2Me;QH2
+!s100 0T7?FQ?VB@efH1dVZkBUl0
 R3
-InHNX98k2:eSA[26>m[WTi0
+I2@eX_QVXml@Xf3Q2kD9@]3
 R4
 S1
 R0
-w1743072836
+w1743106147
 8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
 FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
 !i122 3
-L0 3 22
+L0 3 24
 R5
 r1
 !s85 0
 31
-R6
+Z9 !s108 1743106175.000000
 !s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
 !i113 1
+R6
 R7
 R8
-R9
 n@a@l@u_@n_bits_tb
+vfull_adder
+R1
+R2
+!i10b 1
+!s100 C>7E?RKeRTJTK>jH]EkL`0
+R3
+I2k18=kgZ317>XQk@H`F`D1
+R4
+S1
+R0
+Z10 w1743105589
+Z11 8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+Z12 FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+!i122 2
+L0 15 5
+R5
+r1
+!s85 0
+31
+R9
+Z13 !s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+!i113 1
+R6
+R7
+R8
 vmux10
 R1
 R2
@@ -82,36 +108,37 @@ R5
 r1
 !s85 0
 31
-R6
+R9
 !s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
 !i113 1
+R6
 R7
 R8
-R9
-vsum
+vripple_carry_adder_N_bits
 R1
 R2
 !i10b 1
-!s100 d<78cJ;i;k<P7m5hh78lV2
+!s100 ID=Sh7_@?lk4Vh2`NC9^B1
 R3
-I28Cgmn3RCE^A@0[<JS5][2
+IbfgTZ9laJgfUJ2Sm0`b4o0
 R4
 S1
 R0
-w1743057953
-8C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
-FC:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+R10
+R11
+R12
 !i122 2
-L0 3 9
+L0 21 21
 R5
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code|C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+R9
+R13
+R14
 !i113 1
+R6
 R7
 R8
-R9
+nripple_carry_adder_@n_bits

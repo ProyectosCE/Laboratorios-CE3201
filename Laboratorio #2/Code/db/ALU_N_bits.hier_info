@@ -36,31 +36,78 @@ control[0] => control[0].IN2
 control[1] => control[1].IN1
 control[2] => control[2].IN1
 control[3] => control[3].IN1
-result[0] <= mux10:alu_controller.y
-result[1] <= mux10:alu_controller.y
-result[2] <= mux10:alu_controller.y
-result[3] <= mux10:alu_controller.y
-v <= v.DB_MAX_OUTPUT_PORT_TYPE
-c <= c.DB_MAX_OUTPUT_PORT_TYPE
-n <= mux10:alu_controller.y
-z <= WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
+result[0] << mux10:alu_controller.y
+result[1] << mux10:alu_controller.y
+result[2] << mux10:alu_controller.y
+result[3] << mux10:alu_controller.y
+v << v.DB_MAX_OUTPUT_PORT_TYPE
+c << c.DB_MAX_OUTPUT_PORT_TYPE
+n << mux10:alu_controller.y
+z << WideAnd0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|ALU_N_bits|sum:alu_sum
-a[0] => _.DATAD
-a[1] => _.DATAD
-a[2] => _.DATAD
-a[3] => _.DATAD
-b[0] => _.DATAC
-b[1] => _.DATAC
-b[2] => _.DATAC
-b[3] => _.DATAC
-cin => _.DATAB
-s[0] <= _.SUM_OUT
-s[1] <= _.SUM_OUT
-s[2] <= _.SUM_OUT
-s[3] <= _.SUM_OUT
-cout <= _.SUM_OUT
+|ALU_N_bits|ripple_carry_adder_N_bits:alu_sum
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => carry[0].IN1
+s[0] <= full_adder:adder_stage[0].fa.s
+s[1] <= full_adder:adder_stage[1].fa.s
+s[2] <= full_adder:adder_stage[2].fa.s
+s[3] <= full_adder:adder_stage[3].fa.s
+cout[0] <= full_adder:adder_stage[3].fa.cout
+cout[1] <= <GND>
+cout[2] <= <GND>
+cout[3] <= <GND>
+
+
+|ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU_N_bits|mux10:alu_controller

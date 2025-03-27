@@ -23,11 +23,19 @@ module ALU_N_bits
 	assign res_lsl = a << b;
 	
 	// Arithmetic
+	/*
 	sum#(.N(N)) alu_sum(.a(a),
 							  .b(b_sum),
 							  .cin(control[0]),
 							  .s(res_sum),
 							  .cout(sum_carry));
+	*/
+
+	ripple_carry_adder_N_bits#(.N(N)) alu_sum(.a(a),
+															.b(b_sum),
+															.cin(control[0]),
+															.s(res_sum),
+															.cout(sum_carry));
 		
 	/* MULTIPLEXER */
 	// Controls which operation goes as the result
