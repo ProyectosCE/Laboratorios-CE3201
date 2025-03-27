@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "03/26/2025 23:19:42"
+// DATE "03/26/2025 23:34:09"
 
 // 
 // Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -35,11 +35,11 @@ module CarryLookAheadAdder (
 	Cin,
 	S,
 	Cout);
-input 	logic [3:0] A ;
-input 	logic [3:0] B ;
-input 	reg Cin ;
-output 	logic [3:0] S ;
-output 	reg Cout ;
+input 	[3:0] A;
+input 	[3:0] B;
+input 	Cin;
+output 	[3:0] S;
+output 	Cout;
 
 // Design Ports Information
 // S[0]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default

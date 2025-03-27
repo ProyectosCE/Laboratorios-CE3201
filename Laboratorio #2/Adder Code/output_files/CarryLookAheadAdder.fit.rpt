@@ -1,5 +1,5 @@
 Fitter report for CarryLookAheadAdder
-Wed Mar 26 23:18:50 2025
+Wed Mar 26 23:33:30 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Mar 26 23:18:49 2025          ;
+; Fitter Status                   ; Successful - Wed Mar 26 23:33:30 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; CarryLookAheadAdder                            ;
 ; Top-level Entity Name           ; CarryLookAheadAdder                            ;
@@ -153,7 +153,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -1199,18 +1199,18 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 0.60 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.62 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:10
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:09
 Info (144001): Generated suppressed messages file C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Adder Code/output_files/CarryLookAheadAdder.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7067 megabytes
-    Info: Processing ended: Wed Mar 26 23:18:51 2025
-    Info: Elapsed time: 00:01:40
-    Info: Total CPU time (on all processors): 00:03:15
+    Info: Peak virtual memory: 7069 megabytes
+    Info: Processing ended: Wed Mar 26 23:33:31 2025
+    Info: Elapsed time: 00:01:27
+    Info: Total CPU time (on all processors): 00:03:22
 
 
 +----------------------------+
