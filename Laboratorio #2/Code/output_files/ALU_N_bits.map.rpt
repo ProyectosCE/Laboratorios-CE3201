@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ALU_N_bits
-Fri Mar 28 03:37:24 2025
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fri Mar 28 07:10:59 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -31,7 +31,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -51,8 +51,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Mar 28 03:37:24 2025          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Fri Mar 28 07:10:59 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; ALU_N_bits                                     ;
 ; Top-level Entity Name           ; ALU_N_bits                                     ;
 ; Family                          ; Cyclone V                                      ;
@@ -163,8 +163,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -174,22 +174,22 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
-; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv              ;         ;
-; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv                     ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                         ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/abs_divider.inc                        ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                    ;         ;
-; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/aglobal221.inc                         ;         ;
-; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf      ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf ;         ;
-; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf       ;         ;
-; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv              ;         ;
+; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; e:/intelfpga/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf                                          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; e:/intelfpga/23.1std/quartus/libraries/megafunctions/abs_divider.inc                                         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; e:/intelfpga/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                                     ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; e:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc                                          ;         ;
+; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/lpm_divide_42m.tdf      ;         ;
+; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf ;         ;
+; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/alt_u_div_kse.tdf       ;         ;
+; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/lpm_divide_1am.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -388,7 +388,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -397,56 +397,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Fri Mar 28 03:37:17 2025
+    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+    Info: Processing started: Fri Mar 28 07:10:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 2 design units, including 2 entities, in source file alu_n_bits.sv
-    Info (12023): Found entity 1: mux10 File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 1
-    Info (12023): Found entity 2: ALU_N_bits File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 10
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 4 design units, including 4 entities, in source file alu_n_bits.sv
+    Info (12023): Found entity 1: mux10 File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 1
+    Info (12023): Found entity 2: ALU_N_bits File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 10
+    Info (12023): Found entity 3: ALU_TOP_BTN File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 69
+    Info (12023): Found entity 4: Print_Single_Hex File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 123
 Info (12021): Found 0 design units, including 0 entities, in source file mux10.sv
 Info (12021): Found 2 design units, including 2 entities, in source file sum.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 15
-    Info (12023): Found entity 2: ripple_carry_adder_N_bits File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 21
+    Info (12023): Found entity 1: full_adder File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv Line: 15
+    Info (12023): Found entity 2: ripple_carry_adder_N_bits File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file alu_n_bits_tb.sv
-    Info (12023): Found entity 1: ALU_N_bits_tb File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv Line: 3
+    Info (12023): Found entity 1: ALU_N_bits_tb File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits_tb.sv Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead_adder.sv
-    Info (12023): Found entity 1: carry_lookahead_adder File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv Line: 1
+    Info (12023): Found entity 1: carry_lookahead_adder File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/carry_lookahead_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_cla.sv
-    Info (12023): Found entity 1: multiplier_cla File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv Line: 1
+    Info (12023): Found entity 1: multiplier_cla File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_cla_tb.sv
-    Info (12023): Found entity 1: multiplier_cla_tb File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv Line: 1
+    Info (12023): Found entity 1: multiplier_cla_tb File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv Line: 1
 Info (12127): Elaborating entity "ALU_N_bits" for the top level hierarchy
-Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ripple_carry_adder_N_bits:alu_sum" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 43
-Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 37
-Info (12128): Elaborating entity "mux10" for hierarchy "mux10:alu_controller" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 58
+Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ripple_carry_adder_N_bits:alu_sum" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 43
+Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv Line: 37
+Info (12128): Elaborating entity "mux10" for hierarchy "mux10:alu_controller" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 58
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 35
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
-    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/lpm_divide_42m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
-    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
+    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/alt_u_div_kse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv Line: 37
     Info (12134): Parameter "LPM_WIDTHN" = "4"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
-    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/db/lpm_divide_1am.tdf Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
@@ -455,15 +457,15 @@ Info (21057): Implemented 97 device resources after synthesis - the final resour
     Info (21061): Implemented 76 logic cells
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Fri Mar 28 03:37:24 2025
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Fri Mar 28 07:10:59 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg.
+The suppressed messages can be found in C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg.
 
 

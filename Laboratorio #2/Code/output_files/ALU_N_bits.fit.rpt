@@ -1,6 +1,6 @@
 Fitter report for ALU_N_bits
-Fri Mar 28 03:38:27 2025
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Fri Mar 28 07:12:19 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
 ---------------------
@@ -40,7 +40,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -60,8 +60,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Mar 28 03:38:27 2025          ;
-; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+; Fitter Status                   ; Successful - Fri Mar 28 07:12:19 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; ALU_N_bits                                     ;
 ; Top-level Entity Name           ; ALU_N_bits                                     ;
 ; Family                          ; Cyclone V                                      ;
@@ -147,21 +147,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
-;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.1%      ;
-;     Processor 5            ;   0.1%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processor 7            ;   0.1%      ;
-;     Processors 8-12        ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.2%      ;
+;     Processor 4            ;   0.2%      ;
+;     Processor 5            ;   0.2%      ;
+;     Processor 6            ;   0.2%      ;
+;     Processor 7            ;   0.2%      ;
+;     Processor 8            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -203,7 +203,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.pin.
+The pin-out file can be found in C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/output_files/ALU_N_bits.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -213,12 +213,12 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 45 / 41,910        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 45                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 45 / 41,910        ; < 1 % ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 46 / 41,910        ; < 1 % ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 45                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 46                 ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 41,910         ; 0 %   ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 41,910         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41,910         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -307,7 +307,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.8% / 0.9% / 0.7% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.5% / 0.5% ;       ;
 ; Maximum fan-out                                             ; 27                 ;       ;
 ; Highest non-global fan-out                                  ; 27                 ;       ;
 ; Total fan-out                                               ; 342                ;       ;
@@ -322,12 +322,12 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +-------------------------------------------------------------+----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 45 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 45                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 45 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 46 / 41910 ( < 1 % ) ; 0 / 41910 ( 0 % )              ;
 ;         [a] ALMs used for LUT logic and registers           ; 0                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 45                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 46                   ; 0                              ;
 ;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 41910 ( 0 % )    ; 0 / 41910 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 41910 ( < 1 % )  ; 0 / 41910 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 41910 ( 0 % )    ; 0 / 41910 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
@@ -407,18 +407,18 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; a[0]       ; AF11  ; 3B       ; 18           ; 0            ; 40           ; 12                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; a[1]       ; AG11  ; 3B       ; 18           ; 0            ; 57           ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; a[2]       ; AG10  ; 3B       ; 18           ; 0            ; 74           ; 15                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; a[3]       ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 16                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; b[0]       ; AJ1   ; 3A       ; 14           ; 0            ; 0            ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; b[1]       ; AD12  ; 3A       ; 16           ; 0            ; 17           ; 15                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; b[2]       ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; b[3]       ; AK2   ; 3B       ; 20           ; 0            ; 34           ; 27                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; control[0] ; AE13  ; 3B       ; 22           ; 0            ; 0            ; 16                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; control[1] ; AA13  ; 3B       ; 20           ; 0            ; 0            ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; control[2] ; AG2   ; 3A       ; 16           ; 0            ; 34           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; control[3] ; AH9   ; 3B       ; 18           ; 0            ; 91           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[0]       ; AK4   ; 3B       ; 22           ; 0            ; 51           ; 12                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[1]       ; AF11  ; 3B       ; 18           ; 0            ; 40           ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[2]       ; AA13  ; 3B       ; 20           ; 0            ; 0            ; 15                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[3]       ; AK3   ; 3B       ; 20           ; 0            ; 51           ; 16                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[0]       ; AB13  ; 3B       ; 20           ; 0            ; 17           ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[1]       ; AG11  ; 3B       ; 18           ; 0            ; 57           ; 15                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[2]       ; AK2   ; 3B       ; 20           ; 0            ; 34           ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[3]       ; AE13  ; 3B       ; 22           ; 0            ; 0            ; 27                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[0] ; AG10  ; 3B       ; 18           ; 0            ; 74           ; 16                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[1] ; AJ4   ; 3B       ; 22           ; 0            ; 34           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[2] ; AF13  ; 3B       ; 22           ; 0            ; 17           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[3] ; AG12  ; 3B       ; 26           ; 0            ; 40           ; 4                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -427,14 +427,14 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; c         ; AG5   ; 3A       ; 14           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; n         ; AH5   ; 3A       ; 14           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[0] ; AB13  ; 3B       ; 20           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[1] ; AE14  ; 3B       ; 24           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[2] ; AK3   ; 3B       ; 20           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; result[3] ; AG6   ; 3A       ; 12           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; v         ; AH3   ; 3A       ; 16           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; z         ; AF13  ; 3B       ; 22           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; c         ; AH9   ; 3B       ; 18           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; n         ; AD14  ; 3B       ; 24           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[0] ; AK6   ; 3B       ; 24           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[1] ; AK8   ; 3B       ; 28           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[2] ; AJ7   ; 3B       ; 26           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[3] ; AJ5   ; 3B       ; 24           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; v         ; AC14  ; 3B       ; 28           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; z         ; AE14  ; 3B       ; 24           ; 0            ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -446,8 +446,8 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; B2L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B1L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
 ; B0L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
-; 3A       ; 7 / 32 ( 22 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 13 / 48 ( 27 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 3A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 20 / 48 ( 42 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
@@ -506,7 +506,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AA10     ;            ; 3A             ; VCCPD3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA12     ; 74         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA13     ; 90         ; 3B             ; control[1]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA13     ; 90         ; 3B             ; a[2]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AA14     ; 122        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA15     ; 120        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA16     ; 146        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -536,7 +536,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AB10     ;            ; --             ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; AB11     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB12     ; 72         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB13     ; 88         ; 3B             ; result[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB13     ; 88         ; 3B             ; b[0]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB14     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB15     ; 106        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB16     ;            ; --             ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -567,7 +567,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AC11     ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC12     ; 82         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AC13     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AC14     ; 104        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AC14     ; 104        ; 3B             ; v                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AC15     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AC16     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC17     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -595,9 +595,9 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AD9      ; 55         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD10     ; 56         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD11     ; 54         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AD12     ; 80         ; 3A             ; b[1]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AD12     ; 80         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD13     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AD14     ; 98         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AD14     ; 98         ; 3B             ; n                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AD15     ;            ;                ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD16     ;            ; 3B, 4A         ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD17     ; 160        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -626,8 +626,8 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AE10     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE11     ; 59         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE12     ; 52         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AE13     ; 95         ; 3B             ; control[0]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AE14     ; 96         ; 3B             ; result[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE13     ; 95         ; 3B             ; b[3]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AE14     ; 96         ; 3B             ; z                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AE15     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AE16     ; 139        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AE17     ; 135        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -654,9 +654,9 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AF8      ; 70         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF9      ; 67         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF10     ; 57         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AF11     ; 87         ; 3B             ; a[0]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF11     ; 87         ; 3B             ; a[1]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF12     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AF13     ; 93         ; 3B             ; z                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AF13     ; 93         ; 3B             ; control[2]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AF14     ; 114        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF15     ; 112        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF16     ; 137        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -675,17 +675,17 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AF29     ; 237        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AF30     ; 239        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AG2      ; 83         ; 3A             ; control[2]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG4      ;            ; 3A             ; VCCIO3A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AG5      ; 78         ; 3A             ; c                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG6      ; 73         ; 3A             ; result[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG5      ; 78         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG6      ; 73         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG7      ; 68         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG8      ; 65         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG9      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AG10     ; 86         ; 3B             ; a[2]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG11     ; 85         ; 3B             ; a[1]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AG12     ; 103        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AG10     ; 86         ; 3B             ; control[0]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG11     ; 85         ; 3B             ; b[1]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AG12     ; 103        ; 3B             ; control[3]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AG13     ; 101        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG14     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AG15     ; 127        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -706,13 +706,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AG30     ; 243        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH2      ; 69         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH3      ; 81         ; 3A             ; v                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH3      ; 81         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH4      ; 61         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH5      ; 76         ; 3A             ; n                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH5      ; 76         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH6      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH7      ; 115        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH8      ; 113        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AH9      ; 84         ; 3B             ; control[3]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AH9      ; 84         ; 3B             ; c                               ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AH10     ; 118        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH11     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH12     ; 126        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -734,13 +734,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AH28     ; 214        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH29     ; 218        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH30     ; 241        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; AJ1      ; 79         ; 3A             ; b[0]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ1      ; 79         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ2      ; 77         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AJ4      ; 94         ; 3B             ; b[2]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AJ5      ; 99         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ4      ; 94         ; 3B             ; control[1]                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AJ5      ; 99         ; 3B             ; result[3]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ6      ; 102        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AJ7      ; 100        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AJ7      ; 100        ; 3B             ; result[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AJ8      ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AJ9      ; 110        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ10     ; 116        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -764,13 +764,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AJ28     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AJ29     ; 216        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AJ30     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AK2      ; 91         ; 3B             ; b[3]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK3      ; 89         ; 3B             ; result[2]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; AK4      ; 92         ; 3B             ; a[3]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK2      ; 91         ; 3B             ; b[2]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK3      ; 89         ; 3B             ; a[3]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AK4      ; 92         ; 3B             ; a[0]                            ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AK5      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AK6      ; 97         ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK6      ; 97         ; 3B             ; result[0]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AK7      ; 107        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AK8      ; 105        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AK8      ; 105        ; 3B             ; result[1]                       ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AK9      ; 108        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AK10     ;            ; 3B             ; VCCIO3B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AK11     ; 117        ; 3B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -1419,18 +1419,18 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 ; Compilation Hierarchy Node             ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                         ; Entity Name               ; Library Name ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |ALU_N_bits                            ; 45.0 (8.5)           ; 45.0 (8.5)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 77 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 20   ; 0            ; |ALU_N_bits                                                                                                 ; ALU_N_bits                ; work         ;
+; |ALU_N_bits                            ; 45.0 (9.0)           ; 45.5 (9.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 77 (14)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 1          ; 20   ; 0            ; |ALU_N_bits                                                                                                 ; ALU_N_bits                ; work         ;
 ;    |lpm_divide:Div0|                   ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0                                                                                 ; lpm_divide                ; work         ;
 ;       |lpm_divide_1am:auto_generated|  ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am            ; work         ;
 ;          |sign_div_unsign_7kh:divider| ; 11.0 (0.0)           ; 11.0 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
 ;             |alt_u_div_kse:divider|    ; 11.0 (11.0)          ; 11.0 (11.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (22)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
-;    |lpm_divide:Mod0|                   ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0                                                                                 ; lpm_divide                ; work         ;
-;       |lpm_divide_42m:auto_generated|  ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m            ; work         ;
-;          |sign_div_unsign_7kh:divider| ; 13.5 (0.0)           ; 13.5 (0.0)                       ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
-;             |alt_u_div_kse:divider|    ; 13.5 (13.5)          ; 13.5 (13.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
-;    |mux10:alu_controller|              ; 11.5 (11.5)          ; 11.5 (11.5)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|mux10:alu_controller                                                                            ; mux10                     ; work         ;
-;    |ripple_carry_adder_N_bits:alu_sum| ; 0.5 (0.0)            ; 0.5 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum                                                               ; ripple_carry_adder_N_bits ; work         ;
-;       |full_adder:adder_stage[1].fa|   ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa                                  ; full_adder                ; work         ;
+;    |lpm_divide:Mod0|                   ; 13.0 (0.0)           ; 13.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0                                                                                 ; lpm_divide                ; work         ;
+;       |lpm_divide_42m:auto_generated|  ; 13.0 (0.0)           ; 13.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m            ; work         ;
+;          |sign_div_unsign_7kh:divider| ; 13.0 (0.0)           ; 13.5 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (0)              ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
+;             |alt_u_div_kse:divider|    ; 13.0 (13.0)          ; 13.5 (13.5)                      ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 26 (26)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
+;    |mux10:alu_controller|              ; 11.0 (11.0)          ; 11.0 (11.0)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 13 (13)             ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|mux10:alu_controller                                                                            ; mux10                     ; work         ;
+;    |ripple_carry_adder_N_bits:alu_sum| ; 1.0 (0.0)            ; 1.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 2 (0)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum                                                               ; ripple_carry_adder_N_bits ; work         ;
+;       |full_adder:adder_stage[1].fa|   ; 1.0 (1.0)            ; 1.0 (1.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa                                  ; full_adder                ; work         ;
 ;       |full_adder:adder_stage[2].fa|   ; 0.0 (0.0)            ; 0.0 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ALU_N_bits|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa                                  ; full_adder                ; work         ;
 +----------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1449,17 +1449,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; c          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; n          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; z          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; a[0]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[0]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[0]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[2]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[3]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; a[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; a[2]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[1]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[3]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; b[1]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; control[0] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[1]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; control[0] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; control[1] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; control[2] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; control[2] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; control[3] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1470,18 +1470,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                                                                               ; Pad To Core Index ; Setting ;
 +-----------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; a[0]                                                                                                                              ;                   ;         ;
-;      - Mult0~mac                                                                                                                  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                     ; 1                 ; 0       ;
-;      - mux10:alu_controller|y~30                                                                                                  ; 1                 ; 0       ;
-;      - ShiftRight0~0                                                                                                              ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~0             ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[0]~0                                                                                                ; 1                 ; 0       ;
-;      - ShiftLeft0~0                                                                                                               ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[1]~1                                                                                                ; 1                 ; 0       ;
-;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout                                                        ; 1                 ; 0       ;
-;      - ShiftLeft0~1                                                                                                               ; 1                 ; 0       ;
-;      - ShiftLeft0~3                                                                                                               ; 1                 ; 0       ;
+;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~18                    ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~5                     ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~30                                                                                                  ; 0                 ; 0       ;
+;      - ShiftRight0~0                                                                                                              ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[12]~0             ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[0]~0                                                                                                ; 0                 ; 0       ;
+;      - ShiftLeft0~0                                                                                                               ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                                                                                ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout                                                        ; 0                 ; 0       ;
+;      - ShiftLeft0~1                                                                                                               ; 0                 ; 0       ;
+;      - ShiftLeft0~3                                                                                                               ; 0                 ; 0       ;
 ; b[0]                                                                                                                              ;                   ;         ;
 ;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
 ;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_0_result_int[0]~5  ; 0                 ; 0       ;
@@ -1504,27 +1504,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - ShiftRight0~4                                                                                                              ; 0                 ; 0       ;
 ;      - ShiftLeft0~1                                                                                                               ; 0                 ; 0       ;
 ; b[2]                                                                                                                              ;                   ;         ;
-;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[2]~5  ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[2]~13 ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~10                    ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~13                    ; 0                 ; 0       ;
-;      - ShiftLeft0~3                                                                                                               ; 0                 ; 0       ;
-;      - ShiftRight0~5                                                                                                              ; 0                 ; 0       ;
-;      - ShiftRight0~1                                                                                                              ; 0                 ; 0       ;
-;      - ShiftRight0~2                                                                                                              ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~2              ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[2]~4                                                                                                ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 0                 ; 0       ;
-;      - ShiftLeft0~2                                                                                                               ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~4              ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~6              ; 0                 ; 0       ;
-;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 0                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~0              ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2              ; 0                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 0                 ; 0       ;
-;      - mux10:alu_controller|y~18                                                                                                  ; 0                 ; 0       ;
+;      - Mult0~mac                                                                                                                  ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[2]~5  ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[2]~13 ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~10                    ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~13                    ; 1                 ; 0       ;
+;      - ShiftLeft0~3                                                                                                               ; 1                 ; 0       ;
+;      - ShiftRight0~5                                                                                                              ; 1                 ; 0       ;
+;      - ShiftRight0~1                                                                                                              ; 1                 ; 0       ;
+;      - ShiftRight0~2                                                                                                              ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~2              ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                                                                                ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 1                 ; 0       ;
+;      - ShiftLeft0~2                                                                                                               ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~4              ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~6              ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 1                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|selnose[5]                 ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~0              ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[5]~2              ; 1                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~18                                                                                                  ; 1                 ; 0       ;
 ; b[3]                                                                                                                              ;                   ;         ;
 ;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
 ;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 0                 ; 0       ;
@@ -1554,21 +1554,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 0                 ; 0       ;
 ;      - mux10:alu_controller|y~10                                                                                                  ; 0                 ; 0       ;
 ; a[2]                                                                                                                              ;                   ;         ;
-;      - Mult0~mac                                                                                                                  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~5  ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
-;      - mux10:alu_controller|y~18                                                                                                  ; 1                 ; 0       ;
-;      - ShiftLeft0~3                                                                                                               ; 1                 ; 0       ;
-;      - ShiftRight0~5                                                                                                              ; 1                 ; 0       ;
-;      - ShiftRight0~0                                                                                                              ; 1                 ; 0       ;
-;      - ShiftRight0~3                                                                                                              ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~2              ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[2]~4                                                                                                ; 1                 ; 0       ;
-;      - ShiftLeft0~1                                                                                                               ; 1                 ; 0       ;
-;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 1                 ; 0       ;
+;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~9  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[0]~5  ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~18                                                                                                  ; 0                 ; 0       ;
+;      - ShiftLeft0~3                                                                                                               ; 0                 ; 0       ;
+;      - ShiftRight0~5                                                                                                              ; 0                 ; 0       ;
+;      - ShiftRight0~0                                                                                                              ; 0                 ; 0       ;
+;      - ShiftRight0~3                                                                                                              ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~2              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                                                                                ; 0                 ; 0       ;
+;      - ShiftLeft0~1                                                                                                               ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[4]~3              ; 0                 ; 0       ;
 ; a[1]                                                                                                                              ;                   ;         ;
 ;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
 ;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[0]~13 ; 0                 ; 0       ;
@@ -1602,38 +1602,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|StageOut[0]~1              ; 0                 ; 0       ;
 ;      - ShiftRight0~5                                                                                                              ; 0                 ; 0       ;
 ; b[1]                                                                                                                              ;                   ;         ;
-;      - Mult0~mac                                                                                                                  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~5  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~9  ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 1                 ; 0       ;
-;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 1                 ; 0       ;
-;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                     ; 1                 ; 0       ;
-;      - ShiftLeft0~3                                                                                                               ; 1                 ; 0       ;
-;      - mux10:alu_controller|y~22                                                                                                  ; 1                 ; 0       ;
-;      - ShiftRight0~5                                                                                                              ; 1                 ; 0       ;
-;      - ShiftRight0~0                                                                                                              ; 1                 ; 0       ;
-;      - ShiftRight0~2                                                                                                              ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[1]~1                                                                                                ; 1                 ; 0       ;
-;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout                                                        ; 1                 ; 0       ;
-;      - ShiftLeft0~1                                                                                                               ; 1                 ; 0       ;
-; control[0]                                                                                                                        ;                   ;         ;
-;      - mux10:alu_controller|y[3]~6                                                                                                ; 0                 ; 0       ;
-;      - mux10:alu_controller|y~10                                                                                                  ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[2]~14                                                                                               ; 0                 ; 0       ;
-;      - mux10:alu_controller|y~18                                                                                                  ; 0                 ; 0       ;
+;      - Mult0~mac                                                                                                                  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~5  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_1_result_int[1]~9  ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|add_sub_2_result_int[1]~9  ; 0                 ; 0       ;
+;      - lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~14                    ; 0                 ; 0       ;
+;      - lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider|op_4~9                     ; 0                 ; 0       ;
+;      - ShiftLeft0~3                                                                                                               ; 0                 ; 0       ;
 ;      - mux10:alu_controller|y~22                                                                                                  ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[0]~26                                                                                               ; 0                 ; 0       ;
-;      - mux10:alu_controller|y~30                                                                                                  ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[0]~0                                                                                                ; 0                 ; 0       ;
+;      - ShiftRight0~5                                                                                                              ; 0                 ; 0       ;
+;      - ShiftRight0~0                                                                                                              ; 0                 ; 0       ;
+;      - ShiftRight0~2                                                                                                              ; 0                 ; 0       ;
 ;      - mux10:alu_controller|y[1]~1                                                                                                ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[1]~2                                                                                                ; 0                 ; 0       ;
 ;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout                                                        ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[2]~4                                                                                                ; 0                 ; 0       ;
-;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 0                 ; 0       ;
-;      - mux10:alu_controller|y[3]~5                                                                                                ; 0                 ; 0       ;
-;      - v~0                                                                                                                        ; 0                 ; 0       ;
-;      - c~0                                                                                                                        ; 0                 ; 0       ;
+;      - ShiftLeft0~1                                                                                                               ; 0                 ; 0       ;
+; control[0]                                                                                                                        ;                   ;         ;
+;      - mux10:alu_controller|y[3]~6                                                                                                ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~10                                                                                                  ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~14                                                                                               ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~18                                                                                                  ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~22                                                                                                  ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[0]~26                                                                                               ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~30                                                                                                  ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[0]~0                                                                                                ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                                                                                ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[1]~2                                                                                                ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout                                                        ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                                                                                ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout                                                        ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~5                                                                                                ; 1                 ; 0       ;
+;      - v~0                                                                                                                        ; 1                 ; 0       ;
+;      - c~0                                                                                                                        ; 1                 ; 0       ;
 ; control[1]                                                                                                                        ;                   ;         ;
 ;      - mux10:alu_controller|y~10                                                                                                  ; 0                 ; 0       ;
 ;      - mux10:alu_controller|y~18                                                                                                  ; 0                 ; 0       ;
@@ -1646,10 +1646,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - v~0                                                                                                                        ; 0                 ; 0       ;
 ;      - c~0                                                                                                                        ; 0                 ; 0       ;
 ; control[2]                                                                                                                        ;                   ;         ;
-;      - mux10:alu_controller|y[3]~6                                                                                                ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[2]~14                                                                                               ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[0]~26                                                                                               ; 1                 ; 0       ;
-;      - mux10:alu_controller|y[1]~3                                                                                                ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                                                                                ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[2]~14                                                                                               ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[0]~26                                                                                               ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~3                                                                                                ; 0                 ; 0       ;
 ; control[3]                                                                                                                        ;                   ;         ;
 ;      - mux10:alu_controller|y[3]~6                                                                                                ; 1                 ; 0       ;
 ;      - mux10:alu_controller|y[2]~14                                                                                               ; 1                 ; 0       ;
@@ -1684,14 +1684,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------+-------------------------+
 ; Routing Resource Type                       ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Block interconnects                         ; 123 / 289,320 ( < 1 % ) ;
+; Block interconnects                         ; 117 / 289,320 ( < 1 % ) ;
 ; C12 interconnects                           ; 0 / 13,420 ( 0 % )      ;
 ; C2 interconnects                            ; 18 / 119,108 ( < 1 % )  ;
-; C4 interconnects                            ; 20 / 56,300 ( < 1 % )   ;
+; C4 interconnects                            ; 19 / 56,300 ( < 1 % )   ;
 ; DQS bus muxes                               ; 0 / 25 ( 0 % )          ;
 ; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )          ;
 ; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )          ;
-; Direct links                                ; 10 / 289,320 ( < 1 % )  ;
+; Direct links                                ; 18 / 289,320 ( < 1 % )  ;
 ; Global clocks                               ; 0 / 16 ( 0 % )          ;
 ; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )           ;
 ; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )           ;
@@ -1747,12 +1747,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )           ;
 ; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )          ;
 ; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )          ;
-; Local interconnects                         ; 39 / 84,580 ( < 1 % )   ;
+; Local interconnects                         ; 35 / 84,580 ( < 1 % )   ;
 ; Quadrant clocks                             ; 0 / 66 ( 0 % )          ;
 ; R14 interconnects                           ; 0 / 12,676 ( 0 % )      ;
 ; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % )      ;
-; R3 interconnects                            ; 27 / 130,992 ( < 1 % )  ;
-; R6 interconnects                            ; 54 / 266,960 ( < 1 % )  ;
+; R3 interconnects                            ; 49 / 130,992 ( < 1 % )  ;
+; R6 interconnects                            ; 32 / 266,960 ( < 1 % )  ;
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
@@ -1887,7 +1887,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (119006): Selected device 5CSXFC6D6F31C6 for design "ALU_N_bits"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1900,7 +1900,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:12
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALU_N_bits.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1921,23 +1921,23 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.36 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.49 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
-Info (144001): Generated suppressed messages file C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 7360 megabytes
-    Info: Processing ended: Fri Mar 28 03:38:27 2025
-    Info: Elapsed time: 00:01:02
-    Info: Total CPU time (on all processors): 00:04:15
+    Info: Peak virtual memory: 6829 megabytes
+    Info: Processing ended: Fri Mar 28 07:12:20 2025
+    Info: Elapsed time: 00:01:20
+    Info: Total CPU time (on all processors): 00:03:32
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg.
+The suppressed messages can be found in C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg.
 
 
