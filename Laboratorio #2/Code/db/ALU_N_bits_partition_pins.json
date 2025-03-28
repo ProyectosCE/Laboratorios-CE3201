@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "alu_out_7seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alu_out_7seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[6]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[5]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[4]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[3]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[2]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[1]",
+					"strict" : false
+				},
+				{
+					"name" : "oper_7seg[0]",
+					"strict" : false
+				},
+				{
+					"name" : "v",
+					"strict" : false
+				},
+				{
+					"name" : "c",
+					"strict" : false
+				},
+				{
+					"name" : "n",
+					"strict" : false
+				},
+				{
+					"name" : "z",
+					"strict" : false
+				},
+				{
+					"name" : "result[0]",
+					"strict" : false
+				},
+				{
+					"name" : "result[1]",
+					"strict" : false
+				},
+				{
+					"name" : "result[2]",
+					"strict" : false
+				},
+				{
+					"name" : "result[3]",
+					"strict" : false
+				},
+				{
+					"name" : "a[0]",
+					"strict" : false
+				},
+				{
+					"name" : "b[0]",
+					"strict" : false
+				},
+				{
+					"name" : "a[2]",
+					"strict" : false
+				},
+				{
+					"name" : "a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "a[3]",
+					"strict" : false
+				},
+				{
+					"name" : "b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "b[2]",
+					"strict" : false
+				},
+				{
+					"name" : "b[3]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_sumador",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "btn_restador",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
