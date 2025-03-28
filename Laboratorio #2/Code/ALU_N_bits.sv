@@ -24,8 +24,8 @@ module ALU_N_bits
 	
 	// Arithmetic
 	
-	assign res_div = a / b
-	assign res_mod = a % b
+	assign res_mod = a % b;
+	assign res_div = a / b;
 	
 	/*
 	sum#(.N(N)) alu_sum(.a(a),
@@ -41,9 +41,7 @@ module ALU_N_bits
 															.s(res_sum),
 															.cout(sum_carry));
 	
-	assign res_mod = a % b;
-	
-	assign res_div = a / b;
+
 	
 	/* MULTIPLEXER */
 	// Controls which operation goes as the result
