@@ -1,3 +1,35 @@
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+
+/* Module: ALU_N_bits_tb
+   Descripción:
+     Testbench que verifica el funcionamiento del módulo ALU_N_bits, una unidad aritmética y lógica
+     de 8 bits que realiza operaciones básicas como suma, resta, AND, OR, XOR, desplazamientos,
+     módulo, multiplicación y división. Además, calcula las banderas de condición (V, C, N, Z).
+
+   Procedimiento de prueba:
+     1) Se definen las señales de entrada 'a' y 'b' (8 bits cada una) y la señal de selección 'select' (4 bits).
+     2) Se define la salida 'result' (8 bits) y las banderas de condición 'flags' (4 bits: V, C, N, Z).
+     3) Se instancia el módulo ALU_N_bits con estas señales.
+     4) En el bloque 'initial', se prueban las siguientes operaciones:
+        - Suma, resta, AND, OR, XOR
+        - Desplazamiento lógico a la derecha e izquierda
+        - Módulo, multiplicación y división
+     5) Se imprimen los resultados en consola con $display para validar el comportamiento.
+     6) Se incluyen pruebas para verificar el cálculo correcto de las banderas de condición.
+
+   Notas:
+     - Se utilizan diferentes combinaciones de entrada para cubrir varios casos de prueba.
+     - Se puede agregar la verificación de resultados esperados con aserciones (assert).
+*/
+
 `timescale 1ns/1ps
 
 /* Mux operation order
