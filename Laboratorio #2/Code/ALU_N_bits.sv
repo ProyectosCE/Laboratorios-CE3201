@@ -1,3 +1,18 @@
+/*
+================================== LICENCIA
+==================================================
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+Alexander Montero Vargas,
+Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+================================================================
+==============================
+*/
+
+
+
+
 module ALU_N_bits 
 	#(parameter N=4)
 	 (input logic[N-1:0] a, b,
