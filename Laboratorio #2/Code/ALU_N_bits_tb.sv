@@ -64,45 +64,106 @@ module ALU_N_bits_tb ();
 	// test
 	initial begin
 		// Operation tests
+		// Operation tests
 		a=8'b00001001; b=8'b00101001; select=4'b0000;
 		#10;
 		$display("Addition Test: %d + %d = %d", a, b, result);
+		
+		// Nueva prueba de suma
+		a=8'b00001111; b=8'b00000001; select=4'b0000;
+		#10;
+		$display("Addition Test 2: %d + %d = %d", a, b, result);
+		
 		
 		a=8'b00110001; b=8'b00010001; select=4'b0001;
 		#10;
 		$display("Substraction Test: %d - %d = %d", a, b, result);
 		
+		// Nueva prueba de resta
+		a=8'b00000100; b=8'b00001000; select=4'b0001;
+		#10;
+		$display("Substraction Test 2: %d - %d = %d", a, b, result);
+		
+		
 		a=8'b00110101; b=8'b01010001; select=4'b0010;
 		#10;
 		$display("AND Test: %b & %b = %b", a, b, result);
+		
+		// Nueva prueba AND
+		a=8'b11110000; b=8'b10101010; select=4'b0010;
+		#10;
+		$display("AND Test 2: %b & %b = %b", a, b, result);
+		
 		
 		a=8'b00110101; b=8'b01010001; select=4'b0011;
 		#10;
 		$display("OR Test: %b | %b = %b", a, b, result);
 		
+		// Nueva prueba OR
+		a=8'b00001111; b=8'b11110000; select=4'b0011;
+		#10;
+		$display("OR Test 2: %b | %b = %b", a, b, result);
+		
+		
 		a=8'b00110101; b=8'b01010001; select=4'b0100;
 		#10;
 		$display("XOR Test: %b ^ %b = %b", a, b, result);
+		
+		// Nueva prueba XOR
+		a=8'b11111111; b=8'b10101010; select=4'b0100;
+		#10;
+		$display("XOR Test 2: %b ^ %b = %b", a, b, result);
+		
 		
 		a=8'b00110101; b=8'b00000001; select=4'b0101;
 		#10;
 		$display("Logical Shift Right Test: %b >> %d = %b", a, b, result);
 		
+		// Nueva prueba LSR
+		a=8'b11110000; b=8'b00000010; select=4'b0101;
+		#10;
+		$display("Logical Shift Right Test 2: %b >> %d = %b", a, b, result);
+		
+		
 		a=8'b00110101; b=8'b00000010; select=4'b0110;
 		#10;
 		$display("Logical Shift Left Test: %b << %d = %b", a, b, result);
+		
+		// Nueva prueba LSL
+		a=8'b00001111; b=8'b00000011; select=4'b0110;
+		#10;
+		$display("Logical Shift Left Test 2: %b << %d = %b", a, b, result);
+		
 		
 		a=8'b00011001; b=8'b00000111; select=4'b0111;
 		#10;
 		$display("Modulus Test: %d %% %d = %d", a, b, result);
 		
+		// Nueva prueba MOD
+		a=8'b00010100; b=8'b00000101; select=4'b0111;
+		#10;
+		$display("Modulus Test 2: %d %% %d = %d", a, b, result);
+		
+		
 		a=8'b00000011; b=8'b00100000; select=4'b1000;
 		#10;
 		$display("Multiplication Test: %d * %d = %d", a, b, result);
 		
+		// Nueva prueba MUL
+		a=8'b00000101; b=8'b00000110; select=4'b1000;
+		#10;
+		$display("Multiplication Test 2: %d * %d = %d", a, b, result);
+		
+		
 		a=8'b01110001; b=8'b00000111; select=4'b1001;
 		#10;
 		$display("Divition Test: %d / %d = %d", a, b, result);
+		
+		// Nueva prueba DIV
+		a=8'b00010100; b=8'b00000101; select=4'b1001;
+		#10;
+		$display("Divition Test 2: %d / %d = %d", a, b, result);
+		
 		
 		// Flags test
 		a=8'b11111111; b=8'b00000000; select=4'b0010;
