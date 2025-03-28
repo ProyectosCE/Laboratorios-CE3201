@@ -1,17 +1,45 @@
-/*
-================================== LICENCIA
-==================================================
+/* 
+================================== LICENCIA ================================================== 
 MIT License
 Copyright (c) 2025 José Bernardo Barquero Bonilla,
-Alexander Montero Vargas,
-Alvaro Vargas Molina
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
 Consulta el archivo LICENSE para más detalles.
-================================================================
-==============================
+==============================================================================================
 */
 
-
-
+/* 
+Module: ALU_N_bits
+Implementa una Unidad Aritmética Lógica (ALU) parametrizable en el número de bits.
+Params:
+- N: Entero - Número de bits de las entradas y salidas.
+Inputs:
+- a: Logic input [N bits] - Primer operando.
+- b: Logic input [N bits] - Segundo operando.
+- control: Logic input [4 bits] - Código de operación.
+Outputs:
+- result: Logic output [N bits] - Resultado de la operación.
+- v: Logic output - Flag de overflow.
+- c: Logic output - Flag de carry.
+- n: Logic output - Flag de negativo.
+- z: Logic output - Flag de cero.
+Restriction:
+- El parámetro N debe ser estrictamente mayor a 0.
+Example:
+ALU_N_bits #(.N(8)) alu_instance (
+    .a(8'b00011011),
+    .b(8'b00000101),
+    .control(4'b0010),
+    .result(result_output),
+    .v(v_flag),
+    .c(c_flag),
+    .n(n_flag),
+    .z(z_flag)
+);
+References:
+[1] D. Harris y S. Harris, "Digital Design and Computer Architecture", 4th ed., ARM
+edition, Morgan Kaufmann, 2021.
+*/
 
 module ALU_N_bits 
 	#(parameter N=4)
@@ -86,6 +114,44 @@ module ALU_N_bits
 
 endmodule
 
+/* 
+Module: ALU_TOP_BTN
+Controla la ALU mediante botones para seleccionar operaciones y muestra los resultados en displays de 7 segmentos.
+Inputs:
+- a: Logic input [4 bits] - Primer operando.
+- b: Logic input [4 bits] - Segundo operando.
+- clk: Logic input - Reloj para sincronización.
+- btn_sumador: Logic input - Botón para incrementar el código de operación.
+- btn_restador: Logic input - Botón para decrementar el código de operación.
+Outputs:
+- alu_out_7seg: Logic output [7 bits] - Resultado de la ALU en formato de 7 segmentos.
+- oper_7seg: Logic output [7 bits] - Código de operación en formato de 7 segmentos.
+- v: Logic output - Flag de overflow.
+- c: Logic output - Flag de carry.
+- n: Logic output - Flag de negativo.
+- z: Logic output - Flag de cero.
+- result: Logic output [4 bits] - Resultado de la operación.
+Restriction:
+- Los botones deben generar flancos negativos para cambiar el código de operación.
+Example:
+ALU_TOP_BTN alu_top_instance (
+    .a(4'b1010),
+    .b(4'b0101),
+    .clk(clk_signal),
+    .btn_sumador(btn_up),
+    .btn_restador(btn_down),
+    .alu_out_7seg(display_result),
+    .oper_7seg(display_control),
+    .v(v_flag),
+    .c(c_flag),
+    .n(n_flag),
+    .z(z_flag),
+    .result(result_output)
+);
+References:
+[1] D. Harris y S. Harris, "Digital Design and Computer Architecture", 4th ed., ARM
+edition, Morgan Kaufmann, 2021.
+*/
 
 module ALU_TOP_BTN (
     input  logic [3:0] a,
@@ -150,6 +216,25 @@ module ALU_TOP_BTN (
     );
 
 endmodule
+
+/* 
+Module: Print_Single_Hex
+Convierte un valor hexadecimal de 4 bits en su representación en un display de 7 segmentos.
+Inputs:
+- hex: Logic input [4 bits] - Valor hexadecimal a convertir.
+Outputs:
+- segment: Logic output [7 bits] - Representación en 7 segmentos.
+Restriction:
+- El valor de entrada debe estar en el rango de 0 a F (hexadecimal).
+Example:
+Print_Single_Hex hex_to_7seg (
+    .hex(4'b1010),
+    .segment(display_output)
+);
+References:
+[1] D. Harris y S. Harris, "Digital Design and Computer Architecture", 4th ed., ARM
+edition, Morgan Kaufmann, 2021.
+*/
 
 module Print_Single_Hex (
     input  logic [3:0] hex,
