@@ -1,6 +1,11 @@
 Fitter report for ALU_N_bits
+<<<<<<< HEAD
 Thu Mar 27 17:35:12 2025
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+=======
+Thu Mar 27 21:57:12 2025
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+>>>>>>> multiplication
 
 
 ---------------------
@@ -38,7 +43,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -58,8 +63,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
+<<<<<<< HEAD
 ; Fitter Status                   ; Successful - Thu Mar 27 17:35:12 2025          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
+=======
+; Fitter Status                   ; Successful - Thu Mar 27 21:57:12 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+>>>>>>> multiplication
 ; Revision Name                   ; ALU_N_bits                                     ;
 ; Top-level Entity Name           ; ALU_N_bits                                     ;
 ; Family                          ; Cyclone V                                      ;
@@ -200,7 +210,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.pin.
+The pin-out file can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -304,11 +314,19 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; Impedance control blocks                                    ; 0 / 4              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
+<<<<<<< HEAD
 ; Peak interconnect usage (total/H/V)                         ; 0.6% / 0.5% / 0.7% ;       ;
 ; Maximum fan-out                                             ; 23                 ;       ;
 ; Highest non-global fan-out                                  ; 23                 ;       ;
 ; Total fan-out                                               ; 350                ;       ;
 ; Average fan-out                                             ; 2.82               ;       ;
+=======
+; Peak interconnect usage (total/H/V)                         ; 0.3% / 0.2% / 0.5% ;       ;
+; Maximum fan-out                                             ; 14                 ;       ;
+; Highest non-global fan-out                                  ; 14                 ;       ;
+; Total fan-out                                               ; 172                ;       ;
+; Average fan-out                                             ; 2.53               ;       ;
+>>>>>>> multiplication
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -403,6 +421,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
+<<<<<<< HEAD
 ; a[0]       ; AG30  ; 5A       ; 89           ; 16           ; 54           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; a[1]       ; AC28  ; 5B       ; 89           ; 20           ; 77           ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; a[2]       ; W25   ; 5B       ; 89           ; 20           ; 43           ; 15                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
@@ -415,6 +434,20 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; control[1] ; AD26  ; 5A       ; 89           ; 16           ; 3            ; 13                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; control[2] ; AB30  ; 5B       ; 89           ; 21           ; 3            ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 ; control[3] ; AB28  ; 5B       ; 89           ; 21           ; 37           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+=======
+; a[0]       ; W25   ; 5B       ; 89           ; 20           ; 43           ; 8                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[1]       ; AB27  ; 5B       ; 89           ; 23           ; 20           ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[2]       ; AD30  ; 5B       ; 89           ; 25           ; 37           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; a[3]       ; AB28  ; 5B       ; 89           ; 21           ; 37           ; 9                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[0]       ; AC28  ; 5B       ; 89           ; 20           ; 77           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[1]       ; V25   ; 5B       ; 89           ; 20           ; 60           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[2]       ; AC29  ; 5B       ; 89           ; 20           ; 94           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; b[3]       ; AD29  ; 5B       ; 89           ; 23           ; 54           ; 10                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[0] ; AA30  ; 5B       ; 89           ; 21           ; 20           ; 14                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[1] ; AC27  ; 5A       ; 89           ; 16           ; 20           ; 11                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[2] ; AA28  ; 5B       ; 89           ; 21           ; 54           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; control[3] ; AG30  ; 5A       ; 89           ; 16           ; 54           ; 7                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+>>>>>>> multiplication
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -423,6 +456,7 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
+<<<<<<< HEAD
 ; c         ; AA26  ; 5B       ; 89           ; 23           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; n         ; AF29  ; 5A       ; 89           ; 15           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; result[0] ; AE29  ; 5B       ; 89           ; 23           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
@@ -431,6 +465,16 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; result[3] ; AF30  ; 5A       ; 89           ; 15           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; v         ; AA30  ; 5B       ; 89           ; 21           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 ; z         ; AD29  ; 5B       ; 89           ; 23           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+=======
+; c         ; AE29  ; 5B       ; 89           ; 23           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; n         ; V23   ; 5A       ; 89           ; 15           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[0] ; AD26  ; 5A       ; 89           ; 16           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[1] ; AF29  ; 5A       ; 89           ; 15           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[2] ; AH30  ; 5A       ; 89           ; 16           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; result[3] ; W24   ; 5A       ; 89           ; 15           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; v         ; AB30  ; 5B       ; 89           ; 21           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; z         ; AF30  ; 5A       ; 89           ; 15           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+>>>>>>> multiplication
 +-----------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -517,9 +561,15 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AA25     ; 224        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AA26     ; 252        ; 5B             ; c                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AA27     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
+<<<<<<< HEAD
 ; AA28     ; 251        ; 5B             ; result[2]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AA29     ;            ; 5B             ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AA30     ; 250        ; 5B             ; v                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AA28     ; 251        ; 5B             ; control[2]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AA29     ;            ; 5B             ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
+; AA30     ; 250        ; 5B             ; control[0]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AB1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB2      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB3      ; 32         ; B0L            ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -546,8 +596,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AB24     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AB25     ; 230        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AB26     ; 226        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+<<<<<<< HEAD
 ; AB27     ; 254        ; 5B             ; result[1]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AB28     ; 249        ; 5B             ; control[3]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AB27     ; 254        ; 5B             ; a[1]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AB28     ; 249        ; 5B             ; a[3]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AB29     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB30     ; 248        ; 5B             ; control[2]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AC1      ; 35         ; B0L            ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -576,8 +631,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AC24     ;            ; 5A             ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AC25     ; 215        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AC26     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
+<<<<<<< HEAD
 ; AC27     ; 242        ; 5A             ; b[3]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AC28     ; 245        ; 5B             ; a[1]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AC27     ; 242        ; 5A             ; control[1]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AC28     ; 245        ; 5B             ; b[0]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AC29     ; 247        ; 5B             ; b[2]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AC30     ; 259        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -605,11 +665,19 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AD23     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AD24     ; 211        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AD25     ; 213        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+<<<<<<< HEAD
 ; AD26     ; 240        ; 5A             ; control[1]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AD29     ; 255        ; 5B             ; z                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AD30     ; 257        ; 5B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+=======
+; AD26     ; 240        ; 5A             ; result[0]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD27     ; 222        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; AD28     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
+; AD29     ; 255        ; 5B             ; b[3]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AD30     ; 257        ; 5B             ; a[2]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AE1      ; 39         ; B0L            ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE2      ; 38         ; B0L            ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AE3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -638,7 +706,11 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AE26     ; 220        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE27     ; 229        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AE28     ; 231        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+<<<<<<< HEAD
 ; AE29     ; 253        ; 5B             ; result[0]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AE29     ; 253        ; 5B             ; c                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AE30     ;            ; 5B             ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AF1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF2      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -668,8 +740,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AF26     ; 204        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AF27     ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AF28     ; 235        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+<<<<<<< HEAD
 ; AF29     ; 237        ; 5A             ; n                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; AF30     ; 239        ; 5A             ; result[3]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AF29     ; 237        ; 5A             ; result[1]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; AF30     ; 239        ; 5A             ; z                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AG1      ; 71         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG2      ; 83         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AG3      ; 63         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -699,7 +776,11 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AG27     ; 212        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG28     ; 233        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AG29     ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
+<<<<<<< HEAD
 ; AG30     ; 243        ; 5A             ; a[0]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AG30     ; 243        ; 5A             ; control[3]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AH1      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AH2      ; 69         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH3      ; 81         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -729,7 +810,11 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; AH27     ; 201        ; 4A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AH28     ; 214        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; AH29     ; 218        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+<<<<<<< HEAD
 ; AH30     ; 241        ; 5A             ; b[0]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; AH30     ; 241        ; 5A             ; result[2]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; AJ1      ; 79         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ2      ; 77         ; 3A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AJ3      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1290,7 +1375,11 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; V20      ; 292        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; V21      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; V22      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
+<<<<<<< HEAD
 ; V23      ; 236        ; 5A             ; a[3]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; V23      ; 236        ; 5A             ; n                               ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; V24      ;            ; 5A             ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; V25      ; 246        ; 5B             ; b[1]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; V26      ;            ; 6B             ; VCCIO6B_HPS                     ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -1321,8 +1410,13 @@ The pin-out file can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/La
 ; W21      ; 221        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W22      ; 223        ; 5A             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W23      ;            ; 5A             ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
+<<<<<<< HEAD
 ; W24      ; 238        ; 5A             ; control[0]                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; W25      ; 244        ; 5B             ; a[2]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+=======
+; W24      ; 238        ; 5A             ; result[3]                       ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; W25      ; 244        ; 5B             ; a[0]                            ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+>>>>>>> multiplication
 ; W26      ; 274        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W27      ; 261        ; 6B             ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; W28      ;            ;                ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -1445,6 +1539,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; c          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; n          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; z          ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+<<<<<<< HEAD
+=======
+; b[1]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; b[3]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+>>>>>>> multiplication
 ; a[0]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[0]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; b[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1452,7 +1552,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; a[2]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[1]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; a[3]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+<<<<<<< HEAD
 ; b[1]       ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+=======
+; b[0]       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+>>>>>>> multiplication
 ; control[0] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; control[1] ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; control[2] ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
@@ -1460,6 +1564,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
+<<<<<<< HEAD
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Pad To Core Delay Chain Fanout                                                                                                                                  ;
 +-----------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
@@ -1732,6 +1837,220 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Spine clocks                                ; 0 / 360 ( 0 % )         ;
 ; Wire stub REs                               ; 0 / 15,858 ( 0 % )      ;
 +---------------------------------------------+-------------------------+
+=======
++------------------------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                                             ;
++------------------------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                                          ; Pad To Core Index ; Setting ;
++------------------------------------------------------------------------------+-------------------+---------+
+; b[1]                                                                         ;                   ;         ;
+;      - ShiftRight0~0                                                         ; 0                 ; 0       ;
+;      - ShiftRight0~2                                                         ; 0                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 0                 ; 0       ;
+;      - ShiftRight0~3                                                         ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~0                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                           ; 0                 ; 0       ;
+;      - ShiftLeft0~1                                                          ; 0                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout   ; 0                 ; 0       ;
+;      - ShiftRight0~5                                                         ; 0                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 0                 ; 0       ;
+; b[2]                                                                         ;                   ;         ;
+;      - ShiftRight0~0                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~1                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 1                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~3                                              ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                           ; 1                 ; 0       ;
+;      - ShiftRight0~5                                                         ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa|s      ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout   ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~8                                              ; 1                 ; 0       ;
+; b[3]                                                                         ;                   ;         ;
+;      - mux10:alu_controller|y~8                                              ; 1                 ; 0       ;
+;      - ShiftRight0~0                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~1                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 1                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~5                                                         ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa|s      ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 1                 ; 0       ;
+;      - v~0                                                                   ; 1                 ; 0       ;
+;      - c~0                                                                   ; 1                 ; 0       ;
+; a[0]                                                                         ;                   ;         ;
+;      - mux10:alu_controller|y[0]~12                                          ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~16                                             ; 1                 ; 0       ;
+;      - ShiftRight0~2                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa|cout~0 ; 1                 ; 0       ;
+;      - ShiftLeft0~1                                                          ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout   ; 1                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 1                 ; 0       ;
+; a[2]                                                                         ;                   ;         ;
+;      - ShiftRight0~2                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~3                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~1                                                          ; 1                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 1                 ; 0       ;
+;      - mux10:alu_controller|y~3                                              ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~5                                           ; 1                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa|s      ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout   ; 1                 ; 0       ;
+; a[1]                                                                         ;                   ;         ;
+;      - ShiftRight0~2                                                         ; 0                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 0                 ; 0       ;
+;      - ShiftRight0~3                                                         ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~0                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                           ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~2                                           ; 0                 ; 0       ;
+;      - ShiftLeft0~1                                                          ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout   ; 0                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 0                 ; 0       ;
+; a[3]                                                                         ;                   ;         ;
+;      - mux10:alu_controller|y~8                                              ; 1                 ; 0       ;
+;      - ShiftRight0~2                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~3                                                         ; 1                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa|s      ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 1                 ; 0       ;
+;      - v~0                                                                   ; 1                 ; 0       ;
+;      - c~0                                                                   ; 1                 ; 0       ;
+; b[0]                                                                         ;                   ;         ;
+;      - mux10:alu_controller|y~16                                             ; 1                 ; 0       ;
+;      - ShiftRight0~2                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~0                                                          ; 1                 ; 0       ;
+;      - ShiftRight0~3                                                         ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa|cout~0 ; 1                 ; 0       ;
+;      - ShiftLeft0~1                                                          ; 1                 ; 0       ;
+;      - ShiftRight0~4                                                         ; 1                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout   ; 1                 ; 0       ;
+;      - ShiftRight0~5                                                         ; 1                 ; 0       ;
+;      - ShiftLeft0~2                                                          ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[0]~12                                          ; 1                 ; 0       ;
+; control[0]                                                                   ;                   ;         ;
+;      - mux10:alu_controller|y~8                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[0]~12                                          ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~16                                             ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~0                                              ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa|cout~0 ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                           ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~3                                              ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa|cout   ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                           ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[3].fa|s      ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 0                 ; 0       ;
+;      - ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[2].fa|cout   ; 0                 ; 0       ;
+;      - v~0                                                                   ; 0                 ; 0       ;
+;      - c~0                                                                   ; 0                 ; 0       ;
+; control[1]                                                                   ;                   ;         ;
+;      - mux10:alu_controller|y~8                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[0]~12                                          ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~16                                             ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~0                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                           ; 0                 ; 0       ;
+;      - mux10:alu_controller|y~3                                              ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                           ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 0                 ; 0       ;
+;      - mux10:alu_controller|y[3]~7                                           ; 0                 ; 0       ;
+;      - v~0                                                                   ; 0                 ; 0       ;
+;      - c~0                                                                   ; 0                 ; 0       ;
+; control[2]                                                                   ;                   ;         ;
+;      - mux10:alu_controller|y[0]~12                                          ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[1]~2                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~5                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~7                                           ; 1                 ; 0       ;
+; control[3]                                                                   ;                   ;         ;
+;      - mux10:alu_controller|y[0]~12                                          ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[1]~1                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[1]~2                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~4                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[2]~5                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~6                                           ; 1                 ; 0       ;
+;      - mux10:alu_controller|y[3]~7                                           ; 1                 ; 0       ;
++------------------------------------------------------------------------------+-------------------+---------+
+
+
++----------------------------------------------------------------------+
+; Routing Usage Summary                                                ;
++---------------------------------------------+------------------------+
+; Routing Resource Type                       ; Usage                  ;
++---------------------------------------------+------------------------+
+; Block interconnects                         ; 48 / 289,320 ( < 1 % ) ;
+; C12 interconnects                           ; 0 / 13,420 ( 0 % )     ;
+; C2 interconnects                            ; 16 / 119,108 ( < 1 % ) ;
+; C4 interconnects                            ; 10 / 56,300 ( < 1 % )  ;
+; DQS bus muxes                               ; 0 / 25 ( 0 % )         ;
+; DQS-18 I/O buses                            ; 0 / 25 ( 0 % )         ;
+; DQS-9 I/O buses                             ; 0 / 25 ( 0 % )         ;
+; Direct links                                ; 6 / 289,320 ( < 1 % )  ;
+; Global clocks                               ; 0 / 16 ( 0 % )         ;
+; HPS SDRAM PLL inputs                        ; 0 / 1 ( 0 % )          ;
+; HPS SDRAM PLL outputs                       ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_BOOT_FROM_FPGA_INPUTs         ; 0 / 9 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_INPUTs          ; 0 / 7 ( 0 % )          ;
+; HPS_INTERFACE_CLOCKS_RESETS_OUTPUTs         ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_CROSS_TRIGGER_INPUTs          ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_CROSS_TRIGGER_OUTPUTs         ; 0 / 24 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_INPUTs                ; 0 / 37 ( 0 % )         ;
+; HPS_INTERFACE_DBG_APB_OUTPUTs               ; 0 / 55 ( 0 % )         ;
+; HPS_INTERFACE_DMA_INPUTs                    ; 0 / 16 ( 0 % )         ;
+; HPS_INTERFACE_DMA_OUTPUTs                   ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_FPGA2HPS_INPUTs               ; 0 / 287 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2HPS_OUTPUTs              ; 0 / 154 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_INPUTs             ; 0 / 852 ( 0 % )        ;
+; HPS_INTERFACE_FPGA2SDRAM_OUTPUTs            ; 0 / 408 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_INPUTs               ; 0 / 165 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_INPUTs  ; 0 / 67 ( 0 % )         ;
+; HPS_INTERFACE_HPS2FPGA_LIGHT_WEIGHT_OUTPUTs ; 0 / 156 ( 0 % )        ;
+; HPS_INTERFACE_HPS2FPGA_OUTPUTs              ; 0 / 282 ( 0 % )        ;
+; HPS_INTERFACE_INTERRUPTS_INPUTs             ; 0 / 64 ( 0 % )         ;
+; HPS_INTERFACE_INTERRUPTS_OUTPUTs            ; 0 / 42 ( 0 % )         ;
+; HPS_INTERFACE_JTAG_OUTPUTs                  ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_LOAN_IO_INPUTs                ; 0 / 142 ( 0 % )        ;
+; HPS_INTERFACE_LOAN_IO_OUTPUTs               ; 0 / 85 ( 0 % )         ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_INPUTs      ; 0 / 1 ( 0 % )          ;
+; HPS_INTERFACE_MPU_EVENT_STANDBY_OUTPUTs     ; 0 / 5 ( 0 % )          ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_INPUTs    ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_MPU_GENERAL_PURPOSE_OUTPUTs   ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_CAN_INPUTs         ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_CAN_OUTPUTs        ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_INPUTs        ; 0 / 32 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_EMAC_OUTPUTs       ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_I2C_INPUTs         ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_I2C_OUTPUTs        ; 0 / 8 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_NAND_INPUTs        ; 0 / 12 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_NAND_OUTPUTs       ; 0 / 18 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_INPUTs        ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_QSPI_OUTPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_INPUTs       ; 0 / 13 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SDMMC_OUTPUTs      ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_INPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_MASTER_OUTPUTs ; 0 / 14 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_INPUTs   ; 0 / 6 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_SPI_SLAVE_OUTPUTs  ; 0 / 4 ( 0 % )          ;
+; HPS_INTERFACE_PERIPHERAL_UART_INPUTs        ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_UART_OUTPUTs       ; 0 / 10 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_INPUTs         ; 0 / 22 ( 0 % )         ;
+; HPS_INTERFACE_PERIPHERAL_USB_OUTPUTs        ; 0 / 34 ( 0 % )         ;
+; HPS_INTERFACE_STM_EVENT_INPUTs              ; 0 / 28 ( 0 % )         ;
+; HPS_INTERFACE_TEST_INPUTs                   ; 0 / 610 ( 0 % )        ;
+; HPS_INTERFACE_TEST_OUTPUTs                  ; 0 / 513 ( 0 % )        ;
+; HPS_INTERFACE_TPIU_TRACE_INPUTs             ; 0 / 2 ( 0 % )          ;
+; HPS_INTERFACE_TPIU_TRACE_OUTPUTs            ; 0 / 33 ( 0 % )         ;
+; Horizontal periphery clocks                 ; 0 / 72 ( 0 % )         ;
+; Local interconnects                         ; 14 / 84,580 ( < 1 % )  ;
+; Quadrant clocks                             ; 0 / 66 ( 0 % )         ;
+; R14 interconnects                           ; 5 / 12,676 ( < 1 % )   ;
+; R14/C12 interconnect drivers                ; 0 / 20,720 ( 0 % )     ;
+; R3 interconnects                            ; 16 / 130,992 ( < 1 % ) ;
+; R6 interconnects                            ; 12 / 266,960 ( < 1 % ) ;
+; Spine clocks                                ; 0 / 360 ( 0 % )        ;
+; Wire stub REs                               ; 0 / 15,858 ( 0 % )     ;
++---------------------------------------------+------------------------+
+>>>>>>> multiplication
 
 
 +------------------------------------------+
@@ -1876,7 +2195,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALU_N_bits.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1886,10 +2205,14 @@ Info (332154): The derive_clock_uncertainty command did not apply clock uncertai
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
+<<<<<<< HEAD
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:18
+=======
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:14
+>>>>>>> multiplication
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y11 to location X89_Y22
@@ -1903,17 +2226,26 @@ Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
+<<<<<<< HEAD
 Info (144001): Generated suppressed messages file C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 7358 megabytes
     Info: Processing ended: Thu Mar 27 17:35:12 2025
     Info: Elapsed time: 00:00:54
     Info: Total CPU time (on all processors): 00:03:21
+=======
+Info (144001): Generated suppressed messages file C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 7256 megabytes
+    Info: Processing ended: Thu Mar 27 21:57:12 2025
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:03:08
+>>>>>>> multiplication
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg.
+The suppressed messages can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg.
 
 

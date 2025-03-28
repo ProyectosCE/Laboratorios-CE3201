@@ -1,17 +1,17 @@
+<<<<<<< HEAD
 Analysis & Synthesis Status : Successful - Thu Mar 27 17:34:12 2025
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+=======
+Analysis & Elaboration Status : Successful - Thu Mar 27 21:58:09 2025
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+>>>>>>> multiplication
 Revision Name : ALU_N_bits
 Top-level Entity Name : ALU_N_bits
 Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 0
-Total pins : 20
-Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
-Total PLLs : 0
-Total DLLs : 0
+Logic utilization (in ALMs) : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total block memory bits : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge
+Total DLLs : N/A until Partition Merge

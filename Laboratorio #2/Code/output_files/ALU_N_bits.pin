@@ -1,4 +1,4 @@
- -- Copyright (C) 2023  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2024  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
  -- and other software and tools, and any partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -75,7 +75,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 CHIP  "ALU_N_bits"  ASSIGNED TO AN: 5CSXFC6D6F31C6
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -135,9 +135,15 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AA24      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA25      :        :                   :         : 5A        :                
 c                            : AA26      : output : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : AA27      : power  :                   : 2.5V    : 5B        :                
+<<<<<<< HEAD
 result[2]                    : AA28      : output : 2.5 V             :         : 5B        : N              
 VREFB5BN0                    : AA29      : power  :                   :         : 5B        :                
 v                            : AA30      : output : 2.5 V             :         : 5B        : N              
+=======
+control[2]                   : AA28      : input  : 2.5 V             :         : 5B        : N              
+VREFB5BN0                    : AA29      : power  :                   :         : 5B        :                
+control[0]                   : AA30      : input  : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 GXB_NC                       : AB3       :        :                   :         : B0L       :                
@@ -164,8 +170,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AB23      :        :                   :      
 VCCIO5A                      : AB24      : power  :                   : 2.5V    : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB25      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB26      :        :                   :         : 5A        :                
+<<<<<<< HEAD
 result[1]                    : AB27      : output : 2.5 V             :         : 5B        : N              
 control[3]                   : AB28      : input  : 2.5 V             :         : 5B        : N              
+=======
+a[1]                         : AB27      : input  : 2.5 V             :         : 5B        : N              
+a[3]                         : AB28      : input  : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 GND                          : AB29      : gnd    :                   :         :           :                
 control[2]                   : AB30      : input  : 2.5 V             :         : 5B        : N              
 GND                          : AC1       :        :                   :         : B0L       :                
@@ -194,8 +205,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC23      :        :                   :      
 VREFB5AN0                    : AC24      : power  :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC25      :        :                   :         : 5A        :                
 GND                          : AC26      : gnd    :                   :         :           :                
+<<<<<<< HEAD
 b[3]                         : AC27      : input  : 2.5 V             :         : 5A        : N              
 a[1]                         : AC28      : input  : 2.5 V             :         : 5B        : N              
+=======
+control[1]                   : AC27      : input  : 2.5 V             :         : 5A        : N              
+b[0]                         : AC28      : input  : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 b[2]                         : AC29      : input  : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC30      :        :                   :         : 5B        :                
 GND                          : AD1       : gnd    :                   :         :           :                
@@ -223,11 +239,19 @@ VCC_AUX                      : AD22      : power  :                   : 2.5V    
 GND                          : AD23      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD24      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD25      :        :                   :         : 5A        :                
+<<<<<<< HEAD
 control[1]                   : AD26      : input  : 2.5 V             :         : 5A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5A        :                
 VCCIO5A                      : AD28      : power  :                   : 2.5V    : 5A        :                
 z                            : AD29      : output : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD30      :        :                   :         : 5B        :                
+=======
+result[0]                    : AD26      : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD27      :        :                   :         : 5A        :                
+VCCIO5A                      : AD28      : power  :                   : 2.5V    : 5A        :                
+b[3]                         : AD29      : input  : 2.5 V             :         : 5B        : N              
+a[2]                         : AD30      : input  : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 GND                          : AE1       :        :                   :         : B0L       :                
 GND                          : AE2       :        :                   :         : B0L       :                
 GND                          : AE3       : gnd    :                   :         :           :                
@@ -256,7 +280,11 @@ VCCIO4A                      : AE25      : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE26      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE27      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE28      :        :                   :         : 5A        :                
+<<<<<<< HEAD
 result[0]                    : AE29      : output : 2.5 V             :         : 5B        : N              
+=======
+c                            : AE29      : output : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 VCCIO5B                      : AE30      : power  :                   : 2.5V    : 5B        :                
 GND                          : AF1       : gnd    :                   :         :           :                
 GND                          : AF2       : gnd    :                   :         :           :                
@@ -286,8 +314,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF25      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF26      :        :                   :         : 4A        :                
 GND                          : AF27      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF28      :        :                   :         : 5A        :                
+<<<<<<< HEAD
 n                            : AF29      : output : 2.5 V             :         : 5A        : N              
 result[3]                    : AF30      : output : 2.5 V             :         : 5A        : N              
+=======
+result[1]                    : AF29      : output : 2.5 V             :         : 5A        : N              
+z                            : AF30      : output : 2.5 V             :         : 5A        : N              
+>>>>>>> multiplication
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG1       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG2       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG3       :        :                   :         : 3A        :                
@@ -317,7 +350,11 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG26      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG27      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG28      :        :                   :         : 5A        :                
 VCCIO5A                      : AG29      : power  :                   : 2.5V    : 5A        :                
+<<<<<<< HEAD
 a[0]                         : AG30      : input  : 2.5 V             :         : 5A        : N              
+=======
+control[3]                   : AG30      : input  : 2.5 V             :         : 5A        : N              
+>>>>>>> multiplication
 GND                          : AH1       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH2       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH3       :        :                   :         : 3A        :                
@@ -347,7 +384,11 @@ VCCIO4A                      : AH26      : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH28      :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH29      :        :                   :         : 5A        :                
+<<<<<<< HEAD
 b[0]                         : AH30      : input  : 2.5 V             :         : 5A        : N              
+=======
+result[2]                    : AH30      : output : 2.5 V             :         : 5A        : N              
+>>>>>>> multiplication
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ1       :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ2       :        :                   :         : 3A        :                
 GND                          : AJ3       : gnd    :                   :         :           :                
@@ -908,7 +949,11 @@ GND                          : V19       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : V20       :        :                   :         : 6B        :                
 GND                          : V21       : gnd    :                   :         :           :                
 VCCPD5A                      : V22       : power  :                   : 2.5V    : 5A        :                
+<<<<<<< HEAD
 a[3]                         : V23       : input  : 2.5 V             :         : 5A        : N              
+=======
+n                            : V23       : output : 2.5 V             :         : 5A        : N              
+>>>>>>> multiplication
 VCCPD5A                      : V24       : power  :                   : 2.5V    : 5A        :                
 b[1]                         : V25       : input  : 2.5 V             :         : 5B        : N              
 VCCIO6B_HPS                  : V26       : power  :                   : 2.5V    : 6B        :                
@@ -939,8 +984,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : W20       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : W21       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W22       :        :                   :         : 5A        :                
 VCCIO5A                      : W23       : power  :                   : 2.5V    : 5A        :                
+<<<<<<< HEAD
 control[0]                   : W24       : input  : 2.5 V             :         : 5A        : N              
 a[2]                         : W25       : input  : 2.5 V             :         : 5B        : N              
+=======
+result[3]                    : W24       : output : 2.5 V             :         : 5A        : N              
+a[0]                         : W25       : input  : 2.5 V             :         : 5B        : N              
+>>>>>>> multiplication
 RESERVED_INPUT_WITH_WEAK_PULLUP : W26       :        :                   :         : 6B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : W27       :        :                   :         : 6B        :                
 GND                          : W28       : gnd    :                   :         :           :                
