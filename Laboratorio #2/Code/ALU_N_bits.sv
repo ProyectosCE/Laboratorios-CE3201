@@ -1,3 +1,12 @@
+module mux10
+	#(parameter N=4)
+	 (input logic [N-1:0] d0, d1, d2, d3, d4, d5, d6, d7, d8, d9,
+	  input logic [3:0] s,
+	  output logic [N-1:0] y);
+
+	assign y = s[3] ? (s[0] ? d9 : d8) : (s[2] ? (s[1] ? (s[0] ? d7 : d6) : (s[0] ? d5 : d4)) : (s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0)));
+endmodule
+
 module ALU_N_bits 
 	#(parameter N=4)
 	 (input logic[N-1:0] a, b,
@@ -7,7 +16,7 @@ module ALU_N_bits
 	
 	/* WIRING */
 	// These are for the output of operations, they connect to the mux
-	logic[N-1:0] res_sum, res_and, res_or, res_xor, res_lsr, res_lsl, res_div, res_mod, res_mul;
+	logic[N-1:0] res_sum, res_and, res_or, res_xor, res_lsr, res_lsl, res_mod, res_mult, res_div;
 	
 	// These handle the carry out and the negative b for substraction
 	logic sum_carry;
@@ -23,31 +32,19 @@ module ALU_N_bits
 	assign res_lsl = a << b;
 	
 	// Arithmetic
+	assign res_mod = a % b;
+	assign res_mult = a * b;
+	assign res_div = a / b;
 	
-	assign res_div = a / b
-	assign res_mod = a % b
-	
-	/*
-	sum#(.N(N)) alu_sum(.a(a),
-							  .b(b_sum),
-							  .cin(control[0]),
-							  .s(res_sum),
-							  .cout(sum_carry));
-	*/
-
 	ripple_carry_adder_N_bits#(.N(N)) alu_sum(.a(a),
 															.b(b_sum),
 															.cin(control[0]),
 															.s(res_sum),
 															.cout(sum_carry));
 	
-	assign res_mod = a % b;
-	
-	assign res_div = a / b;
-	
 	/* MULTIPLEXER */
 	// Controls which operation goes as the result
-	mux10#(.N(N)) alu_controller(.d0(res_sum), 
+	mux10#(.N(N)) alu_controller(.d0(res_sum),
 										  .d1(res_sum),
 										  .d2(res_and),
 										  .d3(res_or),
@@ -55,10 +52,10 @@ module ALU_N_bits
 										  .d5(res_lsr),
 										  .d6(res_lsl),
 										  .d7(res_mod),
-										  .d8(a), //de momento se debe quedar en a
+										  .d8(res_mult),
 										  .d9(res_div),
 										  .s(control),
-										  .y(result)); 
+										  .y(result));
 	
 	/* FLAGS */
 	assign z = &(~result);

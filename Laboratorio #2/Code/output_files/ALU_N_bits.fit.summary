@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-Fitter Status : Successful - Thu Mar 27 17:35:12 2025
+Fitter Status : Successful - Fri Mar 28 03:38:27 2025
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-=======
-Fitter Status : Successful - Thu Mar 27 21:57:12 2025
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
->>>>>>> multiplication
 Revision Name : ALU_N_bits
 Top-level Entity Name : ALU_N_bits
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 48 / 41,910 ( < 1 % )
+Logic utilization (in ALMs) : 45 / 41,910 ( < 1 % )
 Total registers : 0
 Total pins : 20 / 499 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
-Total DSP Blocks : 0 / 112 ( 0 % )
+Total DSP Blocks : 1 / 112 ( < 1 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
 Total HSSI TX PCSs : 0 / 9 ( 0 % )

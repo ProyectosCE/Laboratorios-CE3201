@@ -46,7 +46,6 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv}
-vlog -sv -work work +incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/mux10.sv}
 vlog -sv -work work +incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/sum.sv}
 
 vlog -sv -work work +incdir+C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv}

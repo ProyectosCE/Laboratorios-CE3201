@@ -15,6 +15,7 @@
 // This is works on conditionals to get a mux10
 // unsure what happens when select line is outside of range
 // should be fixed to handle out of range select, later though
+/*
 module mux10
 	#(parameter N=4)
 	 (input logic [N-1:0] d0, d1, d2, d3, d4, d5, d6, d7, d8, d9,
@@ -23,3 +24,4 @@ module mux10
 
 	assign y = s[3] ? (s[0] ? d9 : d8) : (s[2] ? (s[1] ? (s[0] ? d7 : d6) : (s[0] ? d5 : d4)) : (s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0)));
 endmodule
+*/
