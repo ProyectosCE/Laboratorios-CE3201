@@ -70,8 +70,8 @@ module ALU_TOP_BTN (
     input  logic [3:0] b,
     input  logic btn_sumador,
     input  logic btn_restador,
-    output logic [0:13] alu_out_7seg,
-    output logic [0:13] oper_7seg
+    output logic [6:0] alu_out_7seg,
+    output logic [6:0] oper_7seg
 );
 
     logic [3:0] control = 4'd0;
@@ -101,71 +101,43 @@ module ALU_TOP_BTN (
         end
     end
 
-    // Visualización de resultado y operación actual en 7 segmentos
-    Print_Segment_Hex res_disp (
+    // Visualización de resultado de la ALU en 7 segmentos (hexadecimal)
+    Print_Single_Hex res_disp (
         .hex(result),
-        .double7segment(alu_out_7seg)
+        .segment(alu_out_7seg)
     );
 
-    Print_Segment_Hex ctrl_disp (
+    // Visualización del código de operación en 7 segmentos (hexadecimal)
+    Print_Single_Hex ctrl_disp (
         .hex(control),
-        .double7segment(oper_7seg)
+        .segment(oper_7seg)
     );
 
 endmodule
 
-
-module Print_Segment_Hex (
-    input  logic [7:0] hex,
-    output logic [0:13] double7segment
+module Print_Single_Hex (
+    input  logic [3:0] hex,
+    output logic [6:0] segment
 );
-    logic [6:0] unidades_segment;
-    logic [6:0] decenas_segment;
-
     always_comb begin
-        // Unidades (hexadecimal)
-        case (hex[3:0])
-            4'h0: unidades_segment = 7'b0000001;
-            4'h1: unidades_segment = 7'b1001111;
-            4'h2: unidades_segment = 7'b0010010;
-            4'h3: unidades_segment = 7'b0000110;
-            4'h4: unidades_segment = 7'b1001100;
-            4'h5: unidades_segment = 7'b0100100;
-            4'h6: unidades_segment = 7'b0100000;
-            4'h7: unidades_segment = 7'b0001111;
-            4'h8: unidades_segment = 7'b0000000;
-            4'h9: unidades_segment = 7'b0000100;
-            4'hA: unidades_segment = 7'b0001000;
-            4'hB: unidades_segment = 7'b1100000;
-            4'hC: unidades_segment = 7'b0110001;
-            4'hD: unidades_segment = 7'b1000010;
-            4'hE: unidades_segment = 7'b0110000;
-            4'hF: unidades_segment = 7'b0111000;
-            default: unidades_segment = 7'b1111111;
+        case (hex)
+            4'h0: segment = 7'b0000001;
+            4'h1: segment = 7'b1001111;
+            4'h2: segment = 7'b0010010;
+            4'h3: segment = 7'b0000110;
+            4'h4: segment = 7'b1001100;
+            4'h5: segment = 7'b0100100;
+            4'h6: segment = 7'b0100000;
+            4'h7: segment = 7'b0001111;
+            4'h8: segment = 7'b0000000;
+            4'h9: segment = 7'b0000100;
+            4'hA: segment = 7'b0001000;
+            4'hB: segment = 7'b1100000;
+            4'hC: segment = 7'b0110001;
+            4'hD: segment = 7'b1000010;
+            4'hE: segment = 7'b0110000;
+            4'hF: segment = 7'b0111000;
+            default: segment = 7'b1111111;
         endcase
-
-        // Decenas (hexadecimal)
-        case (hex[7:4])
-            4'h0: decenas_segment = 7'b0000001;
-            4'h1: decenas_segment = 7'b1001111;
-            4'h2: decenas_segment = 7'b0010010;
-            4'h3: decenas_segment = 7'b0000110;
-            4'h4: decenas_segment = 7'b1001100;
-            4'h5: decenas_segment = 7'b0100100;
-            4'h6: decenas_segment = 7'b0100000;
-            4'h7: decenas_segment = 7'b0001111;
-            4'h8: decenas_segment = 7'b0000000;
-            4'h9: decenas_segment = 7'b0000100;
-            4'hA: decenas_segment = 7'b0001000;
-            4'hB: decenas_segment = 7'b1100000;
-            4'hC: decenas_segment = 7'b0110001;
-            4'hD: decenas_segment = 7'b1000010;
-            4'hE: decenas_segment = 7'b0110000;
-            4'hF: decenas_segment = 7'b0111000;
-            default: decenas_segment = 7'b1111111;
-        endcase
-
-        // BIG-ENDIAN
-        double7segment = {unidades_segment, decenas_segment};
     end
 endmodule
