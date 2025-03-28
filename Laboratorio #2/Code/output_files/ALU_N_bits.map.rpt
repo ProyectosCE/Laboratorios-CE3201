@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU_N_bits
-Thu Mar 27 22:59:03 2025
+Fri Mar 28 01:12:08 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,21 +10,8 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst
- 10. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum
- 11. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller
- 12. Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Mod0
- 13. Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Div0
- 14. Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"
- 15. Port Connectivity Checks: "ALU_N_bits:alu_inst"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,27 +35,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Mar 27 22:59:03 2025          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                   ; ALU_N_bits                                     ;
-; Top-level Entity Name           ; ALU_TOP_BTN                                    ;
-; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 4                                              ;
-; Total pins                      ; 28                                             ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
-+---------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                 ;
++-----------------------------+------------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Fri Mar 28 01:12:08 2025              ;
+; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name               ; ALU_N_bits                                     ;
+; Top-level Entity Name       ; ALU_TOP_BTN                                    ;
+; Family                      ; Cyclone V                                      ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -167,236 +149,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv              ;         ;
-; mux10.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv                   ;         ;
-; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv                     ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf           ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc          ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc      ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc           ;         ;
-; db/lpm_divide_42m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf      ;         ;
-; db/sign_div_unsign_7kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf ;         ;
-; db/alt_u_div_kse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf       ;         ;
-; db/lpm_divide_1am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf      ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
-
-
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 63           ;
-;                                             ;              ;
-; Combinational ALUT usage for logic          ; 108          ;
-;     -- 7 input functions                    ; 7            ;
-;     -- 6 input functions                    ; 11           ;
-;     -- 5 input functions                    ; 12           ;
-;     -- 4 input functions                    ; 36           ;
-;     -- <=3 input functions                  ; 42           ;
-;                                             ;              ;
-; Dedicated logic registers                   ; 4            ;
-;                                             ;              ;
-; I/O pins                                    ; 28           ;
-;                                             ;              ;
-; Total DSP Blocks                            ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; control[0]~2 ;
-; Maximum fan-out                             ; 31           ;
-; Total fan-out                               ; 473          ;
-; Average fan-out                             ; 2.82         ;
-+---------------------------------------------+--------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                              ; Entity Name               ; Library Name ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-; |ALU_TOP_BTN                              ; 108 (17)            ; 4 (4)                     ; 0                 ; 0          ; 28   ; 0            ; |ALU_TOP_BTN                                                                                                                     ; ALU_TOP_BTN               ; work         ;
-;    |ALU_N_bits:alu_inst|                  ; 77 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst                                                                                                 ; ALU_N_bits                ; work         ;
-;       |lpm_divide:Div0|                   ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Div0                                                                                 ; lpm_divide                ; work         ;
-;          |lpm_divide_1am:auto_generated|  ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_1am:auto_generated                                                   ; lpm_divide_1am            ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
-;                |alt_u_div_kse:divider|    ; 22 (22)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_1am:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
-;       |lpm_divide:Mod0|                   ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Mod0                                                                                 ; lpm_divide                ; work         ;
-;          |lpm_divide_42m:auto_generated|  ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_42m:auto_generated                                                   ; lpm_divide_42m            ; work         ;
-;             |sign_div_unsign_7kh:divider| ; 26 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider                       ; sign_div_unsign_7kh       ; work         ;
-;                |alt_u_div_kse:divider|    ; 26 (26)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_42m:auto_generated|sign_div_unsign_7kh:divider|alt_u_div_kse:divider ; alt_u_div_kse             ; work         ;
-;       |mux10:alu_controller|              ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|mux10:alu_controller                                                                            ; mux10                     ; work         ;
-;       |ripple_carry_adder_N_bits:alu_sum| ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum                                                               ; ripple_carry_adder_N_bits ; work         ;
-;          |full_adder:adder_stage[1].fa|   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[1].fa                                  ; full_adder                ; work         ;
-;    |Print_Single_Hex:ctrl_disp|           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|Print_Single_Hex:ctrl_disp                                                                                          ; Print_Single_Hex          ; work         ;
-;    |Print_Single_Hex:res_disp|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU_TOP_BTN|Print_Single_Hex:res_disp                                                                                           ; Print_Single_Hex          ; work         ;
-+-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------+---------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Mod0 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                                    ;
-; LPM_WIDTHD             ; 4              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_42m ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------+
-; Parameter Name         ; Value          ; Type                                       ;
-+------------------------+----------------+--------------------------------------------+
-; LPM_WIDTHN             ; 4              ; Untyped                                    ;
-; LPM_WIDTHD             ; 4              ; Untyped                                    ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
-; LPM_PIPELINE           ; 0              ; Untyped                                    ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
-; CBXI_PARAMETER         ; lpm_divide_1am ; Untyped                                    ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
-+------------------------+----------------+--------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; cout ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "cout[3..1]" have no fanouts ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "ALU_N_bits:alu_inst"   ;
-+------+--------+----------+------------------------+
-; Port ; Type   ; Severity ; Details                ;
-+------+--------+----------+------------------------+
-; v    ; Output ; Info     ; Explicitly unconnected ;
-; c    ; Output ; Info     ; Explicitly unconnected ;
-; n    ; Output ; Info     ; Explicitly unconnected ;
-; z    ; Output ; Info     ; Explicitly unconnected ;
-+------+--------+----------+------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 4                           ;
-;     CLR               ; 4                           ;
-; arriav_lcell_comb     ; 111                         ;
-;     arith             ; 12                          ;
-;         0 data inputs ; 4                           ;
-;         2 data inputs ; 2                           ;
-;         5 data inputs ; 6                           ;
-;     extend            ; 7                           ;
-;         7 data inputs ; 7                           ;
-;     normal            ; 74                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 14                          ;
-;         4 data inputs ; 30                          ;
-;         5 data inputs ; 6                           ;
-;         6 data inputs ; 11                          ;
-;     shared            ; 18                          ;
-;         0 data inputs ; 6                           ;
-;         2 data inputs ; 6                           ;
-;         4 data inputs ; 6                           ;
-; boundary_port         ; 28                          ;
-;                       ;                             ;
-; Max LUT depth         ; 12.50                       ;
-; Average LUT depth     ; 7.78                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -405,14 +162,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Thu Mar 27 22:58:55 2025
+    Info: Processing started: Fri Mar 28 01:12:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 3 design units, including 3 entities, in source file alu_n_bits.sv
     Info (12023): Found entity 1: ALU_N_bits File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 1
     Info (12023): Found entity 2: ALU_TOP_BTN File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 70
-    Info (12023): Found entity 3: Print_Single_Hex File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 124
+    Info (12023): Found entity 3: Print_Single_Hex File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 128
 Info (12021): Found 1 design units, including 1 entities, in source file mux10.sv
     Info (12023): Found entity 1: mux10 File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv Line: 18
 Info (12021): Found 2 design units, including 2 entities, in source file sum.sv
@@ -427,64 +184,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file multipl
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_cla_tb.sv
     Info (12023): Found entity 1: multiplier_cla_tb File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv Line: 1
 Info (12127): Elaborating entity "ALU_TOP_BTN" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(101): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 101
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(106): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 106
-Warning (10034): Output port "v" at ALU_N_bits.sv(77) has no driver File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 77
-Warning (10034): Output port "c" at ALU_N_bits.sv(78) has no driver File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 78
-Warning (10034): Output port "n" at ALU_N_bits.sv(79) has no driver File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 79
-Warning (10034): Output port "z" at ALU_N_bits.sv(81) has no driver File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 81
-Info (12128): Elaborating entity "ALU_N_bits" for hierarchy "ALU_N_bits:alu_inst" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 93
-Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 42
-Info (12128): Elaborating entity "full_adder" for hierarchy "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 37
-Info (12128): Elaborating entity "mux10" for hierarchy "ALU_N_bits:alu_inst|mux10:alu_controller" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 59
-Info (12128): Elaborating entity "Print_Single_Hex" for hierarchy "Print_Single_Hex:res_disp" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 114
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU_N_bits:alu_inst|Mod0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU_N_bits:alu_inst|Div0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 28
-Info (12130): Elaborated megafunction instantiation "ALU_N_bits:alu_inst|lpm_divide:Mod0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 27
-Info (12133): Instantiated megafunction "ALU_N_bits:alu_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 27
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_42m.tdf
-    Info (12023): Found entity 1: lpm_divide_42m File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_42m.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_7kh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_7kh File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_7kh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kse.tdf
-    Info (12023): Found entity 1: alt_u_div_kse File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_kse.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "ALU_N_bits:alu_inst|lpm_divide:Div0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 28
-Info (12133): Instantiated megafunction "ALU_N_bits:alu_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 28
-    Info (12134): Parameter "LPM_WIDTHN" = "4"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_1am.tdf
-    Info (12023): Found entity 1: lpm_divide_1am File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_1am.tdf Line: 25
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "control[0]" is converted into an equivalent circuit using register "control[0]~_emulated" and latch "control[0]~1" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 102
-    Warning (13310): Register "control[1]" is converted into an equivalent circuit using register "control[1]~_emulated" and latch "control[1]~5" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 102
-    Warning (13310): Register "control[2]" is converted into an equivalent circuit using register "control[2]~_emulated" and latch "control[2]~9" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 102
-    Warning (13310): Register "control[3]" is converted into an equivalent circuit using register "control[3]~_emulated" and latch "control[3]~13" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 102
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "v" is stuck at GND File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 77
-    Warning (13410): Pin "c" is stuck at GND File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 78
-    Warning (13410): Pin "n" is stuck at GND File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 79
-    Warning (13410): Pin "z" is stuck at GND File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 81
-Info (286030): Timing-Driven Synthesis is running
+Critical Warning (10237): Verilog HDL warning at ALU_N_bits.sv(101): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 101
+Critical Warning (10237): Verilog HDL warning at ALU_N_bits.sv(102): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 102
+Error (10200): Verilog HDL Conditional Statement error at ALU_N_bits.sv(106): cannot match operand(s) in the condition to the corresponding edges in the enclosing event control of the always construct File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 106
+Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(107): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 107
+Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(109): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 109
+Warning (10240): Verilog HDL Always Construct warning at ALU_N_bits.sv(105): inferring latch(es) for variable "control", which holds its previous value in one or more paths through the always construct File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 105
+Info (10041): Inferred latch for "control[0]" at ALU_N_bits.sv(105) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 105
+Info (10041): Inferred latch for "control[1]" at ALU_N_bits.sv(105) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 105
+Info (10041): Inferred latch for "control[2]" at ALU_N_bits.sv(105) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 105
+Info (10041): Inferred latch for "control[3]" at ALU_N_bits.sv(105) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 105
+Error (12153): Can't elaborate top-level user hierarchy
 Info (144001): Generated suppressed messages file C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 136 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 108 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4895 megabytes
-    Info: Processing ended: Thu Mar 27 22:59:03 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 6 warnings
+    Error: Peak virtual memory: 4770 megabytes
+    Error: Processing ended: Fri Mar 28 01:12:08 2025
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

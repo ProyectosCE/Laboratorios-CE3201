@@ -24,8 +24,8 @@ module ALU_N_bits
 	
 	// Arithmetic
 	
-	assign res_mod = a % b;
-	assign res_div = a / b;
+	assign res_mod = (b != 0) ? (a % b) : 0;
+	assign res_div = (b != 0) ? (a /	b) : 0;
 	
 	/*
 	sum#(.N(N)) alu_sum(.a(a),
@@ -53,7 +53,7 @@ module ALU_N_bits
 										  .d5(res_lsr),
 										  .d6(res_lsl),
 										  .d7(res_mod),
-										  .d8(a), //de momento se debe quedar en a
+										  .d8(res_mul), //de momento se debe quedar en a
 										  .d9(res_div),
 										  .s(control),
 										  .y(result)); 
@@ -72,16 +72,17 @@ module ALU_TOP_BTN (
     input  logic [3:0] b,
     input  logic btn_sumador,
     input  logic btn_restador,
-    output logic [6:0] alu_out_7seg,
-    output logic [6:0] oper_7seg,
+    output logic [0:6] alu_out_7seg,
+    output logic [0:6] oper_7seg,
 	 output logic v,
 	 output logic c,
 	 output logic n,
-	 output logic z
+	 output logic z,
+	 output logic [3:0] result
 );
 
-    logic [3:0] control = 4'd0;
-    logic [3:0] result;
+    logic [3:0] control = 4'd2;
+    
 
     // Instancia de la ALU
     ALU_N_bits #(.N(4)) alu_inst (
@@ -93,19 +94,15 @@ module ALU_TOP_BTN (
     );
 
     // Lógica con botones (flancos negativos)
-    always_ff @(negedge btn_sumador or negedge btn_restador) begin
-        if (!btn_sumador) begin
-            if (control == 4'd9)
-                control <= 4'd0;
-            else
-                control <= control + 1;
-        end else if (!btn_restador) begin
-            if (control == 4'd0)
-                control <= 4'd9;
-            else
-                control <= control - 1;
+		
+		always_ff @(negedge btn_sumador, negedge btn_restador) begin
+        if (!btn_restador) begin
+            control <= (control == 4'd0) ? 4'd9 : control - 1;
+        end else if (!btn_sumador) begin
+            control <= (control == 4'd9) ? 4'd0 : control + 1;
         end
     end
+
 
     // Visualización de resultado de la ALU en 7 segmentos (hexadecimal)
     Print_Single_Hex res_disp (
@@ -123,7 +120,7 @@ endmodule
 
 module Print_Single_Hex (
     input  logic [3:0] hex,
-    output logic [6:0] segment
+    output logic [0:6] segment
 );
     always_comb begin
         case (hex)

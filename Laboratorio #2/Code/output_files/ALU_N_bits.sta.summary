@@ -2,132 +2,132 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'btn_sumador'
-Slack : -7.813
-TNS   : -27.994
-
 Type  : Slow 1100mV 85C Model Setup 'btn_restador'
-Slack : -7.207
-TNS   : -25.031
+Slack : -11.783
+TNS   : -43.908
 
-Type  : Slow 1100mV 85C Model Hold 'btn_restador'
-Slack : 0.681
-TNS   : 0.000
+Type  : Slow 1100mV 85C Model Setup 'btn_sumador'
+Slack : -11.084
+TNS   : -44.176
 
 Type  : Slow 1100mV 85C Model Hold 'btn_sumador'
-Slack : 0.868
+Slack : -5.060
+TNS   : -19.596
+
+Type  : Slow 1100mV 85C Model Hold 'btn_restador'
+Slack : -0.063
+TNS   : -0.063
+
+Type  : Slow 1100mV 85C Model Recovery 'btn_sumador'
+Slack : -5.614
+TNS   : -22.452
+
+Type  : Slow 1100mV 85C Model Removal 'btn_sumador'
+Slack : 0.797
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Recovery 'btn_restador'
-Slack : -2.023
-TNS   : -8.088
-
-Type  : Slow 1100mV 85C Model Removal 'btn_restador'
-Slack : 1.240
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_restador'
-Slack : -0.394
-TNS   : -2.142
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_sumador'
-Slack : 0.297
-TNS   : 0.000
+Slack : -0.394
+TNS   : -2.770
 
-Type  : Slow 1100mV 0C Model Setup 'btn_sumador'
-Slack : -7.826
-TNS   : -27.726
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'btn_restador'
+Slack : 0.099
+TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Setup 'btn_restador'
-Slack : -7.083
-TNS   : -24.424
+Slack : -11.634
+TNS   : -43.163
 
-Type  : Slow 1100mV 0C Model Hold 'btn_restador'
-Slack : 0.606
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'btn_sumador'
+Slack : -10.737
+TNS   : -42.845
 
 Type  : Slow 1100mV 0C Model Hold 'btn_sumador'
-Slack : 0.721
+Slack : -4.912
+TNS   : -19.026
+
+Type  : Slow 1100mV 0C Model Hold 'btn_restador'
+Slack : -0.137
+TNS   : -0.137
+
+Type  : Slow 1100mV 0C Model Recovery 'btn_sumador'
+Slack : -5.181
+TNS   : -20.714
+
+Type  : Slow 1100mV 0C Model Removal 'btn_sumador'
+Slack : 0.505
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Recovery 'btn_restador'
-Slack : -1.805
-TNS   : -7.210
-
-Type  : Slow 1100mV 0C Model Removal 'btn_restador'
-Slack : 1.099
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_restador'
-Slack : -0.394
-TNS   : -2.654
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_sumador'
-Slack : 0.286
+Slack : -0.394
+TNS   : -2.242
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'btn_restador'
+Slack : 0.105
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Setup 'btn_sumador'
-Slack : -4.502
-TNS   : -16.192
+Slack : -6.743
+TNS   : -26.783
 
 Type  : Fast 1100mV 85C Model Setup 'btn_restador'
-Slack : -3.757
-TNS   : -13.105
-
-Type  : Fast 1100mV 85C Model Hold 'btn_restador'
-Slack : 0.379
-TNS   : 0.000
+Slack : -6.548
+TNS   : -24.647
 
 Type  : Fast 1100mV 85C Model Hold 'btn_sumador'
-Slack : 0.614
+Slack : -2.963
+TNS   : -11.505
+
+Type  : Fast 1100mV 85C Model Hold 'btn_restador'
+Slack : 0.007
 TNS   : 0.000
 
-Type  : Fast 1100mV 85C Model Recovery 'btn_restador'
-Slack : -1.132
-TNS   : -4.526
+Type  : Fast 1100mV 85C Model Recovery 'btn_sumador'
+Slack : -4.039
+TNS   : -16.154
 
-Type  : Fast 1100mV 85C Model Removal 'btn_restador'
-Slack : 0.807
+Type  : Fast 1100mV 85C Model Removal 'btn_sumador'
+Slack : 0.853
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_restador'
-Slack : -0.051
-TNS   : -0.200
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_sumador'
-Slack : 0.034
-TNS   : 0.000
+Slack : -0.322
+TNS   : -1.483
 
-Type  : Fast 1100mV 0C Model Setup 'btn_sumador'
-Slack : -4.154
-TNS   : -14.901
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'btn_restador'
+Slack : -0.094
+TNS   : -0.412
 
 Type  : Fast 1100mV 0C Model Setup 'btn_restador'
-Slack : -3.307
-TNS   : -11.448
+Slack : -6.217
+TNS   : -23.414
 
-Type  : Fast 1100mV 0C Model Hold 'btn_restador'
-Slack : 0.288
-TNS   : 0.000
+Type  : Fast 1100mV 0C Model Setup 'btn_sumador'
+Slack : -5.758
+TNS   : -22.877
 
 Type  : Fast 1100mV 0C Model Hold 'btn_sumador'
-Slack : 0.499
+Slack : -2.884
+TNS   : -11.239
+
+Type  : Fast 1100mV 0C Model Hold 'btn_restador'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Fast 1100mV 0C Model Recovery 'btn_sumador'
+Slack : -3.198
+TNS   : -12.790
+
+Type  : Fast 1100mV 0C Model Removal 'btn_sumador'
+Slack : 0.424
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Recovery 'btn_restador'
-Slack : -0.859
-TNS   : -3.434
-
-Type  : Fast 1100mV 0C Model Removal 'btn_restador'
-Slack : 0.616
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_restador'
-Slack : -0.076
-TNS   : -0.300
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_sumador'
-Slack : 0.031
-TNS   : 0.000
+Slack : -0.319
+TNS   : -1.448
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'btn_restador'
+Slack : -0.080
+TNS   : -0.366
 
 ------------------------------------------------------------
