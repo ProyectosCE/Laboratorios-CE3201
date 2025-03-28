@@ -75,4 +75,37 @@ set_global_assignment -name EDA_TEST_BENCH_FILE multiplier_cla_tb.sv -section_id
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AA30 -to a[3]
+set_location_assignment PIN_AC29 -to a[2]
+set_location_assignment PIN_AD30 -to a[1]
+set_location_assignment PIN_AC28 -to a[0]
+set_location_assignment PIN_AC30 -to b[3]
+set_location_assignment PIN_AB28 -to b[2]
+set_location_assignment PIN_Y27 -to b[1]
+set_location_assignment PIN_AB30 -to b[0]
+set_location_assignment PIN_AA14 -to btn_sumador
+set_location_assignment PIN_AA15 -to btn_restador
+set_location_assignment PIN_AA24 -to c
+set_location_assignment PIN_AB21 -to oper_7seg[6]
+set_location_assignment PIN_AB23 -to n
+set_location_assignment PIN_AC23 -to v
+set_location_assignment PIN_AD24 -to z
+set_location_assignment PIN_W17 -to alu_out_7seg[0]
+set_location_assignment PIN_V18 -to alu_out_7seg[1]
+set_location_assignment PIN_AG17 -to alu_out_7seg[2]
+set_location_assignment PIN_AG16 -to alu_out_7seg[3]
+set_location_assignment PIN_AH17 -to alu_out_7seg[4]
+set_location_assignment PIN_AG18 -to alu_out_7seg[5]
+set_location_assignment PIN_AH18 -to alu_out_7seg[6]
+set_location_assignment PIN_AF21 -to oper_7seg[0]
+set_location_assignment PIN_AG21 -to oper_7seg[1]
+set_location_assignment PIN_AF20 -to oper_7seg[2]
+set_location_assignment PIN_AG20 -to oper_7seg[3]
+set_location_assignment PIN_AE19 -to oper_7seg[4]
+set_location_assignment PIN_AF19 -to oper_7seg[5]
+set_location_assignment PIN_AC22 -to result[3]
+set_location_assignment PIN_AB22 -to result[2]
+set_location_assignment PIN_AF24 -to result[1]
+set_location_assignment PIN_AE24 -to result[0]
+set_location_assignment PIN_AF14 -to clk
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

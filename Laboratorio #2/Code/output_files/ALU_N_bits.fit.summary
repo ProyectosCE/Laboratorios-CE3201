@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Mar 27 23:00:04 2025
+Fitter Status : Successful - Fri Mar 28 01:36:43 2025
 Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 Revision Name : ALU_N_bits
 Top-level Entity Name : ALU_TOP_BTN
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 64 / 41,910 ( < 1 % )
-Total registers : 4
-Total pins : 28 / 499 ( 6 % )
+Logic utilization (in ALMs) : 68 / 41,910 ( < 1 % )
+Total registers : 6
+Total pins : 33 / 499 ( 7 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 5,662,720 ( 0 % )
 Total RAM Blocks : 0 / 553 ( 0 % )
