@@ -1,15 +1,12 @@
-/*
-================================== LICENCIA
-==================================================
+/* 
+================================== LICENCIA ================================================== 
 MIT License
 Copyright (c) 2025 José Bernardo Barquero Bonilla,
-Alexander Montero Vargas,
-Alvaro Vargas Molina
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
 Consulta el archivo LICENSE para más detalles.
-================================================================
-==============================
+==============================================================================================
 */
-
 
 
 
