@@ -89,7 +89,7 @@ module ALU_TOP_BTN (
         .b(b),
         .control(control),
         .result(result),
-        .v(), .c(), .n(), .z()
+        .v(v), .c(c), .n(n), .z(z)
     );
 
     // Lógica con botones (flancos negativos)
