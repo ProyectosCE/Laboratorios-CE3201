@@ -1,0 +1,21 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv}
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv}
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv}
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv}
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv}
+
+vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  multiplier_cla_tb
+
+add wave *
+view structure
+view signals
+run -all

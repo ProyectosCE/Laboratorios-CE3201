@@ -104,6 +104,7 @@ module ALU_N_bits_tb ();
 		#10;
 		$display("Divition Test: %d / %d = %d", a, b, result);
 		
+		
 		// Flags test
 		a=8'b11111111; b=8'b00000000; select=4'b0010;
 		#10;

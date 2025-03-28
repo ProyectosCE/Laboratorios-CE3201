@@ -1,5 +1,5 @@
 Fitter report for ALU_N_bits
-Fri Mar 28 01:36:43 2025
+Fri Mar 28 08:13:12 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +---------------------------------+------------------------------------------------+
-; Fitter Status                   ; Successful - Fri Mar 28 01:36:43 2025          ;
+; Fitter Status                   ; Successful - Fri Mar 28 08:13:12 2025          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; ALU_N_bits                                     ;
 ; Top-level Entity Name           ; ALU_TOP_BTN                                    ;
@@ -2001,7 +2001,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.48 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.46 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -2009,10 +2009,10 @@ Info (334004): Delay annotation completed successfully
 Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:03
 Info (144001): Generated suppressed messages file C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 7328 megabytes
-    Info: Processing ended: Fri Mar 28 01:36:43 2025
+    Info: Peak virtual memory: 7349 megabytes
+    Info: Processing ended: Fri Mar 28 08:13:13 2025
     Info: Elapsed time: 00:01:04
-    Info: Total CPU time (on all processors): 00:04:39
+    Info: Total CPU time (on all processors): 00:04:33
 
 
 +----------------------------+
