@@ -1,6 +1,8 @@
 m255
 K4
 z2
+!s12c _opt
+Z0 !s99 nomlopt
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -8,136 +10,200 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/simulation/questa
+Z1 dC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/simulation/questa
+T_opt
+!s110 1743134298
+VKcil8z16YhN<5W8kM5PCQ3
+04 17 4 work multiplier_cla_tb fast 0
+=1-047c16ee2e87-67e61e5a-293-4bdc
+R0
+!s12b OEM100
+!s124 OEM10U33 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
 vALU_N_bits
-2C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv
-Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1743119665
+Z3 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1743134297
 !i10b 1
 !s100 8lAmnOPNC;VoVTQ0TOoAM2
-I7^?lBZXGbZI=57i?K@dS92
+IQC6[FJhWfcHLkYdH>DWl:3
 S1
-R0
-Z3 w1743109163
-8C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv
-FC:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv
+R1
+Z6 w1743134170
+Z7 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+Z8 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
 !i122 0
 L0 1 61
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2023.3;77
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2023.3;77
 r1
 !s85 0
 31
-!s108 1743119664.000000
-!s107 C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code|C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/ALU_N_bits.sv|
+Z11 !s108 1743134297.000000
+Z12 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
+Z13 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
 !i113 0
-Z6 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 !s92 -sv -work work {+incdir+C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 tCvgOpt 0
+Z14 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z15 !s92 -sv -work work {+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 n@a@l@u_@n_bits
-vfull_adder
-Z9 2C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv
-R1
-R2
-!i10b 1
-!s100 C>7E?RKeRTJTK>jH]EkL`0
-Id0oLjW2H_oQch9Ue5BkQz3
-S1
-R0
-Z10 w1743109165
-Z11 8C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv
-Z12 FC:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv
-!i122 2
-L0 15 5
-R4
-R5
-r1
-!s85 0
-31
-Z13 !s108 1743119665.000000
-Z14 !s107 C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv|
-Z15 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code|C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/sum.sv|
-!i113 0
-R6
-R7
-R8
-vmultiplier_cla_tb
-2C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv
-R1
-R2
-!i10b 1
-!s100 @EYG]>VMK93Pa;Sm=1eMV0
-I7:l]X[]ma0<6E8Po_CGJY2
-S1
-R0
-w1743119328
-8C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv
-FC:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv
-!i122 3
-L0 3 60
-R4
-R5
-r1
-!s85 0
-31
-R13
-!s107 C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code|C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/multiplier_cla_tb.sv|
-!i113 0
-R6
-R7
-R8
-vmux10
-2C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/mux10.sv
-R1
-R2
-!i10b 1
-!s100 HBOYXVQQ5cJA9Tf;N=JhP2
-IT>HnPYoQDQ3MAY_kV8dYE2
-S1
-R0
+vcarry_lookahead_adder
 R3
-8C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/mux10.sv
-FC:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/mux10.sv
-!i122 1
-L0 18 8
 R4
 R5
-r1
-!s85 0
-31
-R13
-!s107 C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/mux10.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code|C:/Users/joseb/OneDrive/Documentos/GitHub/Laboratorios-CE3201/Laboratorio #2/Code/mux10.sv|
-!i113 0
+!i10b 1
+!s100 1=h[:^j35a9b@9?8:mC@W2
+INJUW8Iii5f6c;PT^CY:`c3
+S1
+R1
 R6
 R7
 R8
-vripple_carry_adder_N_bits
+!i122 0
+L0 116 29
 R9
-R1
-R2
-!i10b 1
-!s100 ID=Sh7_@?lk4Vh2`NC9^B1
-I0?MO8?:IRWfjg6G_:?W@F3
-S1
-R0
 R10
+r1
+!s85 0
+31
 R11
 R12
-!i122 2
-L0 21 21
+R13
+!i113 0
+R14
+R15
+R2
+vfull_adder
+Z16 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
 R4
 R5
+!i10b 1
+!s100 C>7E?RKeRTJTK>jH]EkL`0
+IcnQW5aIXFiM[Q3g>EF>lP0
+S1
+R1
+Z17 w1743117813
+Z18 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+Z19 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+!i122 2
+L0 15 5
+R9
+R10
 r1
 !s85 0
 31
-R13
+R11
+Z20 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+!i113 0
 R14
 R15
-!i113 0
+R2
+vmultiplier_cla
+R3
+R4
+R5
+!i10b 1
+!s100 <JhzT56?a[<bln5Q]8<nb2
+Ie^Eh[0SlHR[Sm7:TKMlmG2
+S1
+R1
 R6
 R7
 R8
+!i122 0
+L0 63 52
+R9
+R10
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R14
+R15
+R2
+vmultiplier_cla_tb
+2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv
+R4
+R5
+!i10b 1
+!s100 `KNK11Nbdc^fE>Y;_CW=W0
+IcKLZ0WMf>8dT0dAZ6O3OM2
+S1
+R1
+w1743133517
+8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv
+FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv
+!i122 3
+L0 1 56
+R9
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv|
+!i113 0
+R14
+R15
+R2
+vmux10
+2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
+R4
+R5
+!i10b 1
+!s100 HBOYXVQQ5cJA9Tf;N=JhP2
+IFnD30fCH@7Rf[iTLS2XWW2
+S1
+R1
+w1743117812
+8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
+FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
+!i122 1
+L0 18 8
+R9
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
+!i113 0
+R14
+R15
+R2
+vripple_carry_adder_N_bits
+R16
+R4
+R5
+!i10b 1
+!s100 ID=Sh7_@?lk4Vh2`NC9^B1
+I7[`@I@bh5WG;1;A>KGKo=0
+S1
+R1
+R17
+R18
+R19
+!i122 2
+L0 21 21
+R9
+R10
+r1
+!s85 0
+31
+R11
+R20
+R21
+!i113 0
+R14
+R15
+R2
 nripple_carry_adder_@n_bits

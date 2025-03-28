@@ -13,6 +13,7 @@ module multiplier_cla_tb;
         .multiplier(multiplier),
         .product(product)
     );
+	 
 
     // Secuencia de prueba
     initial begin

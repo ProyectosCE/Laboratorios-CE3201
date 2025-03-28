@@ -7,7 +7,7 @@ module ALU_N_bits
 	
 	/* WIRING */
 	// These are for the output of operations, they connect to the mux
-	logic[N-1:0] res_sum, res_and, res_or, res_xor, res_lsr, res_lsl;
+	logic[N-1:0] res_sum, res_and, res_or, res_xor, res_lsr, res_lsl, res_div, res_mod, res_mul;
 	
 	// These handle the carry out and the negative b for substraction
 	logic sum_carry;
@@ -23,6 +23,10 @@ module ALU_N_bits
 	assign res_lsl = a << b;
 	
 	// Arithmetic
+	
+	assign res_div = a / b
+	assign res_mod = a % b
+	
 	/*
 	sum#(.N(N)) alu_sum(.a(a),
 							  .b(b_sum),
@@ -46,9 +50,9 @@ module ALU_N_bits
 										  .d4(res_xor),
 										  .d5(res_lsr),
 										  .d6(res_lsl),
-										  .d7(a), //wip
-										  .d8(a),
-										  .d9(a),
+										  .d7(res_mod),
+										  .d8(a), //de momento se debe quedar en a
+										  .d9(res_div),
 										  .s(control),
 										  .y(result)); 
 	

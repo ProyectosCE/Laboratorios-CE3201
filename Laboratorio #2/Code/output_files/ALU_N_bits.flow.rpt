@@ -1,5 +1,5 @@
 Flow report for ALU_N_bits
-Thu Mar 27 17:54:08 2025
+Thu Mar 27 21:58:09 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Thu Mar 27 17:54:08 2025          ;
+; Flow Status                 ; Successful - Thu Mar 27 21:58:09 2025          ;
 ; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name               ; ALU_N_bits                                     ;
 ; Top-level Entity Name       ; ALU_N_bits                                     ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/27/2025 17:53:58 ;
+; Start date & time ; 03/27/2025 21:58:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU_N_bits          ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 53671021772497.174311963818392         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 4931007164039.174313428221576          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_cla_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_N_bits_tb                     ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
@@ -107,8 +107,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:10     ; 1.0                     ; 4769 MB             ; 00:00:27                           ;
-; Total                  ; 00:00:10     ; --                      ; --                  ; 00:00:27                           ;
+; Analysis & Elaboration ; 00:00:07     ; 1.0                     ; 4770 MB             ; 00:00:17                           ;
+; Total                  ; 00:00:07     ; --                      ; --                  ; 00:00:17                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -117,7 +117,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+------------------+------------+------------+----------------+
 ; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Elaboration ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
 +------------------------+------------------+------------+------------+----------------+
 
 
