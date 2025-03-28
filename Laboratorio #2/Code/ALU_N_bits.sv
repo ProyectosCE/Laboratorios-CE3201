@@ -71,7 +71,11 @@ module ALU_TOP_BTN (
     input  logic btn_sumador,
     input  logic btn_restador,
     output logic [6:0] alu_out_7seg,
-    output logic [6:0] oper_7seg
+    output logic [6:0] oper_7seg,
+	 output logic v,
+	 output logic c,
+	 output logic n,
+	 output logic z
 );
 
     logic [3:0] control = 4'd0;
