@@ -40,7 +40,12 @@ module ALU_N_bits
 															.cin(control[0]),
 															.s(res_sum),
 															.cout(sum_carry));
-	
+	multiplier_cla #(.MULTICAND_WID(N), .MULTIPLIER_WID(N)) alu_mul (
+    .multicand(a),
+    .multiplier(b),
+    .product(res_mul)
+	);
+
 
 	
 	/* MULTIPLEXER */
@@ -82,7 +87,7 @@ module ALU_TOP_BTN (
 	 output logic [3:0] result
 );
 
-    logic [3:0] control = 4'd2;
+    logic [3:0] control = 4'd0;
     
 
     // Instancia de la ALU
