@@ -1,3 +1,29 @@
+/* 
+================================== LICENCIA ================================================== 
+MIT License
+Copyright (c) 2025 José Bernardo Barquero Bonilla,
+                   Alexander Montero Vargas,
+                   Alvaro Vargas Molina
+Consulta el archivo LICENSE para más detalles.
+==============================================================================================
+*/
+/* Module: multiplier_cla_tb
+   Descripción:
+     Testbench que verifica el funcionamiento del módulo multiplier_cla, el cual
+     realiza la multiplicación de dos números de 32 bits usando un Carry Lookahead Adder (CLA).
+
+   Procedimiento de prueba:
+     1) Se definen las señales de entrada 'multicand' y 'multiplier' (ambas de 32 bits) y la salida 'product' (64 bits).
+     2) Se instancia el módulo multiplier_cla con esas señales.
+     3) En el bloque 'initial', se asignan secuencialmente diferentes pares de valores a 'multicand' y 'multiplier'.
+     4) Se usa un retardo #10 entre cada asignación para permitir la simulación y observar el valor de 'product' resultante.
+     5) Se registran los valores de entrada y salida mediante $display para validación visual.
+
+   Notas:
+     - Se prueba con diversos valores para verificar la correcta operación del multiplicador.
+     - Se utiliza $dumpfile y $dumpvars para permitir la visualización de la simulación en herramientas de trazado.
+     - Puede agregarse verificación automática con aserciones para comparar los resultados esperados y obtenidos.
+*/
 module multiplier_cla_tb;
 
     // Inputs
