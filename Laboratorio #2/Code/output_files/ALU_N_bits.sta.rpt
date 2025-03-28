@@ -1,5 +1,5 @@
 Timing Analyzer report for ALU_N_bits
-Fri Mar 28 01:06:26 2025
+Fri Mar 28 01:21:32 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,17 +46,15 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
  38. Signal Integrity Metrics (Fast 1100mv 85c Model)
  39. Setup Transfers
  40. Hold Transfers
- 41. Recovery Transfers
- 42. Removal Transfers
- 43. Report TCCS
- 44. Report RSKM
- 45. Unconstrained Paths Summary
- 46. Clock Status Summary
+ 41. Report TCCS
+ 42. Report RSKM
+ 43. Unconstrained Paths Summary
+ 44. Clock Status Summary
+ 45. Unconstrained Input Ports
+ 46. Unconstrained Output Ports
  47. Unconstrained Input Ports
  48. Unconstrained Output Ports
- 49. Unconstrained Input Ports
- 50. Unconstrained Output Ports
- 51. Timing Analyzer Messages
+ 49. Timing Analyzer Messages
 
 
 
@@ -102,43 +100,39 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.30        ;
+; Average used               ; 1.19        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.9%      ;
-;     Processor 3            ;   2.9%      ;
-;     Processor 4            ;   2.8%      ;
-;     Processor 5            ;   2.8%      ;
-;     Processor 6            ;   2.8%      ;
-;     Processor 7            ;   2.8%      ;
-;     Processor 8            ;   2.8%      ;
-;     Processor 9            ;   2.8%      ;
-;     Processor 10           ;   2.8%      ;
-;     Processor 11           ;   2.8%      ;
-;     Processor 12           ;   1.5%      ;
+;     Processor 2            ;   2.1%      ;
+;     Processor 3            ;   2.0%      ;
+;     Processor 4            ;   2.0%      ;
+;     Processor 5            ;   2.0%      ;
+;     Processor 6            ;   2.0%      ;
+;     Processor 7            ;   2.0%      ;
+;     Processor 8            ;   2.0%      ;
+;     Processor 9            ;   2.0%      ;
+;     Processors 10-12       ;   0.8%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                     ;
-+--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
-; Clock Name   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets          ;
-+--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
-; btn_restador ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_restador } ;
-; btn_sumador  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { btn_sumador }  ;
-+--------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
 
 
-+---------------------------------------------------+
-; Slow 1100mV 85C Model Fmax Summary                ;
-+-----------+-----------------+--------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name   ; Note ;
-+-----------+-----------------+--------------+------+
-; 48.02 MHz ; 48.02 MHz       ; btn_restador ;      ;
-; 82.75 MHz ; 82.75 MHz       ; btn_sumador  ;      ;
-+-----------+-----------------+--------------+------+
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 537.92 MHz ; 537.92 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -148,52 +142,43 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+----------------------------------------+
-; Slow 1100mV 85C Model Setup Summary    ;
-+--------------+---------+---------------+
-; Clock        ; Slack   ; End Point TNS ;
-+--------------+---------+---------------+
-; btn_restador ; -11.783 ; -43.908       ;
-; btn_sumador  ; -11.084 ; -44.176       ;
-+--------------+---------+---------------+
++-------------------------------------+
+; Slow 1100mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.859 ; -3.065             ;
++-------+--------+--------------------+
 
 
-+---------------------------------------+
-; Slow 1100mV 85C Model Hold Summary    ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_sumador  ; -5.060 ; -19.596       ;
-; btn_restador ; -0.063 ; -0.063        ;
-+--------------+--------+---------------+
++------------------------------------+
+; Slow 1100mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.253 ; 0.000              ;
++-------+-------+--------------------+
 
 
-+----------------------------------------+
+------------------------------------------
 ; Slow 1100mV 85C Model Recovery Summary ;
-+-------------+--------+-----------------+
-; Clock       ; Slack  ; End Point TNS   ;
-+-------------+--------+-----------------+
-; btn_sumador ; -5.614 ; -22.452         ;
-+-------------+--------+-----------------+
+------------------------------------------
+No paths to report.
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Slow 1100mV 85C Model Removal Summary ;
-+-------------+-------+-----------------+
-; Clock       ; Slack ; End Point TNS   ;
-+-------------+-------+-----------------+
-; btn_sumador ; 0.797 ; 0.000           ;
-+-------------+-------+-----------------+
+-----------------------------------------
+No paths to report.
 
 
 +---------------------------------------------------+
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
-+--------------+--------+---------------------------+
-; Clock        ; Slack  ; End Point TNS             ;
-+--------------+--------+---------------------------+
-; btn_sumador  ; -0.394 ; -2.770                    ;
-; btn_restador ; 0.099  ; 0.000                     ;
-+--------------+--------+---------------------------+
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -0.394 ; -3.148                           ;
++-------+--------+----------------------------------+
 
 
 -----------------------------------------------
@@ -202,63 +187,53 @@ HTML report is unavailable in plain text report export.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------+
-; Slow 1100mV 0C Model Fmax Summary                 ;
-+-----------+-----------------+--------------+------+
-; Fmax      ; Restricted Fmax ; Clock Name   ; Note ;
-+-----------+-----------------+--------------+------+
-; 49.16 MHz ; 49.16 MHz       ; btn_restador ;      ;
-; 85.2 MHz  ; 85.2 MHz        ; btn_sumador  ;      ;
-+-----------+-----------------+--------------+------+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 545.85 MHz ; 545.85 MHz      ; clk        ;      ;
++------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+----------------------------------------+
-; Slow 1100mV 0C Model Setup Summary     ;
-+--------------+---------+---------------+
-; Clock        ; Slack   ; End Point TNS ;
-+--------------+---------+---------------+
-; btn_restador ; -11.634 ; -43.163       ;
-; btn_sumador  ; -10.737 ; -42.845       ;
-+--------------+---------+---------------+
++------------------------------------+
+; Slow 1100mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.832 ; -2.998            ;
++-------+--------+-------------------+
 
 
-+---------------------------------------+
-; Slow 1100mV 0C Model Hold Summary     ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_sumador  ; -4.912 ; -19.026       ;
-; btn_restador ; -0.137 ; -0.137        ;
-+--------------+--------+---------------+
++-----------------------------------+
+; Slow 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.237 ; 0.000             ;
++-------+-------+-------------------+
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Slow 1100mV 0C Model Recovery Summary ;
-+-------------+--------+----------------+
-; Clock       ; Slack  ; End Point TNS  ;
-+-------------+--------+----------------+
-; btn_sumador ; -5.181 ; -20.714        ;
-+-------------+--------+----------------+
+-----------------------------------------
+No paths to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Slow 1100mV 0C Model Removal Summary ;
-+-------------+-------+----------------+
-; Clock       ; Slack ; End Point TNS  ;
-+-------------+-------+----------------+
-; btn_sumador ; 0.505 ; 0.000          ;
-+-------------+-------+----------------+
+----------------------------------------
+No paths to report.
 
 
 +--------------------------------------------------+
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-+--------------+--------+--------------------------+
-; Clock        ; Slack  ; End Point TNS            ;
-+--------------+--------+--------------------------+
-; btn_sumador  ; -0.394 ; -2.242                   ;
-; btn_restador ; 0.105  ; 0.000                    ;
-+--------------+--------+--------------------------+
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -0.394 ; -3.337                          ;
++-------+--------+---------------------------------+
 
 
 ----------------------------------------------
@@ -267,52 +242,43 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+---------------------------------------+
-; Fast 1100mV 85C Model Setup Summary   ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_sumador  ; -6.743 ; -26.783       ;
-; btn_restador ; -6.548 ; -24.647       ;
-+--------------+--------+---------------+
++-------------------------------------+
+; Fast 1100mV 85C Model Setup Summary ;
++-------+-------+---------------------+
+; Clock ; Slack ; End Point TNS       ;
++-------+-------+---------------------+
+; clk   ; 0.036 ; 0.000               ;
++-------+-------+---------------------+
 
 
-+---------------------------------------+
-; Fast 1100mV 85C Model Hold Summary    ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_sumador  ; -2.963 ; -11.505       ;
-; btn_restador ; 0.007  ; 0.000         ;
-+--------------+--------+---------------+
++------------------------------------+
+; Fast 1100mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.152 ; 0.000              ;
++-------+-------+--------------------+
 
 
-+----------------------------------------+
+------------------------------------------
 ; Fast 1100mV 85C Model Recovery Summary ;
-+-------------+--------+-----------------+
-; Clock       ; Slack  ; End Point TNS   ;
-+-------------+--------+-----------------+
-; btn_sumador ; -4.039 ; -16.154         ;
-+-------------+--------+-----------------+
+------------------------------------------
+No paths to report.
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Fast 1100mV 85C Model Removal Summary ;
-+-------------+-------+-----------------+
-; Clock       ; Slack ; End Point TNS   ;
-+-------------+-------+-----------------+
-; btn_sumador ; 0.853 ; 0.000           ;
-+-------------+-------+-----------------+
+-----------------------------------------
+No paths to report.
 
 
 +---------------------------------------------------+
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
-+--------------+--------+---------------------------+
-; Clock        ; Slack  ; End Point TNS             ;
-+--------------+--------+---------------------------+
-; btn_sumador  ; -0.322 ; -1.483                    ;
-; btn_restador ; -0.094 ; -0.412                    ;
-+--------------+--------+---------------------------+
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -0.092 ; -0.541                           ;
++-------+--------+----------------------------------+
 
 
 -----------------------------------------------
@@ -321,52 +287,43 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------+
-; Fast 1100mV 0C Model Setup Summary    ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_restador ; -6.217 ; -23.414       ;
-; btn_sumador  ; -5.758 ; -22.877       ;
-+--------------+--------+---------------+
++------------------------------------+
+; Fast 1100mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.096 ; 0.000              ;
++-------+-------+--------------------+
 
 
-+---------------------------------------+
-; Fast 1100mV 0C Model Hold Summary     ;
-+--------------+--------+---------------+
-; Clock        ; Slack  ; End Point TNS ;
-+--------------+--------+---------------+
-; btn_sumador  ; -2.884 ; -11.239       ;
-; btn_restador ; -0.026 ; -0.026        ;
-+--------------+--------+---------------+
++-----------------------------------+
+; Fast 1100mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.136 ; 0.000             ;
++-------+-------+-------------------+
 
 
-+---------------------------------------+
+-----------------------------------------
 ; Fast 1100mV 0C Model Recovery Summary ;
-+-------------+--------+----------------+
-; Clock       ; Slack  ; End Point TNS  ;
-+-------------+--------+----------------+
-; btn_sumador ; -3.198 ; -12.790        ;
-+-------------+--------+----------------+
+-----------------------------------------
+No paths to report.
 
 
-+--------------------------------------+
+----------------------------------------
 ; Fast 1100mV 0C Model Removal Summary ;
-+-------------+-------+----------------+
-; Clock       ; Slack ; End Point TNS  ;
-+-------------+-------+----------------+
-; btn_sumador ; 0.424 ; 0.000          ;
-+-------------+-------+----------------+
+----------------------------------------
+No paths to report.
 
 
 +--------------------------------------------------+
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-+--------------+--------+--------------------------+
-; Clock        ; Slack  ; End Point TNS            ;
-+--------------+--------+--------------------------+
-; btn_sumador  ; -0.319 ; -1.448                   ;
-; btn_restador ; -0.080 ; -0.366                   ;
-+--------------+--------+--------------------------+
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -0.090 ; -0.529                          ;
++-------+--------+---------------------------------+
 
 
 ----------------------------------------------
@@ -375,18 +332,16 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                             ;
-+------------------+---------+---------+----------+---------+---------------------+
-; Clock            ; Setup   ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+---------+---------+----------+---------+---------------------+
-; Worst-case Slack ; -11.783 ; -5.060  ; -5.614   ; 0.424   ; -0.394              ;
-;  btn_restador    ; -11.783 ; -0.137  ; N/A      ; N/A     ; -0.094              ;
-;  btn_sumador     ; -11.084 ; -5.060  ; -5.614   ; 0.424   ; -0.394              ;
-; Design-wide TNS  ; -88.084 ; -19.659 ; -22.452  ; 0.0     ; -2.77               ;
-;  btn_restador    ; -43.908 ; -0.137  ; N/A      ; N/A     ; -0.412              ;
-;  btn_sumador     ; -44.176 ; -19.596 ; -22.452  ; 0.000   ; -2.770              ;
-+------------------+---------+---------+----------+---------+---------------------+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.859 ; 0.136 ; N/A      ; N/A     ; -0.394              ;
+;  clk             ; -0.859 ; 0.136 ; N/A      ; N/A     ; -0.394              ;
+; Design-wide TNS  ; -3.065 ; 0.0   ; 0.0      ; 0.0     ; -3.337              ;
+;  clk             ; -3.065 ; 0.000 ; N/A      ; N/A     ; -3.337              ;
++------------------+--------+-------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -425,15 +380,16 @@ No synchronizer chains to report.
 ; Pin          ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +--------------+--------------+-----------------+-----------------+
 ; b[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; a[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; b[3]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; b[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; b[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; a[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; a[2]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; a[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; a[3]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; b[1]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; btn_restador ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; btn_sumador  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; btn_restador ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +--------------+--------------+-----------------+-----------------+
 
 
@@ -557,49 +513,23 @@ No synchronizer chains to report.
 +-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Setup Transfers                                                         ;
-+--------------+--------------+----------+----------+----------+----------+
-; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------+--------------+----------+----------+----------+----------+
-; btn_restador ; btn_restador ; 44       ; 22       ; 0        ; 0        ;
-; btn_sumador  ; btn_restador ; 0        ; 22       ; 0        ; 0        ;
-; btn_restador ; btn_sumador  ; 0        ; 0        ; 258      ; 127      ;
-; btn_sumador  ; btn_sumador  ; 0        ; 0        ; 0        ; 127      ;
-+--------------+--------------+----------+----------+----------+----------+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 28       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------+
-; Hold Transfers                                                          ;
-+--------------+--------------+----------+----------+----------+----------+
-; From Clock   ; To Clock     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------+--------------+----------+----------+----------+----------+
-; btn_restador ; btn_restador ; 44       ; 22       ; 0        ; 0        ;
-; btn_sumador  ; btn_restador ; 0        ; 22       ; 0        ; 0        ;
-; btn_restador ; btn_sumador  ; 0        ; 0        ; 258      ; 127      ;
-; btn_sumador  ; btn_sumador  ; 0        ; 0        ; 0        ; 127      ;
-+--------------+--------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+------------------------------------------------------------------------+
-; Recovery Transfers                                                     ;
-+--------------+-------------+----------+----------+----------+----------+
-; From Clock   ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------+-------------+----------+----------+----------+----------+
-; btn_restador ; btn_sumador ; 0        ; 0        ; 4        ; 4        ;
-+--------------+-------------+----------+----------+----------+----------+
-Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
-
-
-+------------------------------------------------------------------------+
-; Removal Transfers                                                      ;
-+--------------+-------------+----------+----------+----------+----------+
-; From Clock   ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------+-------------+----------+----------+----------+----------+
-; btn_restador ; btn_sumador ; 0        ; 0        ; 4        ; 4        ;
-+--------------+-------------+----------+----------+----------+----------+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 28       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -622,21 +552,20 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 9     ; 9    ;
-; Unconstrained Input Port Paths  ; 142   ; 142  ;
+; Unconstrained Input Ports       ; 10    ; 10   ;
+; Unconstrained Input Port Paths  ; 130   ; 130  ;
 ; Unconstrained Output Ports      ; 22    ; 22   ;
-; Unconstrained Output Port Paths ; 318   ; 318  ;
+; Unconstrained Output Port Paths ; 204   ; 204  ;
 +---------------------------------+-------+------+
 
 
-+--------------------------------------------------+
-; Clock Status Summary                             ;
-+--------------+--------------+------+-------------+
-; Target       ; Clock        ; Type ; Status      ;
-+--------------+--------------+------+-------------+
-; btn_restador ; btn_restador ; Base ; Constrained ;
-; btn_sumador  ; btn_sumador  ; Base ; Constrained ;
-+--------------+--------------+------+-------------+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -653,6 +582,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; b[2]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn_restador ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn_sumador  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +--------------+--------------------------------------------------------------------------------------+
 
 
@@ -700,6 +630,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; b[2]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; btn_restador ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; btn_sumador  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +--------------+--------------------------------------------------------------------------------------+
 
 
@@ -739,164 +670,101 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Mar 28 01:06:21 2025
+    Info: Processing started: Fri Mar 28 01:21:27 2025
 Info: Command: quartus_sta ALU_N_bits -c ALU_N_bits
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): The Timing Analyzer is analyzing 4 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'ALU_N_bits.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name btn_sumador btn_sumador
-    Info (332105): create_clock -period 1.000 -name btn_restador btn_restador
-Warning (332125): Found combinational loop of 21 nodes File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 100
-    Warning (332126): Node "control[1]~6|combout"
-    Warning (332126): Node "control~24|dataa"
-    Warning (332126): Node "control~24|combout"
-    Warning (332126): Node "control[1]~6|datac"
-    Warning (332126): Node "Equal0~1|dataa"
-    Warning (332126): Node "Equal0~1|combout"
-    Warning (332126): Node "control~23|datad"
-    Warning (332126): Node "control~23|combout"
-    Warning (332126): Node "control[2]~10|dataa"
-    Warning (332126): Node "control[2]~10|combout"
-    Warning (332126): Node "Add0~1|datac"
-    Warning (332126): Node "Add0~1|combout"
-    Warning (332126): Node "control[3]~14|dataa"
-    Warning (332126): Node "control[3]~14|combout"
-    Warning (332126): Node "Add0~1|datab"
-    Warning (332126): Node "Equal0~1|datac"
-    Warning (332126): Node "control~23|datab"
-    Warning (332126): Node "Equal0~1|datab"
-    Warning (332126): Node "control~24|datad"
-    Warning (332126): Node "control~23|datac"
-    Warning (332126): Node "Add0~1|datad"
-Warning (332125): Found combinational loop of 2 nodes File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 100
-    Warning (332126): Node "control[0]~2|combout"
-    Warning (332126): Node "control[0]~2|datac"
+    Info (332105): create_clock -period 1.000 -name clk clk
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.783
+Info (332146): Worst-case setup slack is -0.859
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.783             -43.908 btn_restador 
-    Info (332119):   -11.084             -44.176 btn_sumador 
-Info (332146): Worst-case hold slack is -5.060
+    Info (332119):    -0.859              -3.065 clk 
+Info (332146): Worst-case hold slack is 0.253
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.060             -19.596 btn_sumador 
-    Info (332119):    -0.063              -0.063 btn_restador 
-Info (332146): Worst-case recovery slack is -5.614
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -5.614             -22.452 btn_sumador 
-Info (332146): Worst-case removal slack is 0.797
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.797               0.000 btn_sumador 
+    Info (332119):     0.253               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394              -2.770 btn_sumador 
-    Info (332119):     0.099               0.000 btn_restador 
+    Info (332119):    -0.394              -3.148 clk 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -11.634
+Info (332146): Worst-case setup slack is -0.832
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.634             -43.163 btn_restador 
-    Info (332119):   -10.737             -42.845 btn_sumador 
-Info (332146): Worst-case hold slack is -4.912
+    Info (332119):    -0.832              -2.998 clk 
+Info (332146): Worst-case hold slack is 0.237
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.912             -19.026 btn_sumador 
-    Info (332119):    -0.137              -0.137 btn_restador 
-Info (332146): Worst-case recovery slack is -5.181
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -5.181             -20.714 btn_sumador 
-Info (332146): Worst-case removal slack is 0.505
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.505               0.000 btn_sumador 
+    Info (332119):     0.237               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -0.394
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.394              -2.242 btn_sumador 
-    Info (332119):     0.105               0.000 btn_restador 
+    Info (332119):    -0.394              -3.337 clk 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.036
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.036               0.000 clk 
+Info (332146): Worst-case hold slack is 0.152
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.152               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.743
+Info (332146): Worst-case minimum pulse width slack is -0.092
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.743             -26.783 btn_sumador 
-    Info (332119):    -6.548             -24.647 btn_restador 
-Info (332146): Worst-case hold slack is -2.963
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -2.963             -11.505 btn_sumador 
-    Info (332119):     0.007               0.000 btn_restador 
-Info (332146): Worst-case recovery slack is -4.039
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -4.039             -16.154 btn_sumador 
-Info (332146): Worst-case removal slack is 0.853
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.853               0.000 btn_sumador 
-Info (332146): Worst-case minimum pulse width slack is -0.322
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.322              -1.483 btn_sumador 
-    Info (332119):    -0.094              -0.412 btn_restador 
+    Info (332119):    -0.092              -0.541 clk 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.096
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.096               0.000 clk 
+Info (332146): Worst-case hold slack is 0.136
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.136               0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -6.217
+Info (332146): Worst-case minimum pulse width slack is -0.090
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.217             -23.414 btn_restador 
-    Info (332119):    -5.758             -22.877 btn_sumador 
-Info (332146): Worst-case hold slack is -2.884
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -2.884             -11.239 btn_sumador 
-    Info (332119):    -0.026              -0.026 btn_restador 
-Info (332146): Worst-case recovery slack is -3.198
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -3.198             -12.790 btn_sumador 
-Info (332146): Worst-case removal slack is 0.424
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.424               0.000 btn_sumador 
-Info (332146): Worst-case minimum pulse width slack is -0.319
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -0.319              -1.448 btn_sumador 
-    Info (332119):    -0.080              -0.366 btn_restador 
+    Info (332119):    -0.090              -0.529 clk 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 5242 megabytes
-    Info: Processing ended: Fri Mar 28 01:06:25 2025
-    Info: Elapsed time: 00:00:04
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5240 megabytes
+    Info: Processing ended: Fri Mar 28 01:21:32 2025
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -70,6 +70,7 @@ endmodule
 module ALU_TOP_BTN (
     input  logic [3:0] a,
     input  logic [3:0] b,
+	 input  logic clk,
     input  logic btn_sumador,
     input  logic btn_restador,
     output logic [0:6] alu_out_7seg,
@@ -94,14 +95,26 @@ module ALU_TOP_BTN (
     );
 
     // Lógica con botones (flancos negativos)
-		
-		always_ff @(negedge btn_sumador, negedge btn_restador) begin
-        if (!btn_restador) begin
-            control <= (control == 4'd0) ? 4'd9 : control - 1;
-        end else if (!btn_sumador) begin
-            control <= (control == 4'd9) ? 4'd0 : control + 1;
-        end
-    end
+	logic btn_sumador_prev, btn_restador_prev;
+
+	// Detener flancos
+	always_ff @(posedge clk) begin
+		 btn_sumador_prev   <= btn_sumador;
+		 btn_restador_prev  <= btn_restador;
+	end
+
+	// Control de operación con flanco
+	always_ff @(posedge clk) begin
+		 // Detecta flanco de bajada en btn_sumador
+		 if (btn_sumador_prev && !btn_sumador) begin
+			  control <= (control >= 4'd9) ? 4'd0 : control + 1;
+		 end
+		 // Detecta flanco de bajada en btn_restador
+		 else if (btn_restador_prev && !btn_restador) begin
+			  control <= (control == 4'd0) ? 4'd9 : control - 1;
+		 end
+	end
+
 
 
     // Visualización de resultado de la ALU en 7 segmentos (hexadecimal)
