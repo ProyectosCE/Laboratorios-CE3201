@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "03/28/2025 01:36:57"
+// DATE "03/28/2025 08:13:26"
 
 // 
 // Device: Altera 5CSXFC6D6F31C6 Package FBGA896
@@ -42,18 +42,18 @@ module ALU_TOP_BTN (
 	n,
 	z,
 	result);
-input 	logic [3:0] a ;
-input 	logic [3:0] b ;
-input 	logic clk ;
-input 	logic btn_sumador ;
-input 	logic btn_restador ;
-output 	logic [0:6] alu_out_7seg ;
-output 	logic [0:6] oper_7seg ;
-output 	logic v ;
-output 	logic c ;
-output 	logic n ;
-output 	logic z ;
-output 	logic [3:0] result ;
+input 	[3:0] a;
+input 	[3:0] b;
+input 	clk;
+input 	btn_sumador;
+input 	btn_restador;
+output 	[0:6] alu_out_7seg;
+output 	[0:6] oper_7seg;
+output 	v;
+output 	c;
+output 	n;
+output 	z;
+output 	[3:0] result;
 
 // Design Ports Information
 // alu_out_7seg[6]	=>  Location: PIN_AH18,	 I/O Standard: 2.5 V,	 Current Strength: Default

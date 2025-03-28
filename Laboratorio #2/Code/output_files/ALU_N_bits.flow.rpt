@@ -1,5 +1,5 @@
 Flow report for ALU_N_bits
-Fri Mar 28 01:36:57 2025
+Fri Mar 28 08:14:13 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -38,29 +38,24 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Flow Summary                                                                     ;
-+---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Fri Mar 28 01:36:57 2025          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                   ; ALU_N_bits                                     ;
-; Top-level Entity Name           ; ALU_TOP_BTN                                    ;
-; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CSXFC6D6F31C6                                 ;
-; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 68 / 41,910 ( < 1 % )                          ;
-; Total registers                 ; 6                                              ;
-; Total pins                      ; 33 / 499 ( 7 % )                               ;
-; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
-; Total DSP Blocks                ; 0 / 112 ( 0 % )                                ;
-; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                  ;
-; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                  ;
-; Total PLLs                      ; 0 / 15 ( 0 % )                                 ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
-+---------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++-----------------------------+------------------------------------------------+
+; Flow Status                 ; Successful - Fri Mar 28 08:14:13 2025          ;
+; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name               ; ALU_N_bits                                     ;
+; Top-level Entity Name       ; ALU_TOP_BTN                                    ;
+; Family                      ; Cyclone V                                      ;
+; Device                      ; 5CSXFC6D6F31C6                                 ;
+; Timing Models               ; Final                                          ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
+; Total registers             ; N/A until Partition Merge                      ;
+; Total pins                  ; N/A until Partition Merge                      ;
+; Total virtual pins          ; N/A until Partition Merge                      ;
+; Total block memory bits     ; N/A until Partition Merge                      ;
+; Total PLLs                  ; N/A until Partition Merge                      ;
+; Total DLLs                  ; N/A until Partition Merge                      ;
++-----------------------------+------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/28/2025 01:35:30 ;
+; Start date & time ; 03/28/2025 08:14:06 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU_N_bits          ;
 +-------------------+---------------------+
@@ -79,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 4931007164039.174314732902112          ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 4931007164039.174317124522212          ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; multiplier_cla_tb                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; ALU_N_bits_tb                     ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
@@ -95,6 +90,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_MODULE_NAME           ; multiplier_cla_tb                      ; --            ; --          ; multiplier_cla_tb                 ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; ALU_N_bits_tb                          ; --            ; --          ; ALU_N_bits_tb                     ;
 ; EDA_TEST_BENCH_NAME                  ; multiplier_cla_tb                      ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; ALU_N_bits_tb                          ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
@@ -108,41 +104,29 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4859 MB             ; 00:00:17                           ;
-; Fitter               ; 00:01:04     ; 1.0                     ; 7328 MB             ; 00:04:38                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 4861 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5240 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
-; Total                ; 00:01:25     ; --                      ; --                  ; 00:05:06                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4770 MB             ; 00:00:17                           ;
+; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:17                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; ALEXTW           ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits
-quartus_fit --read_settings_files=off --write_settings_files=off ALU_N_bits -c ALU_N_bits
-quartus_asm --read_settings_files=off --write_settings_files=off ALU_N_bits -c ALU_N_bits
-quartus_sta ALU_N_bits -c ALU_N_bits
-quartus_eda --read_settings_files=off --write_settings_files=off ALU_N_bits -c ALU_N_bits
+quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits --analysis_and_elaboration
 
 
 
