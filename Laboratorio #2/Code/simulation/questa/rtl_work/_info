@@ -1,8 +1,9 @@
 m255
 K4
 z2
-Z0 !s12c _opt1
-Z1 !s99 nomlopt
+!s12c _opt2
+Z0 !s99 nomlopt
+Z1 !s12c _opt1
 R0
 R1
 R0
@@ -11,8 +12,11 @@ R0
 R1
 R0
 R1
+R0
+R1
+R0
 !s12c _opt
-R1
+R0
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -26,7 +30,7 @@ T_opt
 VKcil8z16YhN<5W8kM5PCQ3
 04 17 4 work multiplier_cla_tb fast 0
 =1-047c16ee2e87-67e61e5a-293-4bdc
-R1
+R0
 Z3 !s12b OEM100
 !s124 OEM10U33 
 Z4 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work +acc
@@ -35,253 +39,266 @@ n@_opt
 Z6 OL;O;2023.3;77
 R2
 T_opt1
-!s110 1743171869
-Vk;3i7z=D`RjI71]JAI9D@0
-04 13 4 work ALU_N_bits_tb fast 0
-=1-047c16ee2e87-67e6b11d-e9-3c20
-R1
+!s110 1743172924
+V[cn2ZQHN3=TlReFHeKNhj1
+Z7 04 13 4 work ALU_N_bits_tb fast 0
+=1-047c16ee2e87-67e6b53c-1da-3cd0
+R0
 R3
-!s124 OEM10U20 
+Z8 !s124 OEM10U20 
 R4
 R5
 n@_opt1
 R6
+R2
+T_opt2
+!s110 1743214282
+VC0h3QgO_Y_bfQ9lo8gA@Y2
+R7
+=1-047c16ee2e87-67e756c9-224-36b0
+R0
+R3
+R8
+R4
+R5
+n@_opt2
+R6
 vALU_N_bits
-Z7 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
-Z8 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z9 !s110 1743171867
+Z9 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z11 !s110 1743214280
 !i10b 1
 !s100 E`O_bR5_Ual9`F[H?jD021
 IfHClg]NZPjD`3NL9fIanY1
 S1
 R2
-Z10 w1743168600
-Z11 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
-Z12 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+Z12 w1743168600
+Z13 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
+Z14 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv
 !i122 0
 L0 44 72
-Z13 VDg1SIo80bB@j0V0VzS_@n1
-Z14 OL;L;2023.3;77
+Z15 VDg1SIo80bB@j0V0VzS_@n1
+Z16 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z15 !s108 1743171867.000000
-Z16 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
-Z17 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
+Z17 !s108 1743214279.000000
+Z18 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
+Z19 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv|
 !i113 0
-Z18 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z19 !s92 -sv -work work {+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z20 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z21 !s92 -sv -work work {+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R5
 n@a@l@u_@n_bits
 vALU_N_bits_tb
 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
-R8
-Z20 !s110 1743171868
+R10
+R11
 !i10b 1
-!s100 JN`g_ck>=MQK`EB>]5a242
-I=;gHe]aK69o@HcB7DaO:k3
+!s100 E^C6TQF8oI:>0QIcC9Vle0
+I<ZFDEzZi7?;]NCCHl>kk12
 S1
 R2
-R10
+w1743172603
 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv
 !i122 5
-L0 17 77
-R13
-R14
+L0 49 138
+R15
+R16
 r1
 !s85 0
 31
-Z21 !s108 1743171868.000000
+Z22 !s108 1743214280.000000
 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv|
 !i113 0
-R18
-R19
+R20
+R21
 R5
 n@a@l@u_@n_bits_tb
 vALU_TOP_BTN
-R7
-R8
 R9
+R10
+R11
 !i10b 1
 !s100 faaFffH]L>N[b?_ld]L4@0
 I1DZ>aoHUf6iNDS=dI]S7>3
 S1
 R2
-R10
-R11
 R12
-!i122 0
-L0 156 63
 R13
 R14
+!i122 0
+L0 156 63
+R15
+R16
 r1
 !s85 0
 31
-R15
-R16
 R17
-!i113 0
 R18
 R19
+!i113 0
+R20
+R21
 R5
 n@a@l@u_@t@o@p_@b@t@n
 vcarry_lookahead_adder
 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv
-R8
-R20
+R10
+R11
 !i10b 1
 !s100 D1XNU4IGCkChIf5<c`oU91
 Ik>C]z9a72BhC[SdFP_i0^0
 S1
 R2
-R10
+R12
 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv
 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv
 !i122 3
 L0 41 29
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R21
+R22
 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv|
 !i113 0
-R18
-R19
+R20
+R21
 R5
 vfull_adder
-Z22 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
-R8
-R9
+Z23 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+R10
+R11
 !i10b 1
 !s100 o5Vo@3YY61I]ig>YVcoiV3
 I[@3?^[z933zFRY^h?fnYe3
 S1
 R2
-Z23 w1743168602
-Z24 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
-Z25 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+Z24 w1743168602
+Z25 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
+Z26 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv
 !i122 2
 L0 31 5
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R15
-Z26 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
-Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+R22
+Z27 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
+Z28 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv|
 !i113 0
-R18
-R19
+R20
+R21
 R5
 vmultiplier_cla
 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv
-R8
-R20
+R10
+R11
 !i10b 1
 !s100 BPbB7CP>;[CBNiG1;SXHV1
 I[Ue@8:fF:AJZRQaXc[Rc=0
 S1
 R2
-Z28 w1743168601
+Z29 w1743168601
 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv
 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv
 !i122 4
 L0 41 52
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R21
+R22
 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv|
 !i113 0
-R18
-R19
+R20
+R21
 R5
 vmux10
 2C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
-R8
-R9
+R10
+R11
 !i10b 1
 !s100 TL[kDo5ODgMiEKQVXjh>73
 IzOEF]`6D0A0cTKGO7lPKi2
 S1
 R2
-R28
+R29
 8C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
 FC:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv
 !i122 1
 L0 55 9
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R15
+R22
 !s107 C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code|C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv|
 !i113 0
-R18
-R19
+R20
+R21
 R5
 vPrint_Single_Hex
-R7
-R8
 R9
+R10
+R11
 !i10b 1
 !s100 lU8PgM:FNDhgL^SK>YMWK2
 I=o<bOQJ^D8`Z1BTWR_VY[3
 S1
 R2
-R10
-R11
 R12
-!i122 0
-L0 239 26
 R13
 R14
+!i122 0
+L0 239 26
+R15
+R16
 r1
 !s85 0
 31
-R15
-R16
 R17
-!i113 0
 R18
 R19
+!i113 0
+R20
+R21
 R5
 n@print_@single_@hex
 vripple_carry_adder_N_bits
-R22
-R8
-R9
+R23
+R10
+R11
 !i10b 1
 !s100 MLzeOiZkITgMZ@ZL5k10E1
 IKIAj`TAf0G^LV]I1;kPb>1
 S1
 R2
-R23
 R24
 R25
+R26
 !i122 2
 L0 61 21
-R13
-R14
+R15
+R16
 r1
 !s85 0
 31
-R15
-R26
+R22
 R27
+R28
 !i113 0
-R18
-R19
+R20
+R21
 R5
 nripple_carry_adder_@n_bits
