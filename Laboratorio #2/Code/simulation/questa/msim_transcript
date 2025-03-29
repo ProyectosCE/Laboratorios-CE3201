@@ -18,6 +18,7 @@
 # 	vdel -lib rtl_work -all
 # }
 # ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is amv22@ALEXTW.
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt1".  Locker is amv22@ALEXTW.
 # vlib rtl_work
 # ** Warning: (vlib-34) Library already exists at "rtl_work".
 # Errors: 0, Warnings: 1
@@ -29,7 +30,7 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:27 on Mar 28,2025
+# Start time: 20:11:19 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv 
 # -- Compiling module ALU_N_bits
 # -- Compiling module ALU_TOP_BTN
@@ -37,64 +38,64 @@
 # 
 # Top level modules:
 # 	ALU_TOP_BTN
-# End time: 08:24:27 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:27 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv 
 # -- Compiling module mux10
 # 
 # Top level modules:
 # 	mux10
-# End time: 08:24:27 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:27 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv 
 # -- Compiling module full_adder
 # -- Compiling module ripple_carry_adder_N_bits
 # 
 # Top level modules:
 # 	ripple_carry_adder_N_bits
-# End time: 08:24:27 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:28 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv 
 # -- Compiling module carry_lookahead_adder
 # 
 # Top level modules:
 # 	carry_lookahead_adder
-# End time: 08:24:28 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:28 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv 
 # -- Compiling module multiplier_cla
 # 
 # Top level modules:
 # 	multiplier_cla
-# End time: 08:24:28 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio\ #2/Code {C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 08:24:28 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code" C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv 
 # -- Compiling module ALU_N_bits_tb
 # 
 # Top level modules:
 # 	ALU_N_bits_tb
-# End time: 08:24:28 on Mar 28,2025, Elapsed time: 0:00:00
+# End time: 20:11:20 on Mar 28,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  ALU_N_bits_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" ALU_N_bits_tb 
-# Start time: 08:24:28 on Mar 28,2025
+# Start time: 20:11:20 on Mar 28,2025
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -114,29 +115,37 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: amv22  Hostname: ALEXTW  ProcessID: 19420
-#           Attempting to use alternate WLF file "./wlftf10e89".
+#           Attempting to use alternate WLF file "./wlftfj8fes".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftf10e89
+#           Using alternate file: ./wlftfj8fes
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Addition Test:   9 +  41 =  50
+# Addition Test 2:  15 +   1 =  16
 # Substraction Test:  49 -  17 =  32
+# Substraction Test 2:   4 -   8 = 252
 # AND Test: 00110101 & 01010001 = 00010001
+# AND Test 2: 11110000 & 10101010 = 10100000
 # OR Test: 00110101 | 01010001 = 01110101
+# OR Test 2: 00001111 | 11110000 = 11111111
 # XOR Test: 00110101 ^ 01010001 = 01100100
+# XOR Test 2: 11111111 ^ 10101010 = 01010101
 # Logical Shift Right Test: 00110101 >>   1 = 00011010
+# Logical Shift Right Test 2: 11110000 >>   2 = 00111100
 # Logical Shift Left Test: 00110101 <<   2 = 11010100
+# Logical Shift Left Test 2: 00001111 <<   3 = 01111000
 # Modulus Test:  25 %   7 =   4
+# Modulus Test 2:  20 %   5 =   0
 # Multiplication Test:   3 *  32 =  96
+# Multiplication Test 2:   5 *   6 =  30
 # Divition Test: 113 /   7 =  16
+# Divition Test 2:  20 /   5 =   4
 # ** Warning: (vsim-8630) Infinity results from division operation.
-#    Time: 100 ns  Iteration: 1  Process: /ALU_N_bits_tb/dut/#ASSIGN#71 File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
+#    Time: 200 ns  Iteration: 1  Process: /ALU_N_bits_tb/dut/#ASSIGN#71 File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
 # FLAGS Test (VCNZ:0001): 11111111 & 00000000 = 00000000
 # FLAGS Test (VCNZ:1100): 11000011 + 10010001 = 01010100
 # FLAGS Test (VCNZ:1010):  93 + 126 =  -37
 # Causality operation skipped due to absence of debug database file
-# End time: 08:32:09 on Mar 28,2025, Elapsed time: 0:07:41
-# Errors: 0, Warnings: 6

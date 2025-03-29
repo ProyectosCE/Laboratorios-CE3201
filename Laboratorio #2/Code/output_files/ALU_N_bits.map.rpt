@@ -1,5 +1,5 @@
-Analysis & Elaboration report for ALU_N_bits
-Fri Mar 28 08:14:13 2025
+Analysis & Synthesis report for ALU_N_bits
+Fri Mar 28 21:07:26 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -7,20 +7,59 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst
-  5. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum
-  6. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul
-  7. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1
-  8. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[2].add1
-  9. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[3].add1
- 10. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller
- 11. Analysis & Elaboration Settings
- 12. Port Connectivity Checks: "ALU_N_bits:alu_inst|multiplier_cla:alu_mul"
- 13. Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"
- 14. Analysis & Elaboration Messages
- 15. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |top_ALU_test
+ 11. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst
+ 12. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum
+ 13. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul
+ 14. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1
+ 15. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[2].add1
+ 16. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[3].add1
+ 17. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[4].add1
+ 18. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[5].add1
+ 19. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[6].add1
+ 20. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[7].add1
+ 21. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[8].add1
+ 22. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[9].add1
+ 23. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[10].add1
+ 24. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[11].add1
+ 25. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[12].add1
+ 26. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[13].add1
+ 27. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[14].add1
+ 28. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[15].add1
+ 29. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[16].add1
+ 30. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[17].add1
+ 31. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[18].add1
+ 32. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[19].add1
+ 33. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[20].add1
+ 34. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[21].add1
+ 35. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[22].add1
+ 36. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[23].add1
+ 37. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[24].add1
+ 38. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[25].add1
+ 39. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[26].add1
+ 40. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[27].add1
+ 41. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[28].add1
+ 42. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[29].add1
+ 43. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[30].add1
+ 44. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[31].add1
+ 45. Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller
+ 46. Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Mod0
+ 47. Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Div0
+ 48. Port Connectivity Checks: "ALU_N_bits:alu_inst|multiplier_cla:alu_mul"
+ 49. Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"
+ 50. Port Connectivity Checks: "ALU_N_bits:alu_inst"
+ 51. Post-Synthesis Netlist Statistics for Top Partition
+ 52. Elapsed Time Per Partition
+ 53. Analysis & Synthesis Messages
+ 54. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,118 +83,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+--------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                 ;
-+-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Fri Mar 28 08:14:13 2025          ;
-; Quartus Prime Version         ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name                 ; ALU_N_bits                                     ;
-; Top-level Entity Name         ; ALU_TOP_BTN                                    ;
-; Family                        ; Cyclone V                                      ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                      ;
-; Total registers               ; N/A until Partition Merge                      ;
-; Total pins                    ; N/A until Partition Merge                      ;
-; Total virtual pins            ; N/A until Partition Merge                      ;
-; Total block memory bits       ; N/A until Partition Merge                      ;
-; Total PLLs                    ; N/A until Partition Merge                      ;
-; Total DLLs                    ; N/A until Partition Merge                      ;
-+-------------------------------+------------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst ;
-+----------------+-------+-----------------------------------------+
-; Parameter Name ; Value ; Type                                    ;
-+----------------+-------+-----------------------------------------+
-; N              ; 4     ; Signed Integer                          ;
-+----------------+-------+-----------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum ;
-+----------------+-------+---------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                                            ;
-+----------------+-------+---------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; MULTICAND_WID  ; 4     ; Signed Integer                                                 ;
-; MULTIPLIER_WID ; 4     ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; DATA_WID       ; 4     ; Signed Integer                                                                                      ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[2].add1 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; DATA_WID       ; 4     ; Signed Integer                                                                                      ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[3].add1 ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-; DATA_WID       ; 4     ; Signed Integer                                                                                      ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller ;
-+----------------+-------+--------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                         ;
-+----------------+-------+--------------------------------------------------------------+
-; N              ; 4     ; Signed Integer                                               ;
-+----------------+-------+--------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Mar 28 21:07:26 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; ALU_N_bits                                     ;
+; Top-level Entity Name           ; top_ALU_test                                   ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 64                                             ;
+; Total pins                      ; 70                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; ALU_TOP_BTN        ; ALU_N_bits         ;
+; Top-level entity name                                                           ; top_ALU_test       ; ALU_N_bits         ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -236,32 +193,651 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_N_bits:alu_inst|multiplier_cla:alu_mul"                                                                                   ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                    ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
-; product ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (4 bits) it drives; bit(s) "product[7..4]" have no fanouts ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
++----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
-; cout ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "cout[3..1]" have no fanouts ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
+; ALU_N_bits.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv              ;         ;
+; mux10.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/mux10.sv                   ;         ;
+; sum.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv                     ;         ;
+; carry_lookahead_adder.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv   ;         ;
+; multiplier_cla.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv          ;         ;
+; top_ALU_test.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/top_ALU_test.sv            ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf           ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc          ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc      ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc           ;         ;
+; db/lpm_divide_65m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_65m.tdf      ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_9nh.tdf ;         ;
+; db/alt_u_div_o2f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_o2f.tdf       ;         ;
+; db/lpm_divide_3dm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_3dm.tdf      ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 3309      ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 5468      ;
+;     -- 7 input functions                    ; 8         ;
+;     -- 6 input functions                    ; 1138      ;
+;     -- 5 input functions                    ; 1588      ;
+;     -- 4 input functions                    ; 1082      ;
+;     -- <=3 input functions                  ; 1652      ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 64        ;
+;                                             ;           ;
+; I/O pins                                    ; 70        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; reg_in[1] ;
+; Maximum fan-out                             ; 195       ;
+; Total fan-out                               ; 24475     ;
+; Average fan-out                             ; 4.32      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Entity Name           ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |top_ALU_test                                    ; 5468 (19)           ; 64 (64)                   ; 0                 ; 0          ; 70   ; 0            ; |top_ALU_test                                                                                                                     ; top_ALU_test          ; work         ;
+;    |ALU_N_bits:alu_inst|                         ; 5449 (111)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst                                                                                                 ; ALU_N_bits            ; work         ;
+;       |lpm_divide:Div0|                          ; 1089 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Div0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_3dm:auto_generated|         ; 1089 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_3dm:auto_generated                                                   ; lpm_divide_3dm        ; work         ;
+;             |sign_div_unsign_9nh:divider|        ; 1089 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh   ; work         ;
+;                |alt_u_div_o2f:divider|           ; 1089 (1089)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Div0|lpm_divide_3dm:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f         ; work         ;
+;       |lpm_divide:Mod0|                          ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Mod0                                                                                 ; lpm_divide            ; work         ;
+;          |lpm_divide_65m:auto_generated|         ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_65m:auto_generated                                                   ; lpm_divide_65m        ; work         ;
+;             |sign_div_unsign_9nh:divider|        ; 1115 (0)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider                       ; sign_div_unsign_9nh   ; work         ;
+;                |alt_u_div_o2f:divider|           ; 1115 (1115)         ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|lpm_divide:Mod0|lpm_divide_65m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_o2f:divider ; alt_u_div_o2f         ; work         ;
+;       |multiplier_cla:alu_mul|                   ; 2946 (476)          ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul                                                                          ; multiplier_cla        ; work         ;
+;          |carry_lookahead_adder:adders[10].add1| ; 86 (86)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[10].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[11].add1| ; 93 (93)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[11].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[12].add1| ; 92 (92)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[12].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[13].add1| ; 82 (82)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[13].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[14].add1| ; 93 (93)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[14].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[15].add1| ; 97 (97)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[15].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[16].add1| ; 94 (94)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[16].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[17].add1| ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[17].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[18].add1| ; 91 (91)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[18].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[19].add1| ; 97 (97)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[19].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[1].add1|  ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[20].add1| ; 93 (93)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[20].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[21].add1| ; 90 (90)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[21].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[22].add1| ; 95 (95)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[22].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[23].add1| ; 88 (88)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[23].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[24].add1| ; 89 (89)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[24].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[25].add1| ; 92 (92)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[25].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[26].add1| ; 79 (79)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[26].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[27].add1| ; 88 (88)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[27].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[28].add1| ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[28].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[29].add1| ; 59 (59)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[29].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[2].add1|  ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[2].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[30].add1| ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[30].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[31].add1| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[31].add1                                    ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[3].add1|  ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[3].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[4].add1|  ; 68 (68)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[4].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[5].add1|  ; 78 (78)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[5].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[6].add1|  ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[6].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[7].add1|  ; 88 (88)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[7].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[8].add1|  ; 76 (76)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[8].add1                                     ; carry_lookahead_adder ; work         ;
+;          |carry_lookahead_adder:adders[9].add1|  ; 86 (86)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[9].add1                                     ; carry_lookahead_adder ; work         ;
+;       |mux10:alu_controller|                     ; 188 (188)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_ALU_test|ALU_N_bits:alu_inst|mux10:alu_controller                                                                            ; mux10                 ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 64    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 17:1               ; 12 bits   ; 132 LEs       ; 84 LEs               ; 48 LEs                 ; Yes        ; |top_ALU_test|out_data[8]~reg0                ;
+; 17:1               ; 12 bits   ; 132 LEs       ; 84 LEs               ; 48 LEs                 ; Yes        ; |top_ALU_test|out_data[16]~reg0               ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 24 LEs               ; 2 LEs                  ; Yes        ; |top_ALU_test|out_data[2]~reg0                ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 48 LEs               ; 4 LEs                  ; Yes        ; |top_ALU_test|out_data[28]~reg0               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftLeft0  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftRight0 ;
+; 4:1                ; 48 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftRight0 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftLeft0  ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftRight0 ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top_ALU_test|ALU_N_bits:alu_inst|ShiftRight0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |top_ALU_test ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 32    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 32    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; MULTICAND_WID  ; 32    ; Signed Integer                                                 ;
+; MULTIPLIER_WID ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[2].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[3].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[4].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[5].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[6].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[7].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[8].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[9].add1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                      ;
++----------------+-------+-----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[10].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[11].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[12].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[13].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[14].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[15].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[16].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[17].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[18].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[19].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[20].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[21].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[22].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[23].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[24].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[25].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[26].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[27].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[28].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[29].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[30].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[31].add1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; DATA_WID       ; 32    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU_N_bits:alu_inst|mux10:alu_controller ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                    ;
+; LPM_WIDTHD             ; 32             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_65m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ALU_N_bits:alu_inst|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                    ;
+; LPM_WIDTHD             ; 32             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_3dm ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_N_bits:alu_inst|multiplier_cla:alu_mul"                                                                                       ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                        ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; product ; Output ; Warning  ; Output or bidir port (64 bits) is wider than the port expression (32 bits) it drives; bit(s) "product[63..32]" have no fanouts ;
++---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum"                                                                    ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; cout ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "cout[31..1]" have no fanouts ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU_N_bits:alu_inst"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; v    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; c    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; n    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 64                          ;
+;     CLR               ; 40                          ;
+;     CLR SCLR          ; 24                          ;
+; arriav_lcell_comb     ; 5468                        ;
+;     arith             ; 1160                        ;
+;         0 data inputs ; 116                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 56                          ;
+;         5 data inputs ; 986                         ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 4282                        ;
+;         2 data inputs ; 633                         ;
+;         3 data inputs ; 833                         ;
+;         4 data inputs ; 1076                        ;
+;         5 data inputs ; 602                         ;
+;         6 data inputs ; 1138                        ;
+;     shared            ; 18                          ;
+;         0 data inputs ; 6                           ;
+;         2 data inputs ; 6                           ;
+;         4 data inputs ; 6                           ;
+; boundary_port         ; 70                          ;
+;                       ;                             ;
+; Max LUT depth         ; 376.00                      ;
+; Average LUT depth     ; 210.08                      ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:24     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Mar 28 08:14:05 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits --analysis_and_elaboration
+    Info: Processing started: Fri Mar 28 21:06:53 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU_N_bits -c ALU_N_bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 3 design units, including 3 entities, in source file alu_n_bits.sv
@@ -274,37 +850,64 @@ Info (12021): Found 2 design units, including 2 entities, in source file sum.sv
     Info (12023): Found entity 1: full_adder File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 31
     Info (12023): Found entity 2: ripple_carry_adder_N_bits File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 61
 Info (12021): Found 1 design units, including 1 entities, in source file alu_n_bits_tb.sv
-    Info (12023): Found entity 1: ALU_N_bits_tb File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv Line: 17
+    Info (12023): Found entity 1: ALU_N_bits_tb File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits_tb.sv Line: 49
 Info (12021): Found 1 design units, including 1 entities, in source file carry_lookahead_adder.sv
     Info (12023): Found entity 1: carry_lookahead_adder File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/carry_lookahead_adder.sv Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_cla.sv
     Info (12023): Found entity 1: multiplier_cla File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv Line: 41
 Info (12021): Found 1 design units, including 1 entities, in source file multiplier_cla_tb.sv
-    Info (12023): Found entity 1: multiplier_cla_tb File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv Line: 1
-Info (12127): Elaborating entity "ALU_TOP_BTN" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(196): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 196
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(200): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 200
-Info (12128): Elaborating entity "ALU_N_bits" for hierarchy "ALU_N_bits:alu_inst" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 181
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(70): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 70
-Warning (10230): Verilog HDL assignment warning at ALU_N_bits.sv(71): truncated value with size 32 to match size of target (4) File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
+    Info (12023): Found entity 1: multiplier_cla_tb File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla_tb.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file top_alu_test.sv
+    Info (12023): Found entity 1: top_ALU_test File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/top_ALU_test.sv Line: 1
+Info (12127): Elaborating entity "top_ALU_test" for the top level hierarchy
+Info (12128): Elaborating entity "ALU_N_bits" for hierarchy "ALU_N_bits:alu_inst" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/top_ALU_test.sv Line: 28
 Info (12128): Elaborating entity "ripple_carry_adder_N_bits" for hierarchy "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 85
 Info (12128): Elaborating entity "full_adder" for hierarchy "ALU_N_bits:alu_inst|ripple_carry_adder_N_bits:alu_sum|full_adder:adder_stage[0].fa" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/sum.sv Line: 77
 Info (12128): Elaborating entity "multiplier_cla" for hierarchy "ALU_N_bits:alu_inst|multiplier_cla:alu_mul" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 90
 Info (12128): Elaborating entity "carry_lookahead_adder" for hierarchy "ALU_N_bits:alu_inst|multiplier_cla:alu_mul|carry_lookahead_adder:adders[1].add1" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/multiplier_cla.sv Line: 76
 Info (12128): Elaborating entity "mux10" for hierarchy "ALU_N_bits:alu_inst|mux10:alu_controller" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 107
-Info (12128): Elaborating entity "Print_Single_Hex" for hierarchy "Print_Single_Hex:res_disp" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 210
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU_N_bits:alu_inst|Mod0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 70
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "ALU_N_bits:alu_inst|Div0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
+Info (12130): Elaborated megafunction instantiation "ALU_N_bits:alu_inst|lpm_divide:Mod0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 70
+Info (12133): Instantiated megafunction "ALU_N_bits:alu_inst|lpm_divide:Mod0" with the following parameter: File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 70
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_65m.tdf
+    Info (12023): Found entity 1: lpm_divide_65m File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_65m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_o2f.tdf
+    Info (12023): Found entity 1: alt_u_div_o2f File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/alt_u_div_o2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "ALU_N_bits:alu_inst|lpm_divide:Div0" File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
+Info (12133): Instantiated megafunction "ALU_N_bits:alu_inst|lpm_divide:Div0" with the following parameter: File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/ALU_N_bits.sv Line: 71
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "32"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3dm.tdf
+    Info (12023): Found entity 1: lpm_divide_3dm File: C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/db/lpm_divide_3dm.tdf Line: 25
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Fri Mar 28 08:14:13 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5570 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 38 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 5500 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Fri Mar 28 21:07:26 2025
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:42
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in C:/Users/amv22/Dev/TEC/CE3201_LAB01/Laboratorio #2/Code/output_files/ALU_N_bits.map.smsg.
 
 
