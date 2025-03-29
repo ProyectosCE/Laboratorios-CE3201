@@ -1,4 +1,4 @@
-module top_ALU_test #(parameter N = 4)(
+module top_ALU_test #(parameter N = 32)(
     input  logic tclk,
     input  logic reset,
     input  logic [3:0] control,

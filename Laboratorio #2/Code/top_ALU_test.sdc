@@ -1,6 +1,6 @@
 # ========= RELOJ PRINCIPAL =========
 # Supón una frecuencia de 100 MHz (10 ns). Puedes ajustar esto si lo necesitas.
-create_clock -name tclk -period 6.2 [get_ports tclk]
+create_clock -name tclk -period 193.4 [get_ports tclk]
 
 
 # ========= RESTRICCIONES DE ENTRADA/SALIDA =========
