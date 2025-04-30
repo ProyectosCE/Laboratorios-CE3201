@@ -72,3 +72,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE tb_Status_Register.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Player2_Input.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM_Game_Controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_FSM_Game_Controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Topmodule.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Topmodule.sv
