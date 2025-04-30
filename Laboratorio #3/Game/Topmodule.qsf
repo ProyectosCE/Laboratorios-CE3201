@@ -55,3 +55,4 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name SYSTEMVERILOG_FILE Board_Manager.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Board_Manager.sv
