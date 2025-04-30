@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at Board_Manager.sv(13): always construct contains both blocking and non-blocking assignments File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv Line: 13
+Warning (10268): Verilog HDL information at Win_Checker.sv(15): always construct contains both blocking and non-blocking assignments File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv Line: 15
+Warning (10268): Verilog HDL information at Random_Move_Generator.sv(26): always construct contains both blocking and non-blocking assignments File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 26

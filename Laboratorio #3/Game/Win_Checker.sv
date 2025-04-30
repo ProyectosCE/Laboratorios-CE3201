@@ -8,7 +8,7 @@ module Win_Checker (
     output logic [1:0] winner_id
 );
 
-    logic [1:0] cell;
+    logic [1:0] current_cell;
     integer row, col;
     logic found;
 
@@ -18,56 +18,59 @@ module Win_Checker (
             winner_id  <= 2'b00;
         end else if (check_en) begin
             found = 0;
-            // Recorremos cada celda del tablero
+            win_flag <= 0;
+            winner_id <= 2'b00;
+
             for (row = 0; row < 6; row = row + 1) begin
                 for (col = 0; col < 7; col = col + 1) begin
-                    cell = board[row][col];
-                    if (cell != 2'b00) begin
+                    current_cell = board[row][col];
+                    if (current_cell != 2'b00) begin
 
-                        // Horizontal (izq a der)
+                        // Horizontal →
                         if (col <= 3 &&
-                            cell == board[row][col+1] &&
-                            cell == board[row][col+2] &&
-                            cell == board[row][col+3]) begin
+                            current_cell == board[row][col+1] &&
+                            current_cell == board[row][col+2] &&
+                            current_cell == board[row][col+3]) begin
                             found = 1;
+                            win_flag <= 1;
+                            winner_id <= current_cell;
                         end
 
-                        // Vertical (up a down)
+                        // Vertical ↓
                         if (row <= 2 &&
-                            cell == board[row+1][col] &&
-                            cell == board[row+2][col] &&
-                            cell == board[row+3][col]) begin
+                            current_cell == board[row+1][col] &&
+                            current_cell == board[row+2][col] &&
+                            current_cell == board[row+3][col]) begin
                             found = 1;
+                            win_flag <= 1;
+                            winner_id <= current_cell;
                         end
 
-                        // Diagonal (up e iqz a down y der)
+                        // Diagonal ↘
                         if (row <= 2 && col <= 3 &&
-                            cell == board[row+1][col+1] &&
-                            cell == board[row+2][col+2] &&
-                            cell == board[row+3][col+3]) begin
+                            current_cell == board[row+1][col+1] &&
+                            current_cell == board[row+2][col+2] &&
+                            current_cell == board[row+3][col+3]) begin
                             found = 1;
+                            win_flag <= 1;
+                            winner_id <= current_cell;
                         end
 
-                        // Diagonal (down y der a up e iqz a)
+                        // Diagonal ↗
                         if (row >= 3 && col <= 3 &&
-                            cell == board[row-1][col+1] &&
-                            cell == board[row-2][col+2] &&
-                            cell == board[row-3][col+3]) begin
+                            current_cell == board[row-1][col+1] &&
+                            current_cell == board[row-2][col+2] &&
+                            current_cell == board[row-3][col+3]) begin
                             found = 1;
-                        end
-
-                        if (found) begin
-                            win_flag  <= 1;
-                            winner_id <= cell;
+                            win_flag <= 1;
+                            winner_id <= current_cell;
                         end
                     end
                 end
             end
-
-            if (!found) begin
-                win_flag <= 0;
-                winner_id <= 2'b00;
-            end
+        end else begin
+            win_flag <= 0;
+            winner_id <= 2'b00;
         end
     end
 

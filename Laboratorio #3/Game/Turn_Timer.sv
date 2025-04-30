@@ -1,6 +1,6 @@
 // Temporizador de 10 segundos para controlar el turno de cada jugador
 module Turn_Timer #(
-    parameter CLK_FREQ = 50_000_000  // Frecuencia de reloj en Hz
+    parameter integer CLK_FREQ = 50_000_000  // Frecuencia del reloj (50 MHz)
 )(
     input  logic       clk,
     input  logic       rst,
@@ -10,42 +10,35 @@ module Turn_Timer #(
     output logic [3:0] count_seconds
 );
 
-    // Contador de ciclos para generar 1 segundo
-    logic [$clog2(CLK_FREQ)-1:0] tick_counter;
+    // Contador para generar pulso de 1 segundo
+    logic [$clog2(CLK_FREQ)-1:0] cycle_counter;
     logic tick_1s;
 
-    // Generar pulso cada segundo
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst || reset_timer) begin
-            tick_counter <= 0;
+    // Pulso de 1 segundo
+    always_ff @(posedge clk) begin
+        if (rst || reset_timer || !enable) begin
+            cycle_counter <= 0;
             tick_1s <= 0;
-        end else if (enable) begin
-            if (tick_counter == CLK_FREQ - 1) begin
-                tick_counter <= 0;
-                tick_1s <= 1;
-            end else begin
-                tick_counter <= tick_counter + 1;
-                tick_1s <= 0;
-            end
+        end else if (cycle_counter == CLK_FREQ - 1) begin
+            cycle_counter <= 0;
+            tick_1s <= 1;
         end else begin
-            tick_counter <= 0;
+            cycle_counter <= cycle_counter + 1;
             tick_1s <= 0;
         end
     end
 
     // Contador de segundos
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk) begin
         if (rst || reset_timer) begin
             count_seconds <= 0;
             timeout <= 0;
-        end else if (enable) begin
-            if (tick_1s) begin
-                if (count_seconds == 10) begin
-                    timeout <= 1;
-                end else begin
-                    count_seconds <= count_seconds + 1;
-                    timeout <= 0;
-                end
+        end else if (enable && tick_1s) begin
+            if (count_seconds == 4'd10) begin
+                timeout <= 1;
+            end else begin
+                count_seconds <= count_seconds + 1;
+                timeout <= 0;
             end
         end else begin
             timeout <= 0;
