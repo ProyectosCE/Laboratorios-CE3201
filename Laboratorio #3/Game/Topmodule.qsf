@@ -69,3 +69,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE tb_SevenSeg_Controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE VGA_Controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Status_Register.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Status_Register.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Player2_Input.sv
