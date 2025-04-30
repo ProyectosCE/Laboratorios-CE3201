@@ -58,3 +58,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE Board_Manager.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Board_Manager.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Player1_Input.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Player1_Input.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Win_Checker.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Win_Checker.sv
