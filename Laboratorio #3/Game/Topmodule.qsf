@@ -60,3 +60,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE Player1_Input.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Player1_Input.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_Win_Checker.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Win_Checker.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Turn_Timer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE tb_Turn_Timer.sv
