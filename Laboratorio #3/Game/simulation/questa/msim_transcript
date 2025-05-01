@@ -1,0 +1,129 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Topmodule_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying e:/intelfpga/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:25 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv 
+# -- Compiling module Board_Manager
+# 
+# Top level modules:
+# 	Board_Manager
+# End time: 22:49:26 on Apr 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:26 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv 
+# -- Compiling module Player1_Input
+# 
+# Top level modules:
+# 	Player1_Input
+# End time: 22:49:26 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:26 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv 
+# -- Compiling module Win_Checker
+# ** Warning: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv(6): (vlog-13314) Defaulting port 'board' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	Win_Checker
+# End time: 22:49:26 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:26 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv 
+# -- Compiling module Turn_Timer
+# 
+# Top level modules:
+# 	Turn_Timer
+# End time: 22:49:26 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:26 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv 
+# -- Compiling module SevenSeg_Controller
+# 
+# Top level modules:
+# 	SevenSeg_Controller
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:27 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv 
+# -- Compiling module VGA_Controller
+# ** Warning: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv(5): (vlog-13314) Defaulting port 'board' kind to 'var' rather than 'wire' due to default compile option setting of -svinputport=relaxed.
+# 
+# Top level modules:
+# 	VGA_Controller
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:27 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv 
+# -- Compiling module Status_Register
+# 
+# Top level modules:
+# 	Status_Register
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:27 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv 
+# -- Compiling module Player2_Input
+# 
+# Top level modules:
+# 	Player2_Input
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:27 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv 
+# -- Compiling module FSM_Game_Controller
+# 
+# Top level modules:
+# 	FSM_Game_Controller
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio\ #3/Game {C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 22:49:27 on Apr 30,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game" C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv 
+# -- Compiling module Topmodule
+# 
+# Top level modules:
+# 	Topmodule
+# End time: 22:49:27 on Apr 30,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
