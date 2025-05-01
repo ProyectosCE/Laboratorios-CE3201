@@ -1,0 +1,14 @@
+
+State Machine - |Topmodule|FSM_Game_Controller:fsm|state
+Name state.GAME_RESET state.DRAW state.PLAYER2_WINS state.PLAYER1_WINS state.TIMEOUT_ERROR state.CHECK_WINNER state.PLAYER2_PROCESS state.PLAYER2_WAIT state.PLAYER1_PROCESS state.PLAYER1_WAIT state.INIT_SCREEN 
+state.INIT_SCREEN 0 0 0 0 0 0 0 0 0 0 0 
+state.PLAYER1_WAIT 0 0 0 0 0 0 0 0 0 1 1 
+state.PLAYER1_PROCESS 0 0 0 0 0 0 0 0 1 0 1 
+state.PLAYER2_WAIT 0 0 0 0 0 0 0 1 0 0 1 
+state.PLAYER2_PROCESS 0 0 0 0 0 0 1 0 0 0 1 
+state.CHECK_WINNER 0 0 0 0 0 1 0 0 0 0 1 
+state.TIMEOUT_ERROR 0 0 0 0 1 0 0 0 0 0 1 
+state.PLAYER1_WINS 0 0 0 1 0 0 0 0 0 0 1 
+state.PLAYER2_WINS 0 0 1 0 0 0 0 0 0 0 1 
+state.DRAW 0 1 0 0 0 0 0 0 0 0 1 
+state.GAME_RESET 1 0 0 0 0 0 0 0 0 0 1 

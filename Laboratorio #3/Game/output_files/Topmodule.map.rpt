@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Topmodule
-Wed Apr 30 17:34:18 2025
+Wed Apr 30 22:39:31 2025
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,8 +10,22 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Topmodule|FSM_Game_Controller:fsm|state
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: Turn_Timer:timer
+ 15. Port Connectivity Checks: "FSM_Game_Controller:fsm"
+ 16. Port Connectivity Checks: "Board_Manager:board_logic"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+ 20. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,22 +49,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                 ;
-+-----------------------------+------------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Wed Apr 30 17:34:18 2025              ;
-; Quartus Prime Version       ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
-; Revision Name               ; Topmodule                                      ;
-; Top-level Entity Name       ; Topmodule                                      ;
-; Family                      ; Cyclone V                                      ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                      ;
-; Total registers             ; N/A until Partition Merge                      ;
-; Total pins                  ; N/A until Partition Merge                      ;
-; Total virtual pins          ; N/A until Partition Merge                      ;
-; Total block memory bits     ; N/A until Partition Merge                      ;
-; Total PLLs                  ; N/A until Partition Merge                      ;
-; Total DLLs                  ; N/A until Partition Merge                      ;
-+-----------------------------+------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Apr 30 22:39:31 2025          ;
+; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Revision Name                   ; Topmodule                                      ;
+; Top-level Entity Name           ; Topmodule                                      ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 149                                            ;
+; Total pins                      ; 43                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,11 +168,242 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; Board_Manager.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv       ;         ;
+; Player1_Input.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv       ;         ;
+; Win_Checker.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv         ;         ;
+; Turn_Timer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv          ;         ;
+; SevenSeg_Controller.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv ;         ;
+; VGA_Controller.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv      ;         ;
+; Status_Register.sv               ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv     ;         ;
+; Player2_Input.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv       ;         ;
+; FSM_Game_Controller.sv           ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv ;         ;
+; Topmodule.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv           ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 283       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 420       ;
+;     -- 7 input functions                    ; 7         ;
+;     -- 6 input functions                    ; 133       ;
+;     -- 5 input functions                    ; 61        ;
+;     -- 4 input functions                    ; 59        ;
+;     -- <=3 input functions                  ; 160       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 149       ;
+;                                             ;           ;
+; I/O pins                                    ; 43        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 149       ;
+; Total fan-out                               ; 2303      ;
+; Average fan-out                             ; 3.52      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                       ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Entity Name         ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
+; |Topmodule                        ; 420 (4)             ; 149 (0)                   ; 0                 ; 0          ; 43   ; 0            ; |Topmodule                              ; Topmodule           ; work         ;
+;    |Board_Manager:board_logic|    ; 123 (123)           ; 84 (84)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Board_Manager:board_logic    ; Board_Manager       ; work         ;
+;    |FSM_Game_Controller:fsm|      ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|FSM_Game_Controller:fsm      ; FSM_Game_Controller ; work         ;
+;    |Player1_Input:p1_input|       ; 1 (1)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Player1_Input:p1_input       ; Player1_Input       ; work         ;
+;    |Player2_Input:p2_input|       ; 6 (6)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Player2_Input:p2_input       ; Player2_Input       ; work         ;
+;    |SevenSeg_Controller:seg_disp| ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|SevenSeg_Controller:seg_disp ; SevenSeg_Controller ; work         ;
+;    |Turn_Timer:timer|             ; 45 (45)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Turn_Timer:timer             ; Turn_Timer          ; work         ;
+;    |Win_Checker:win_check|        ; 226 (226)           ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Win_Checker:win_check        ; Win_Checker         ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Topmodule|FSM_Game_Controller:fsm|state                                                                                                                                                                                                 ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+; Name                  ; state.GAME_RESET ; state.DRAW ; state.PLAYER2_WINS ; state.PLAYER1_WINS ; state.TIMEOUT_ERROR ; state.CHECK_WINNER ; state.PLAYER2_PROCESS ; state.PLAYER2_WAIT ; state.PLAYER1_PROCESS ; state.PLAYER1_WAIT ; state.INIT_SCREEN ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+; state.INIT_SCREEN     ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 0                 ;
+; state.PLAYER1_WAIT    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 1                  ; 1                 ;
+; state.PLAYER1_PROCESS ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 1                     ; 0                  ; 1                 ;
+; state.PLAYER2_WAIT    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 1                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER2_PROCESS ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 1                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.CHECK_WINNER    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 1                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.TIMEOUT_ERROR   ; 0                ; 0          ; 0                  ; 0                  ; 1                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER1_WINS    ; 0                ; 0          ; 0                  ; 1                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER2_WINS    ; 0                ; 0          ; 1                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.DRAW            ; 0                ; 1          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.GAME_RESET      ; 1                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; FSM_Game_Controller:fsm|state~4               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~5               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~6               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~7               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state.PLAYER2_WAIT    ; Stuck at GND due to stuck port data_in ;
+; FSM_Game_Controller:fsm|state.DRAW            ; Stuck at GND due to stuck port data_in ;
+; Player2_Input:p2_input|valid_move             ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state.PLAYER2_PROCESS ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8         ;                                        ;
++-----------------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++---------------------------------+--------------------+----------------------------------------+
+; Register name                   ; Reason for Removal ; Registers Removed due to This Register ;
++---------------------------------+--------------------+----------------------------------------+
+; FSM_Game_Controller:fsm|state~4 ; Lost Fanouts       ; Player2_Input:p2_input|valid_move      ;
++---------------------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 27    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 116   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 96    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; SevenSeg_Controller:seg_disp|segments[0] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[1] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[2] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[3] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[4] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[5] ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[6] ; 1       ;
+; Total number of inverted registers = 7   ;         ;
++------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Topmodule|Player2_Input:p2_input|valid_move  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Topmodule|Turn_Timer:timer|count_seconds[0]  ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Topmodule|Turn_Timer:timer|cycle_counter[19] ;
+; 36:1               ; 2 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |Topmodule|Win_Checker:win_check|winner_id[0] ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Topmodule|Board_Manager:board_logic|Mux0     ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |Topmodule|FSM_Game_Controller:fsm|Selector9  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Turn_Timer:timer ;
++----------------+----------+-----------------------------------+
+; Parameter Name ; Value    ; Type                              ;
++----------------+----------+-----------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                    ;
++----------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM_Game_Controller:fsm"                                                                       ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; enable_input_p1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; enable_input_p2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; reset_inputs    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; turn            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "Board_Manager:board_logic" ;
++----------+--------+----------+------------------------+
+; Port     ; Type   ; Severity ; Details                ;
++----------+--------+----------+------------------------+
+; col_full ; Output ; Info     ; Explicitly unconnected ;
++----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 149                         ;
+;     CLR               ; 19                          ;
+;     CLR SCLR          ; 1                           ;
+;     ENA CLR           ; 96                          ;
+;     SCLR              ; 26                          ;
+;     plain             ; 7                           ;
+; arriav_lcell_comb     ; 429                         ;
+;     arith             ; 26                          ;
+;         1 data inputs ; 26                          ;
+;     extend            ; 7                           ;
+;         7 data inputs ; 7                           ;
+;     normal            ; 396                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 50                          ;
+;         2 data inputs ; 39                          ;
+;         3 data inputs ; 52                          ;
+;         4 data inputs ; 59                          ;
+;         5 data inputs ; 61                          ;
+;         6 data inputs ; 133                         ;
+; boundary_port         ; 43                          ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 4.65                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,7 +412,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Apr 30 17:34:06 2025
+    Info: Processing started: Wed Apr 30 22:39:17 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Topmodule
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -218,16 +468,55 @@ Info (12128): Elaborating entity "Board_Manager" for hierarchy "Board_Manager:bo
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (12128): Elaborating entity "Win_Checker" for hierarchy "Win_Checker:win_check" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 89
-Warning (10036): Verilog HDL or VHDL warning at Win_Checker.sv(13): object "found" assigned a value but never read File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv Line: 13
-Error (10251): Verilog HDL error at Win_Checker.sv(61): index -1 cannot fall outside the declared range [0:5] for dimension 0 of array "board" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv Line: 61
-Error (10828): SystemVerilog error at Win_Checker.sv(61): expression has 7 elements ; expected 2 File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv Line: 61
-Error (12152): Can't elaborate user hierarchy "Win_Checker:win_check" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 89
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "Status_Register" for hierarchy "Status_Register:status_reg" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 97
+Info (12128): Elaborating entity "SevenSeg_Controller" for hierarchy "SevenSeg_Controller:seg_disp" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 104
+Info (12128): Elaborating entity "FSM_Game_Controller" for hierarchy "FSM_Game_Controller:fsm" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 126
+Info (12128): Elaborating entity "VGA_Controller" for hierarchy "VGA_Controller:vga" File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 134
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "hsync" is stuck at VCC File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 15
+    Warning (13410): Pin "vsync" is stuck at VCC File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 16
+    Warning (13410): Pin "red[0]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[1]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[2]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[3]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[4]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[5]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[6]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "red[7]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 17
+    Warning (13410): Pin "green[0]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[1]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[2]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[3]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[4]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[5]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[6]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "green[7]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 18
+    Warning (13410): Pin "blue[0]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[1]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[2]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[3]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[4]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[5]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[6]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+    Warning (13410): Pin "blue[7]" is stuck at GND File: C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/output_files/Topmodule.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 5 warnings
-    Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Wed Apr 30 17:34:18 2025
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:29
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 518 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 475 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4871 megabytes
+    Info: Processing ended: Wed Apr 30 22:39:31 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
 
 
 +------------------------------------------+
