@@ -1,0 +1,88 @@
+|vga
+ref_clk => ref_clk.IN1
+rst => ~NO_FANOUT~
+vga_clk << vga_clk.DB_MAX_OUTPUT_PORT_TYPE
+h_sync << vga_controller:vga_ctrl.h_sync
+v_sync << vga_controller:vga_ctrl.v_sync
+sync_b << vga_controller:vga_ctrl.sync_b
+blank_b << vga_controller:vga_ctrl.blank_b
+r[0] << <VCC>
+r[1] << <VCC>
+r[2] << <VCC>
+r[3] << <VCC>
+r[4] << <VCC>
+r[5] << <VCC>
+r[6] << <VCC>
+r[7] << <VCC>
+g[0] << <GND>
+g[1] << <GND>
+g[2] << <GND>
+g[3] << <GND>
+g[4] << <GND>
+g[5] << <GND>
+g[6] << <GND>
+g[7] << <GND>
+b[0] << <VCC>
+b[1] << <VCC>
+b[2] << <VCC>
+b[3] << <VCC>
+b[4] << <VCC>
+b[5] << <VCC>
+b[6] << <VCC>
+b[7] << <VCC>
+
+
+|vga|clock_divider:clk_div
+clk_in => clk_out~reg0.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_out <= clk_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|vga|vga_controller:vga_ctrl
+vga_clk => y[0]~reg0.CLK
+vga_clk => y[1]~reg0.CLK
+vga_clk => y[2]~reg0.CLK
+vga_clk => y[3]~reg0.CLK
+vga_clk => y[4]~reg0.CLK
+vga_clk => y[5]~reg0.CLK
+vga_clk => y[6]~reg0.CLK
+vga_clk => y[7]~reg0.CLK
+vga_clk => y[8]~reg0.CLK
+vga_clk => y[9]~reg0.CLK
+vga_clk => x[0]~reg0.CLK
+vga_clk => x[1]~reg0.CLK
+vga_clk => x[2]~reg0.CLK
+vga_clk => x[3]~reg0.CLK
+vga_clk => x[4]~reg0.CLK
+vga_clk => x[5]~reg0.CLK
+vga_clk => x[6]~reg0.CLK
+vga_clk => x[7]~reg0.CLK
+vga_clk => x[8]~reg0.CLK
+vga_clk => x[9]~reg0.CLK
+h_sync <= h_sync.DB_MAX_OUTPUT_PORT_TYPE
+v_sync <= v_sync.DB_MAX_OUTPUT_PORT_TYPE
+sync_b <= sync_b.DB_MAX_OUTPUT_PORT_TYPE
+blank_b <= blank_b.DB_MAX_OUTPUT_PORT_TYPE
+x[0] <= x[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[1] <= x[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[2] <= x[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[3] <= x[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[4] <= x[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[5] <= x[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[6] <= x[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[7] <= x[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[8] <= x[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+x[9] <= x[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[0] <= y[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[4] <= y[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[5] <= y[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[6] <= y[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[7] <= y[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[8] <= y[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y[9] <= y[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
