@@ -36,20 +36,37 @@ endpackage
 module vga(
     input logic ref_clk, // 50 MHz clock from FPGA
     input logic rst,
-    output logic vga_clk, // 25.175 MHz clock for VGA
+	 
+	 // UNCOMMENT WHEN CONNECTING! Cables for communication, replaces the hardwire below
+	 /*
+	 input logic [1:0] board [0:5][0:6],
+	 input logic [1:0] player_selected,
+    input logic [2:0] column_selected,
+    */
+	 
+	 output logic vga_clk, // 25.175 MHz clock for VGA
     output logic h_sync, v_sync,  // Sync signals for resetting laser
     output logic sync_b, blank_b, // To FPGA video DAC (_b = active low)
     output logic [7:0] r, g, b    // Colors for DAC
-    );
+	 );
     // Positions
     logic [9:0] x, y;
 	 
+	 // /* COMMENT THIS WHEN CONNECTING! Changed to inputs
+	 // Initialize selects
 	 logic [1:0] player_selected;
 	 logic [2:0] column_selected;
 	 
-	 assign player_selected = 2'b00;
-	 assign column_selected = 3'b010;
-      
+	 assign player_selected = 2'b01;
+	 assign column_selected = 3'b100;
+	 
+	 
+	 // Initialize board
+	 logic [1:0] board [0:5][0:6];
+    board_init board_initializer(.board(board));
+    // */ 
+	  
+	  
     // Clock divider converts the reference clock to a suitable VGA one, 50 to 25 MHz, ideally it should be 25.175 MHz
     clock_divider clk_div(
         .clk_in(ref_clk),
@@ -69,6 +86,8 @@ module vga(
     board_drawer brd_drwr(
         .x(x),
         .y(y),
+		  
+		  .board(board), 
         .blank_b(blank_b),
 		  .player_selected(player_selected),
 		  .column_selected(column_selected),
@@ -501,6 +520,7 @@ module pixel_drawer(
 endmodule
 
 module board_drawer(input logic [9:0] x, y,
+						  input logic [1:0] board [0:5][0:6],
                     input logic blank_b,
 						  input logic [1:0] player_selected,
 						  input logic [2:0] column_selected,
@@ -509,16 +529,11 @@ module board_drawer(input logic [9:0] x, y,
     // Import constants
     import BoardConstants::*;
     
-    logic [1:0] board [0:5][0:6];
+
     logic [2:0] col, row;
     logic in_grid_area, is_grid_border, in_circle;
     logic in_p1_label, in_p2_label;
 	 logic is_select;
-
-    // Initialize board with example pattern
-    board_init board_initializer(
-        .board(board)
-    );
     
     // Checks if pixel is on grid
     grid_calculator grid(

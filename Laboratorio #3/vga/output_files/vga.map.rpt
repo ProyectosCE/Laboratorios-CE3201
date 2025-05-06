@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Tue May  6 03:21:59 2025
+Tue May  6 15:54:55 2025
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -52,7 +52,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May  6 03:21:59 2025          ;
+; Analysis & Synthesis Status     ; Successful - Tue May  6 15:54:55 2025          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; vga                                            ;
 ; Top-level Entity Name           ; vga                                            ;
@@ -176,10 +176,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
-;     Processor 6            ;   0.0%      ;
-;     Processor 7            ;   0.0%      ;
-;     Processor 8            ;   0.0%      ;
-;     Processors 9-12        ;   0.0%      ;
+;     Processors 6-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -204,14 +201,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------------------------+
 ; Resource                                    ; Usage                                                     ;
 +---------------------------------------------+-----------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 314                                                       ;
+; Estimate of Logic utilization (ALMs needed) ; 315                                                       ;
 ;                                             ;                                                           ;
-; Combinational ALUT usage for logic          ; 609                                                       ;
+; Combinational ALUT usage for logic          ; 611                                                       ;
 ;     -- 7 input functions                    ; 0                                                         ;
 ;     -- 6 input functions                    ; 17                                                        ;
-;     -- 5 input functions                    ; 42                                                        ;
-;     -- 4 input functions                    ; 92                                                        ;
-;     -- <=3 input functions                  ; 458                                                       ;
+;     -- 5 input functions                    ; 39                                                        ;
+;     -- 4 input functions                    ; 96                                                        ;
+;     -- <=3 input functions                  ; 459                                                       ;
 ;                                             ;                                                           ;
 ; Dedicated logic registers                   ; 22                                                        ;
 ;                                             ;                                                           ;
@@ -221,8 +218,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                                           ;
 ; Maximum fan-out node                        ; board_drawer:brd_drwr|grid_calculator:grid|in_grid_area~1 ;
 ; Maximum fan-out                             ; 54                                                        ;
-; Total fan-out                               ; 1977                                                      ;
-; Average fan-out                             ; 2.84                                                      ;
+; Total fan-out                               ; 1979                                                      ;
+; Average fan-out                             ; 2.83                                                      ;
 +---------------------------------------------+-----------------------------------------------------------+
 
 
@@ -231,8 +228,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name              ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |vga                                         ; 609 (0)             ; 22 (0)                    ; 0                 ; 4          ; 31   ; 0            ; |vga                                                                                                                                            ; vga                      ; work         ;
-;    |board_drawer:brd_drwr|                   ; 578 (0)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|board_drawer:brd_drwr                                                                                                                      ; board_drawer             ; work         ;
+; |vga                                         ; 611 (0)             ; 22 (0)                    ; 0                 ; 4          ; 31   ; 0            ; |vga                                                                                                                                            ; vga                      ; work         ;
+;    |board_drawer:brd_drwr|                   ; 580 (0)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|board_drawer:brd_drwr                                                                                                                      ; board_drawer             ; work         ;
 ;       |grid_calculator:grid|                 ; 438 (102)           ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid                                                                                                 ; grid_calculator          ; work         ;
 ;          |lpm_divide:Div0|                   ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0                                                                                 ; lpm_divide               ; work         ;
 ;             |lpm_divide_lbm:auto_generated|  ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm           ; work         ;
@@ -244,7 +241,7 @@ https://fpgasoftware.intel.com/eula.
 ;                   |alt_u_div_sve:divider|    ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve            ; work         ;
 ;       |pixel_drawer:drawer|                  ; 28 (28)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|pixel_drawer:drawer                                                                                                  ; pixel_drawer             ; work         ;
 ;       |player_labels_calculator:labels|      ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|player_labels_calculator:labels                                                                                      ; player_labels_calculator ; work         ;
-;       |select_calculator:select|             ; 45 (45)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|select_calculator:select                                                                                             ; select_calculator        ; work         ;
+;       |select_calculator:select|             ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|select_calculator:select                                                                                             ; select_calculator        ; work         ;
 ;    |clock_divider:clk_div|                   ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|clock_divider:clk_div                                                                                                                      ; clock_divider            ; work         ;
 ;    |vga_controller:vga_ctrl|                 ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vga_controller:vga_ctrl                                                                                                                    ; vga_controller           ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
@@ -386,16 +383,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------+
-; Port Connectivity Checks: "board_drawer:brd_drwr"    ;
-+--------------------+-------+----------+--------------+
-; Port               ; Type  ; Severity ; Details      ;
-+--------------------+-------+----------+--------------+
-; player_selected    ; Input ; Info     ; Stuck at GND ;
-; column_selected[2] ; Input ; Info     ; Stuck at GND ;
-; column_selected[1] ; Input ; Info     ; Stuck at VCC ;
-; column_selected[0] ; Input ; Info     ; Stuck at GND ;
-+--------------------+-------+----------+--------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "board_drawer:brd_drwr"       ;
++-----------------------+-------+----------+--------------+
+; Port                  ; Type  ; Severity ; Details      ;
++-----------------------+-------+----------+--------------+
+; player_selected[1]    ; Input ; Info     ; Stuck at GND ;
+; player_selected[0]    ; Input ; Info     ; Stuck at VCC ;
+; column_selected[1..0] ; Input ; Info     ; Stuck at GND ;
+; column_selected[2]    ; Input ; Info     ; Stuck at VCC ;
++-----------------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -407,19 +404,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 611                         ;
-;     arith             ; 319                         ;
+; arriav_lcell_comb     ; 613                         ;
+;     arith             ; 320                         ;
 ;         0 data inputs ; 42                          ;
-;         1 data inputs ; 114                         ;
-;         2 data inputs ; 43                          ;
+;         1 data inputs ; 116                         ;
+;         2 data inputs ; 42                          ;
 ;         3 data inputs ; 72                          ;
 ;         4 data inputs ; 48                          ;
-;     normal            ; 276                         ;
+;     normal            ; 277                         ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 95                          ;
 ;         3 data inputs ; 75                          ;
-;         4 data inputs ; 44                          ;
-;         5 data inputs ; 42                          ;
+;         4 data inputs ; 48                          ;
+;         5 data inputs ; 39                          ;
 ;         6 data inputs ; 17                          ;
 ;     shared            ; 16                          ;
 ;         0 data inputs ; 6                           ;
@@ -428,7 +425,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 31                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 22.70                       ;
-; Average LUT depth     ; 14.09                       ;
+; Average LUT depth     ; 14.12                       ;
 +-----------------------+-----------------------------+
 
 
@@ -447,65 +444,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Tue May  6 03:21:51 2025
+    Info: Processing started: Tue May  6 15:54:44 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 10 design units, including 9 entities, in source file vga.sv
     Info (12022): Found design unit 1: BoardConstants (SystemVerilog) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 2
     Info (12023): Found entity 1: vga File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 36
-    Info (12023): Found entity 2: clock_divider File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 83
-    Info (12023): Found entity 3: vga_controller File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 103
-    Info (12023): Found entity 4: board_init File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 149
-    Info (12023): Found entity 5: grid_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 210
-    Info (12023): Found entity 6: player_labels_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 275
-    Info (12023): Found entity 7: select_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 387
-    Info (12023): Found entity 8: pixel_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 454
-    Info (12023): Found entity 9: board_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 503
-Warning (10236): Verilog HDL Implicit Net warning at vga.sv(286): created implicit net for "in_p1_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 286
-Warning (10236): Verilog HDL Implicit Net warning at vga.sv(290): created implicit net for "in_p2_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 290
+    Info (12023): Found entity 2: clock_divider File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 102
+    Info (12023): Found entity 3: vga_controller File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 122
+    Info (12023): Found entity 4: board_init File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 168
+    Info (12023): Found entity 5: grid_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 229
+    Info (12023): Found entity 6: player_labels_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 294
+    Info (12023): Found entity 7: select_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 406
+    Info (12023): Found entity 8: pixel_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 473
+    Info (12023): Found entity 9: board_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 522
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(305): created implicit net for "in_p1_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 305
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(309): created implicit net for "in_p2_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 309
 Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 56
-Warning (10230): Verilog HDL assignment warning at vga.sv(87): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 87
-Warning (10230): Verilog HDL assignment warning at vga.sv(91): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 91
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ctrl" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 66
-Info (12128): Elaborating entity "board_drawer" for hierarchy "board_drawer:brd_drwr" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 76
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
-Info (12128): Elaborating entity "board_init" for hierarchy "board_drawer:brd_drwr|board_init:board_initializer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 521
+Info (12128): Elaborating entity "board_init" for hierarchy "board_init:board_initializer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 66
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
-Info (12128): Elaborating entity "grid_calculator" for hierarchy "board_drawer:brd_drwr|grid_calculator:grid" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 532
-Warning (10230): Verilog HDL assignment warning at vga.sv(228): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 228
-Warning (10230): Verilog HDL assignment warning at vga.sv(229): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 229
-Warning (10230): Verilog HDL assignment warning at vga.sv(230): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 230
-Warning (10230): Verilog HDL assignment warning at vga.sv(231): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 231
-Warning (10230): Verilog HDL assignment warning at vga.sv(251): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 251
-Warning (10230): Verilog HDL assignment warning at vga.sv(252): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 252
-Info (12128): Elaborating entity "player_labels_calculator" for hierarchy "board_drawer:brd_drwr|player_labels_calculator:labels" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 540
-Warning (10230): Verilog HDL assignment warning at vga.sv(295): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 295
-Warning (10230): Verilog HDL assignment warning at vga.sv(296): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 296
-Warning (10230): Verilog HDL assignment warning at vga.sv(297): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 297
-Warning (10230): Verilog HDL assignment warning at vga.sv(298): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 298
-Info (12128): Elaborating entity "select_calculator" for hierarchy "board_drawer:brd_drwr|select_calculator:select" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 548
-Warning (10230): Verilog HDL assignment warning at vga.sv(402): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 402
-Warning (10230): Verilog HDL assignment warning at vga.sv(403): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 403
-Warning (10230): Verilog HDL assignment warning at vga.sv(404): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 404
-Warning (10230): Verilog HDL assignment warning at vga.sv(405): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 405
-Warning (10230): Verilog HDL assignment warning at vga.sv(406): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 406
-Warning (10230): Verilog HDL assignment warning at vga.sv(407): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 407
-Warning (10230): Verilog HDL assignment warning at vga.sv(408): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 408
-Warning (10230): Verilog HDL assignment warning at vga.sv(416): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 416
-Warning (10230): Verilog HDL assignment warning at vga.sv(417): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 417
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 73
+Warning (10230): Verilog HDL assignment warning at vga.sv(106): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 106
+Warning (10230): Verilog HDL assignment warning at vga.sv(110): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 110
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ctrl" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 83
+Info (12128): Elaborating entity "board_drawer" for hierarchy "board_drawer:brd_drwr" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 95
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "grid_calculator" for hierarchy "board_drawer:brd_drwr|grid_calculator:grid" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 547
+Warning (10230): Verilog HDL assignment warning at vga.sv(247): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 247
+Warning (10230): Verilog HDL assignment warning at vga.sv(248): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 248
+Warning (10230): Verilog HDL assignment warning at vga.sv(249): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 249
+Warning (10230): Verilog HDL assignment warning at vga.sv(250): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 250
+Warning (10230): Verilog HDL assignment warning at vga.sv(270): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 270
+Warning (10230): Verilog HDL assignment warning at vga.sv(271): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 271
+Info (12128): Elaborating entity "player_labels_calculator" for hierarchy "board_drawer:brd_drwr|player_labels_calculator:labels" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 555
+Warning (10230): Verilog HDL assignment warning at vga.sv(314): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 314
+Warning (10230): Verilog HDL assignment warning at vga.sv(315): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 315
+Warning (10230): Verilog HDL assignment warning at vga.sv(316): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 316
+Warning (10230): Verilog HDL assignment warning at vga.sv(317): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 317
+Info (12128): Elaborating entity "select_calculator" for hierarchy "board_drawer:brd_drwr|select_calculator:select" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 563
+Warning (10230): Verilog HDL assignment warning at vga.sv(421): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 421
+Warning (10230): Verilog HDL assignment warning at vga.sv(422): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 422
+Warning (10230): Verilog HDL assignment warning at vga.sv(423): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 423
 Warning (10230): Verilog HDL assignment warning at vga.sv(424): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 424
 Warning (10230): Verilog HDL assignment warning at vga.sv(425): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 425
-Info (12128): Elaborating entity "pixel_drawer" for hierarchy "board_drawer:brd_drwr|pixel_drawer:drawer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 563
+Warning (10230): Verilog HDL assignment warning at vga.sv(426): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 426
+Warning (10230): Verilog HDL assignment warning at vga.sv(427): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 427
+Warning (10230): Verilog HDL assignment warning at vga.sv(435): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 435
+Warning (10230): Verilog HDL assignment warning at vga.sv(436): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 436
+Warning (10230): Verilog HDL assignment warning at vga.sv(443): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 443
+Warning (10230): Verilog HDL assignment warning at vga.sv(444): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 444
+Info (12128): Elaborating entity "pixel_drawer" for hierarchy "board_drawer:brd_drwr|pixel_drawer:drawer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 578
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
 Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 229
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 228
-Info (12130): Elaborated megafunction instantiation "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 229
-Info (12133): Instantiated megafunction "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 229
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 248
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 247
+Info (12130): Elaborated megafunction instantiation "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 248
+Info (12133): Instantiated megafunction "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 248
     Info (12134): Parameter "LPM_WIDTHN" = "32"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -521,15 +520,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 38
-Info (21057): Implemented 665 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 667 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 630 logic cells
+    Info (21061): Implemented 632 logic cells
     Info (21062): Implemented 4 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
     Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Tue May  6 03:21:59 2025
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Processing ended: Tue May  6 15:54:55 2025
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
 
 
