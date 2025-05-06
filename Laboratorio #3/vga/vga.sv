@@ -8,7 +8,7 @@ package BoardConstants;
     parameter GRID_WIDTH = 7 * CELL_WIDTH;      // Total grid width for 7 columns
     parameter GRID_HEIGHT = 6 * CELL_HEIGHT;    // Total grid height for 6 rows
     parameter CIRCLE_RADIUS = 25;               // Radius of the game pieces
-    
+    // 165 235 305 375 445 515 585 655
     // Player labels
     parameter P1_LABEL_X = 20;      // X position for P1 label
     parameter P1_LABEL_Y = 100;     // Y position for P1 label
@@ -18,8 +18,8 @@ package BoardConstants;
     parameter LABEL_HEIGHT = 60;    // Height of label
 
     // Select indicator
-    parameter COL_SELECT_OFFSET_Y = 10; // Y position for column selector
-    parameter P_SELECT_OFFSET_X = 110;  // X position for player selector
+    parameter COL_SELECT_OFFSET_Y = 10;
+    parameter P_SELECT_OFFSET_X = 110;
     
     // Colors
     parameter GRID_COLOR = 24'h4040FF;   // Blue color for grid
@@ -37,12 +37,18 @@ module vga(
     input logic ref_clk, // 50 MHz clock from FPGA
     input logic rst,
     output logic vga_clk, // 25.175 MHz clock for VGA
-    output logic h_sync, v_sync, // Sync signals for resetting laser
+    output logic h_sync, v_sync,  // Sync signals for resetting laser
     output logic sync_b, blank_b, // To FPGA video DAC (_b = active low)
-    output logic [7:0] r, g, b); // ..
-    
+    output logic [7:0] r, g, b    // Colors for DAC
+    );
     // Positions
     logic [9:0] x, y;
+	 
+	 logic [1:0] player_selected;
+	 logic [2:0] column_selected;
+	 
+	 assign player_selected = 2'b00;
+	 assign column_selected = 3'b010;
       
     // Clock divider converts the reference clock to a suitable VGA one, 50 to 25 MHz, ideally it should be 25.175 MHz
     clock_divider clk_div(
@@ -64,6 +70,8 @@ module vga(
         .x(x),
         .y(y),
         .blank_b(blank_b),
+		  .player_selected(player_selected),
+		  .column_selected(column_selected),
         .pixel_color({r, g, b})
     ); 
 endmodule
@@ -75,7 +83,7 @@ endmodule
 module clock_divider #(parameter DIV=2)(
     input clk_in, 
     output logic clk_out
-);
+    );
     logic [$clog2(DIV):0] counter = DIV-1;
     
     always @(posedge clk_in) begin
@@ -105,8 +113,8 @@ module vga_controller #(
     V_MAX = V_ACTIVE + V_FP + V_SYN + V_BP)(
     input logic vga_clk,
     output logic h_sync, v_sync, sync_b, blank_b,
-    output logic [9:0] x, y);
-    
+    output logic [9:0] x, y
+    );
     // Each clock cycle
     always @(posedge vga_clk) begin
         // Moves 1 pixel to the right
@@ -203,7 +211,7 @@ module grid_calculator(
     input logic [9:0] x, y,
     output logic [2:0] col, row,
     output logic in_grid_area, is_grid_border, in_circle
-);
+    );
     import BoardConstants::*;
 
     // For relative position in the cell
@@ -266,8 +274,8 @@ endmodule
 */
 module player_labels_calculator(
     input logic [9:0] x, y,
-    output logic in_p1_label, in_p2_label);
-    
+    output logic in_p1_label, in_p2_label
+    );
     import BoardConstants::*;
 
     // Relative positions inside the players labels
@@ -376,6 +384,69 @@ module player_labels_calculator(
     end
 endmodule
 
+module select_calculator(
+    input logic [9:0] x, y,
+    input logic [1:0] player_selected,
+    input logic [2:0] column_selected,
+    output logic is_select
+    );
+    import BoardConstants::*;
+
+    logic [9:0] p_select_offset_y, col_select_offset_x;
+
+	 logic [9:0] rel_x_col_select, rel_y_col_select;
+    logic [9:0] rel_x_player_select, rel_y_player_select;
+	 
+    always_comb begin
+        case (column_selected)
+            3'b000: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5;
+            3'b001: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 1*CELL_WIDTH;
+            3'b010: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 2*CELL_WIDTH;
+            3'b011: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 3*CELL_WIDTH;
+            3'b100: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 4*CELL_WIDTH;
+            3'b101: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 5*CELL_WIDTH;
+            3'b110: col_select_offset_x = GRID_OFFSET_X + CELL_WIDTH/2 - 5 + 6*CELL_WIDTH;
+            3'b111: col_select_offset_x = 0;
+            default : col_select_offset_x = 0;
+        endcase
+    end
+
+    always_comb begin
+        case (player_selected)
+            2'b00: p_select_offset_y = P1_LABEL_Y + LABEL_HEIGHT/2 - 5;
+            2'b01: p_select_offset_y = P2_LABEL_Y + LABEL_HEIGHT/2 - 5;
+            default : p_select_offset_y = 0;
+        endcase
+    end
+
+    always_comb begin
+        rel_x_col_select = x - col_select_offset_x;
+        rel_y_col_select = y - COL_SELECT_OFFSET_Y;
+        rel_x_player_select = x - P_SELECT_OFFSET_X;
+        rel_y_player_select = y - p_select_offset_y;
+    end
+
+    // Checks if a pixel is on a select box
+    function logic is_select_pixel(input logic [9:0] rel_x, rel_y);
+        logic result;
+        // box darwing
+        if ((rel_x >= 0 && rel_x <= 5) && (rel_y >= 0 && rel_y <= 5))
+            result = 1; // Box
+        else
+            result = 0;
+        return result;
+    endfunction
+    
+    always_comb begin
+        if (is_select_pixel(rel_x_col_select, rel_y_col_select))
+            is_select = 1;
+        else if (is_select_pixel(rel_x_player_select, rel_y_player_select))
+            is_select = 1;
+        else
+            is_select = 0;
+    end    
+endmodule
+
 /*
     Selects the color of a pixel based on what type of pixel it is and board data
     Border, grid, label, selector, etc..
@@ -385,11 +456,12 @@ module pixel_drawer(
     input logic [2:0] row, col,
     input logic in_grid_area, is_grid_border, in_circle,
     input logic in_p1_label, in_p2_label,
+	 input logic is_select,
     input logic [1:0] board [0:5][0:6],
     output logic [23:0] pixel_color
 );
     import BoardConstants::*;
-    
+	 
     // Choose color based on board state and position
     always_comb begin
         if (!blank_b) begin
@@ -401,6 +473,9 @@ module pixel_drawer(
         end else if (in_p2_label) begin
             // P2 label
             pixel_color = P2_COLOR;
+		  end else if (is_select) begin
+				// Select
+            pixel_color = SELECT_COLOR;
         end else if (in_grid_area) begin
             if (is_grid_border) begin
                 // Grid lines
@@ -427,6 +502,8 @@ endmodule
 
 module board_drawer(input logic [9:0] x, y,
                     input logic blank_b,
+						  input logic [1:0] player_selected,
+						  input logic [2:0] column_selected,
                     output [23:0] pixel_color);
 
     // Import constants
@@ -436,6 +513,7 @@ module board_drawer(input logic [9:0] x, y,
     logic [2:0] col, row;
     logic in_grid_area, is_grid_border, in_circle;
     logic in_p1_label, in_p2_label;
+	 logic is_select;
 
     // Initialize board with example pattern
     board_init board_initializer(
@@ -455,11 +533,19 @@ module board_drawer(input logic [9:0] x, y,
     
     // Checks if pixel is on player labels
     player_labels_calculator labels(
-            .x(x),
-            .y(y),
-            .in_p1_label(in_p1_label),
-            .in_p2_label(in_p2_label)
+	     .x(x),
+        .y(y),
+        .in_p1_label(in_p1_label),
+        .in_p2_label(in_p2_label)
     );
+	 
+	 select_calculator select(
+	 	  .x(x),
+		  .y(y),
+		  .player_selected(player_selected),
+		  .column_selected(column_selected),
+		  .is_select(is_select)
+	 );
     
     // Colors pixel
     pixel_drawer drawer(
@@ -471,6 +557,7 @@ module board_drawer(input logic [9:0] x, y,
         .in_circle(in_circle),
         .in_p1_label(in_p1_label),
         .in_p2_label(in_p2_label),
+		  .is_select(is_select),
         .board(board),
         .pixel_color(pixel_color)
     );
