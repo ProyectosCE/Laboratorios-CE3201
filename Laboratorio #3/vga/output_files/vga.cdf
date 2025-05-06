@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/output_files/") File("vga.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/output_files/") File("vga.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

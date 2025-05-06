@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Sat May  3 16:18:35 2025
+Tue May  6 01:38:07 2025
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -13,15 +13,18 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Inverted Register Statistics
- 11. Parameter Settings for User Entity Instance: clock_divider:clk_div
- 12. Parameter Settings for User Entity Instance: vga_controller:vga_ctrl
- 13. Port Connectivity Checks: "vga_controller:vga_ctrl"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: clock_divider:clk_div
+ 14. Parameter Settings for User Entity Instance: vga_controller:vga_ctrl
+ 15. Parameter Settings for Inferred Entity Instance: board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1
+ 16. Parameter Settings for Inferred Entity Instance: board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -48,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May  3 16:18:35 2025          ;
+; Analysis & Synthesis Status     ; Successful - Tue May  6 01:38:07 2025          ;
 ; Quartus Prime Version           ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                   ; vga                                            ;
 ; Top-level Entity Name           ; vga                                            ;
@@ -58,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 ; Total pins                      ; 31                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
+; Total DSP Blocks                ; 4                                              ;
 ; Total HSSI RX PCSs              ; 0                                              ;
 ; Total HSSI PMA RX Deserializers ; 0                                              ;
 ; Total HSSI TX PCSs              ; 0                                              ;
@@ -168,56 +171,96 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
-; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv                     ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf                        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/abs_divider.inc                       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc                   ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/22.1std/quartus/libraries/megafunctions/aglobal221.inc                        ;         ;
+; db/lpm_divide_lbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/lpm_divide_lbm.tdf      ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/sign_div_unsign_rlh.tdf ;         ;
+; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/alt_u_div_sve.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                 ;
-+---------------------------------------------+-------------------------------+
-; Resource                                    ; Usage                         ;
-+---------------------------------------------+-------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 18                            ;
-;                                             ;                               ;
-; Combinational ALUT usage for logic          ; 31                            ;
-;     -- 7 input functions                    ; 0                             ;
-;     -- 6 input functions                    ; 4                             ;
-;     -- 5 input functions                    ; 4                             ;
-;     -- 4 input functions                    ; 1                             ;
-;     -- <=3 input functions                  ; 22                            ;
-;                                             ;                               ;
-; Dedicated logic registers                   ; 22                            ;
-;                                             ;                               ;
-; I/O pins                                    ; 31                            ;
-;                                             ;                               ;
-; Total DSP Blocks                            ; 0                             ;
-;                                             ;                               ;
-; Maximum fan-out node                        ; clock_divider:clk_div|clk_out ;
-; Maximum fan-out                             ; 21                            ;
-; Total fan-out                               ; 200                           ;
-; Average fan-out                             ; 1.74                          ;
-+---------------------------------------------+-------------------------------+
++---------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                             ;
++---------------------------------------------+-----------------------------------------------------------+
+; Resource                                    ; Usage                                                     ;
++---------------------------------------------+-----------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 286                                                       ;
+;                                             ;                                                           ;
+; Combinational ALUT usage for logic          ; 556                                                       ;
+;     -- 7 input functions                    ; 0                                                         ;
+;     -- 6 input functions                    ; 15                                                        ;
+;     -- 5 input functions                    ; 33                                                        ;
+;     -- 4 input functions                    ; 89                                                        ;
+;     -- <=3 input functions                  ; 419                                                       ;
+;                                             ;                                                           ;
+; Dedicated logic registers                   ; 22                                                        ;
+;                                             ;                                                           ;
+; I/O pins                                    ; 31                                                        ;
+;                                             ;                                                           ;
+; Total DSP Blocks                            ; 4                                                         ;
+;                                             ;                                                           ;
+; Maximum fan-out node                        ; board_drawer:brd_drwr|grid_calculator:grid|in_grid_area~1 ;
+; Maximum fan-out                             ; 51                                                        ;
+; Total fan-out                               ; 1833                                                      ;
+; Average fan-out                             ; 2.85                                                      ;
++---------------------------------------------+-----------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+----------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Entity Name    ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+----------------+--------------+
-; |vga                         ; 31 (0)              ; 22 (0)                    ; 0                 ; 0          ; 31   ; 0            ; |vga                         ; vga            ; work         ;
-;    |clock_divider:clk_div|   ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|clock_divider:clk_div   ; clock_divider  ; work         ;
-;    |vga_controller:vga_ctrl| ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vga_controller:vga_ctrl ; vga_controller ; work         ;
-+------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                             ; Entity Name              ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |vga                                         ; 556 (0)             ; 22 (0)                    ; 0                 ; 4          ; 31   ; 0            ; |vga                                                                                                                                            ; vga                      ; work         ;
+;    |board_drawer:brd_drwr|                   ; 525 (0)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|board_drawer:brd_drwr                                                                                                                      ; board_drawer             ; work         ;
+;       |grid_calculator:grid|                 ; 438 (102)           ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid                                                                                                 ; grid_calculator          ; work         ;
+;          |lpm_divide:Div0|                   ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0                                                                                 ; lpm_divide               ; work         ;
+;             |lpm_divide_lbm:auto_generated|  ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm           ; work         ;
+;                |sign_div_unsign_rlh:divider| ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh      ; work         ;
+;                   |alt_u_div_sve:divider|    ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve            ; work         ;
+;          |lpm_divide:Div1|                   ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1                                                                                 ; lpm_divide               ; work         ;
+;             |lpm_divide_lbm:auto_generated|  ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm           ; work         ;
+;                |sign_div_unsign_rlh:divider| ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh      ; work         ;
+;                   |alt_u_div_sve:divider|    ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve            ; work         ;
+;       |pixel_drawer:drawer|                  ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|pixel_drawer:drawer                                                                                                  ; pixel_drawer             ; work         ;
+;       |player_labels_calculator:labels|      ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|board_drawer:brd_drwr|player_labels_calculator:labels                                                                                      ; player_labels_calculator ; work         ;
+;    |clock_divider:clk_div|                   ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |vga|clock_divider:clk_div                                                                                                                      ; clock_divider            ; work         ;
+;    |vga_controller:vga_ctrl|                 ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |vga|vga_controller:vga_ctrl                                                                                                                    ; vga_controller           ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary           ;
++------------------------------------------+-------------+
+; Statistic                                ; Number Used ;
++------------------------------------------+-------------+
+; Independent 18x18 plus 36                ; 2           ;
+; Independent 27x27                        ; 2           ;
+; Total number of DSP blocks               ; 4           ;
+;                                          ;             ;
+; Fixed Point Unsigned Multiplier          ; 4           ;
+; Fixed Point Dedicated Output Adder Chain ; 1           ;
++------------------------------------------+-------------+
 
 
 +--------------------------------------------------------------------------------+
@@ -255,6 +298,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |vga|board_drawer:brd_drwr|pixel_drawer:drawer|pixel_color[14] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: clock_divider:clk_div ;
 +----------------+-------+-------------------------------------------+
@@ -284,14 +336,50 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "vga_controller:vga_ctrl"                                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; x    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                              ;
++------------------------+----------------+-------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                           ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
++------------------------+----------------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                              ;
++------------------------+----------------+-------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                           ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                           ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                           ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                           ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                           ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                           ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                                           ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                           ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                           ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                        ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                      ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                      ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                    ;
++------------------------+----------------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------+
@@ -303,20 +391,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 34                          ;
-;     arith             ; 20                          ;
-;         1 data inputs ; 20                          ;
-;     normal            ; 14                          ;
-;         0 data inputs ; 2                           ;
+; arriav_lcell_comb     ; 557                         ;
+;     arith             ; 283                         ;
+;         0 data inputs ; 42                          ;
+;         1 data inputs ; 79                          ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 72                          ;
+;         4 data inputs ; 48                          ;
+;     normal            ; 258                         ;
 ;         1 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 4                           ;
-;         6 data inputs ; 4                           ;
+;         2 data inputs ; 92                          ;
+;         3 data inputs ; 75                          ;
+;         4 data inputs ; 41                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 15                          ;
+;     shared            ; 16                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 10                          ;
+; arriav_mac            ; 4                           ;
 ; boundary_port         ; 31                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.82                        ;
+; Max LUT depth         ; 22.70                       ;
+; Average LUT depth     ; 14.45                       ;
 +-----------------------+-----------------------------+
 
 
@@ -325,7 +421,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -335,57 +431,76 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sat May  3 16:18:29 2025
+    Info: Processing started: Tue May  6 01:37:59 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
-Info (12021): Found 3 design units, including 3 entities, in source file vga.sv
-    Info (12023): Found entity 1: vga File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 5
-    Info (12023): Found entity 2: clock_divider File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 33
-    Info (12023): Found entity 3: vga_controller File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 55
+Info (12021): Found 9 design units, including 8 entities, in source file vga.sv
+    Info (12022): Found design unit 1: BoardConstants (SystemVerilog) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 2
+    Info (12023): Found entity 1: vga File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 36
+    Info (12023): Found entity 2: clock_divider File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 75
+    Info (12023): Found entity 3: vga_controller File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 95
+    Info (12023): Found entity 4: board_init File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 141
+    Info (12023): Found entity 5: grid_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 202
+    Info (12023): Found entity 6: player_labels_calculator File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 267
+    Info (12023): Found entity 7: pixel_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 383
+    Info (12023): Found entity 8: board_drawer File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 428
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(278): created implicit net for "in_p1_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 278
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(282): created implicit net for "in_p2_label_area" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 282
 Info (12127): Elaborating entity "vga" for the top level hierarchy
-Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div" File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at vga.sv(37): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 37
-Warning (10230): Verilog HDL assignment warning at vga.sv(41): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 41
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ctrl" File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 25
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "r[0]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[1]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[2]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[3]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[4]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[5]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[6]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "r[7]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[4]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[5]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[6]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "g[7]" is stuck at GND File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[0]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[1]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[2]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[3]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[4]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[5]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[6]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
-    Warning (13410): Pin "b[7]" is stuck at VCC File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 10
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:clk_div" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at vga.sv(79): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 79
+Warning (10230): Verilog HDL assignment warning at vga.sv(83): truncated value with size 32 to match size of target (2) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 83
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ctrl" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 60
+Info (12128): Elaborating entity "board_drawer" for hierarchy "board_drawer:brd_drwr" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 68
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "board_init" for hierarchy "board_drawer:brd_drwr|board_init:board_initializer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 443
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "grid_calculator" for hierarchy "board_drawer:brd_drwr|grid_calculator:grid" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 454
+Warning (10230): Verilog HDL assignment warning at vga.sv(220): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 220
+Warning (10230): Verilog HDL assignment warning at vga.sv(221): truncated value with size 32 to match size of target (3) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 221
+Warning (10230): Verilog HDL assignment warning at vga.sv(222): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 222
+Warning (10230): Verilog HDL assignment warning at vga.sv(223): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 223
+Warning (10230): Verilog HDL assignment warning at vga.sv(243): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 243
+Warning (10230): Verilog HDL assignment warning at vga.sv(244): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 244
+Info (12128): Elaborating entity "player_labels_calculator" for hierarchy "board_drawer:brd_drwr|player_labels_calculator:labels" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 462
+Warning (10230): Verilog HDL assignment warning at vga.sv(287): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 287
+Warning (10230): Verilog HDL assignment warning at vga.sv(288): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 288
+Warning (10230): Verilog HDL assignment warning at vga.sv(289): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 289
+Warning (10230): Verilog HDL assignment warning at vga.sv(290): truncated value with size 32 to match size of target (10) File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 290
+Info (12128): Elaborating entity "pixel_drawer" for hierarchy "board_drawer:brd_drwr|pixel_drawer:drawer" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 476
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 221
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "board_drawer:brd_drwr|grid_calculator:grid|Div0" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 220
+Info (12130): Elaborated megafunction instantiation "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 221
+Info (12133): Instantiated megafunction "board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" with the following parameter: File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 221
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
+    Info (12023): Found entity 1: lpm_divide_lbm File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/lpm_divide_lbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/sign_div_unsign_rlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
+    Info (12023): Found entity 1: alt_u_div_sve File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/db/alt_u_div_sve.tdf Line: 23
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "rst" File: C:/Users/valva/Desktop/U/IS-2025/TDD/Labs/Laboratorio #3/vga/vga.sv Line: 6
-Info (21057): Implemented 83 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "rst" File: C:/Users/valva/Documents/GitHub/CE3201_LAB01/Laboratorio #3/vga/vga.sv Line: 38
+Info (21057): Implemented 612 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 52 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4890 megabytes
-    Info: Processing ended: Sat May  3 16:18:35 2025
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+    Info (21061): Implemented 577 logic cells
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Tue May  6 01:38:07 2025
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
