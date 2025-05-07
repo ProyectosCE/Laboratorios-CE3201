@@ -6,8 +6,8 @@ module SevenSeg_Controller (
     output logic [6:0] segments  // a–g (activo alto)
 );
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             segments <= 7'b1111111; // Apagar todo
         end else begin
             case (seconds)

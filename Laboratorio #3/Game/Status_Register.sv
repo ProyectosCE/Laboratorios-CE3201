@@ -11,8 +11,8 @@ module Status_Register (
     output logic [7:0] current_state
 );
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             current_state <= 8'h00;  // Estado por defecto: jugando
         end else if (write_en) begin
             current_state <= new_state;

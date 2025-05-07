@@ -15,7 +15,7 @@ module Turn_Timer #(
     logic tick_1s;
 
     // Generar pulso cada segundo
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk or negedge rst) begin
         if (rst || reset_timer) begin
             tick_counter <= 0;
             tick_1s <= 0;
@@ -34,7 +34,7 @@ module Turn_Timer #(
     end
 
     // Contador de segundos
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk or negedge rst) begin
         if (rst || reset_timer) begin
             count_seconds <= 0;
             timeout <= 0;

@@ -17,6 +17,9 @@ module Topmodule (
     output logic [7:0] red,
     output logic [7:0] green,
     output logic [7:0] blue,
+    output logic vga_clk,   // VGA clock output
+    output logic sync_b,    // Sync signal (active low)
+    output logic blank_b,   // Blank signal (active low)
 
     // Display 7 segmentos
     output logic [6:0] seg
@@ -60,22 +63,36 @@ module Topmodule (
         .valid_move(valid_p2)
     );
 
+    // Random move generator
+    Random_Move_Generator random_move_gen (
+        .clk(clk),
+        .rst(rst),
+        .enable(1'b1),  // Always enabled to generate random moves
+        .board(board),
+        .valid_col(random_col),
+        .valid(random_valid)
+    );
+
     // Temporizador
     Turn_Timer timer (
-        .clk(clk), .rst(rst),
-        .enable(start_timer),
+        .clk(clk), 
+        .rst(rst), // Reset del temporizador en cada cambio de turno
         .reset_timer(reset_timer),
+        .enable(start_timer),
         .timeout(timeout),
-        .count_seconds(seconds)
+        .time_remaining(seconds)
     );
 
     // Tablero
     Board_Manager board_logic (
-        .clk(clk), .rst(rst | reset_board),
+        .clk(clk), 
+        .rst(rst | reset_board), // Asegurar que el tablero se limpie correctamente
         .insert_en(insert_piece_p1 | insert_piece_p2),
         .player_id((insert_piece_p1) ? 2'b01 : 2'b10),
-        .col_sel((insert_piece_p1) ? col_p1 : col_p2),
-        .col_full(), // no usado directamente
+        .col_sel((insert_piece_p1 || insert_piece_p2) ? 
+                 ((timeout) ? random_col : 
+                 (insert_piece_p1 ? col_p1 : col_p2)) : 3'd0), // Usar columna aleatoria en timeout
+        .col_full(), 
         .board(board)
     );
 
@@ -98,8 +115,9 @@ module Topmodule (
 
     // Display 7 segmentos
     SevenSeg_Controller seg_disp (
-        .clk(clk), .rst(rst),
-        .seconds(seconds),
+        .clk(clk), 
+        .rst(rst),
+        .seconds(seconds), // Mostrar los segundos restantes
         .segments(seg)
     );
 
@@ -122,15 +140,25 @@ module Topmodule (
         .status(status),
         .reset_board(reset_board),
         .reset_inputs(reset_inputs),
-        .turn(turn)
+        .turn(turn),
+        .timer_value(seconds)  // Connect seconds from Turn_Timer
     );
 
-    // VGA (Placeholder)
-    VGA_Controller vga (
-        .clk(clk), .rst(rst),
-        .board(board),
-        .hsync(hsync), .vsync(vsync),
-        .red(red), .green(green), .blue(blue)
+    // VGA
+    vga vga_inst (
+        .ref_clk(clk), 
+        .rst(rst),
+        .board(board),// Tablero desde Board_Manager
+        .player_selected(turn),      // Turno del jugador actual
+        .column_selected(random_col), // Columna seleccionada (puede ser random o actual)
+        .vga_clk(vga_clk),           // Connected to output
+        .h_sync(hsync), 
+        .v_sync(vsync),
+        .sync_b(sync_b),             // Connected to output
+        .blank_b(blank_b),           // Connected to output
+        .r(red), 
+        .g(green), 
+        .b(blue)
     );
 
 endmodule

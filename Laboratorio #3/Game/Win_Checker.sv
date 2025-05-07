@@ -11,8 +11,8 @@ module Win_Checker (
     logic [1:0] current_cell;
     integer row, col;
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             win_flag   <= 0;
             winner_id  <= 2'b00;
         end else if (check_en) begin
