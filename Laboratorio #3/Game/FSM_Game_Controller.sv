@@ -10,6 +10,7 @@ module FSM_Game_Controller (
     input  logic       timeout,
     input  logic       win_flag,
     input  logic [1:0] winner_id,
+    input  logic [3:0] timer_value,  // Countdown value from Turn_Timer
 
     output logic       enable_input_p1,
     output logic       enable_input_p2,
@@ -22,7 +23,11 @@ module FSM_Game_Controller (
     output logic [7:0] status,
     output logic       reset_board,
     output logic       reset_inputs,
-    output logic [1:0] turn  // 1: jugador 1, 2: jugador 2
+    output logic [1:0] turn,  // 1: jugador 1, 2: jugador 2
+
+    // Outputs for 7-segment display
+    output logic [3:0] seg_display,  // Time remaining (units digit)
+    output logic       seg_enable    // Enable signal for 7-segment display
 );
 
     typedef enum logic [3:0] {
@@ -40,6 +45,10 @@ module FSM_Game_Controller (
     } state_t;
 
     state_t state, next_state;
+
+    // Random move generator signals
+    logic [2:0] random_col;
+    logic       random_valid;
 
     // Estado actual
     always_ff @(posedge clk or negedge rst) begin
@@ -73,8 +82,9 @@ module FSM_Game_Controller (
                 else if (!win_flag && fsm_reset) next_state = GAME_RESET;
                 else next_state = (turn == 2'd1) ? PLAYER2_WAIT : PLAYER1_WAIT;
 
-            TIMEOUT_ERROR:
-                if (fsm_reset) next_state = GAME_RESET;
+            TIMEOUT_ERROR: begin
+                next_state = (turn == 2'd1) ? PLAYER1_PROCESS : PLAYER2_PROCESS;
+            end
 
             PLAYER1_WINS:
                 if (fsm_reset) next_state = GAME_RESET;
@@ -105,6 +115,8 @@ module FSM_Game_Controller (
         reset_board       = 0;
         reset_inputs      = 0;
         turn              = 2'd0;
+        seg_display       = 4'd0;  // Default value for 7-segment display
+        seg_enable        = 0;
 
         case (state)
             INIT_SCREEN: begin
@@ -116,6 +128,8 @@ module FSM_Game_Controller (
                 enable_input_p1 = 1;
                 start_timer     = 1;
                 turn            = 2'd1;
+                seg_enable      = 1;
+                seg_display     = timer_value;  // Use timer_value for display
             end
 
             PLAYER1_PROCESS: begin
@@ -127,6 +141,8 @@ module FSM_Game_Controller (
                 enable_input_p2 = 1;
                 start_timer     = 1;
                 turn            = 2'd2;
+                seg_enable      = 1;
+                seg_display     = timer_value;  // Use timer_value for display
             end
 
             PLAYER2_PROCESS: begin
@@ -139,8 +155,14 @@ module FSM_Game_Controller (
             end
 
             TIMEOUT_ERROR: begin
-                write_status = 1;
-                status       = 8'hFF;
+                if (turn == 2'd1) begin
+                    insert_piece_p1 = 1; // Colocar ficha automáticamente para jugador 1
+                    turn = 2'd2;        // Cambiar turno al jugador 2
+                end else if (turn == 2'd2) begin
+                    insert_piece_p2 = 1; // Colocar ficha automáticamente para jugador 2
+                    turn = 2'd1;        // Cambiar turno al jugador 1
+                end
+                reset_timer = 1; // Reiniciar temporizador
             end
 
             PLAYER1_WINS: begin
@@ -159,9 +181,10 @@ module FSM_Game_Controller (
             end
 
             GAME_RESET: begin
-                reset_board  = 1;
-                reset_timer  = 1;
-                reset_inputs = 1;
+                reset_board  = 1; // Limpiar tablero
+                reset_timer  = 1; // Reiniciar temporizador
+                reset_inputs = 1; // Limpiar entradas
+                turn         = 2'd1; // Reiniciar turno al jugador 1
             end
         endcase
     end

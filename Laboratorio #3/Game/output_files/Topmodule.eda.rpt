@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Topmodule
-Tue May  6 21:39:08 2025
+Wed May  7 05:50:02 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue May  6 21:39:08 2025 ;
+; EDA Netlist Writer Status ; Successful - Wed May  7 05:50:02 2025 ;
 ; Revision Name             ; Topmodule                             ;
 ; Top-level Entity Name     ; Topmodule                             ;
 ; Family                    ; Cyclone V                             ;
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Tue May  6 21:39:07 2025
+    Info: Processing started: Wed May  7 05:50:01 2025
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Game -c Topmodule
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Topmodule.svo in folder "C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4737 megabytes
-    Info: Processing ended: Tue May  6 21:39:08 2025
+    Info: Peak virtual memory: 4728 megabytes
+    Info: Processing ended: Wed May  7 05:50:02 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

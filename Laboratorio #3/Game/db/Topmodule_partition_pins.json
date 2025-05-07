@@ -160,19 +160,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "switches_p1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "btn_confirm_p1",
-					"strict" : false
-				},
-				{
 					"name" : "spi_cs",
 					"strict" : false
 				},
 				{
 					"name" : "spi_clk",
+					"strict" : false
+				},
+				{
+					"name" : "switches_p1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "btn_confirm_p1",
 					"strict" : false
 				},
 				{
