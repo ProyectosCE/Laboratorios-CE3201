@@ -1,0 +1,950 @@
+Analysis & Synthesis report for Topmodule
+Wed May  7 05:48:40 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. State Machine - |Topmodule|FSM_Game_Controller:fsm|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Turn_Timer:timer
+ 16. Parameter Settings for User Entity Instance: vga:vga_inst|clock_divider:clk_div
+ 17. Parameter Settings for User Entity Instance: vga:vga_inst|vga_controller:vga_ctrl
+ 18. Parameter Settings for Inferred Entity Instance: vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1
+ 19. Parameter Settings for Inferred Entity Instance: vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod6
+ 21. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod5
+ 22. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod0
+ 23. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod1
+ 24. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod2
+ 25. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod3
+ 26. Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod4
+ 27. Port Connectivity Checks: "FSM_Game_Controller:fsm"
+ 28. Port Connectivity Checks: "Board_Manager:board_logic"
+ 29. Port Connectivity Checks: "Random_Move_Generator:random_move_gen"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed May  7 05:48:40 2025          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                   ; Topmodule                                      ;
+; Top-level Entity Name           ; Topmodule                                      ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 183                                            ;
+; Total pins                      ; 46                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 4                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 0                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Topmodule          ; Topmodule          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+; Board_Manager.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv               ;         ;
+; Player1_Input.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv               ;         ;
+; Win_Checker.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv                 ;         ;
+; Turn_Timer.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv                  ;         ;
+; Random_Move_Generator.sv         ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv       ;         ;
+; SevenSeg_Controller.sv           ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv         ;         ;
+; Status_Register.sv               ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv             ;         ;
+; Player2_Input.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv               ;         ;
+; FSM_Game_Controller.sv           ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv         ;         ;
+; Topmodule.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv                   ;         ;
+; vga.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv                         ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc      ;         ;
+; db/lpm_divide_lbm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_lbm.tdf          ;         ;
+; db/sign_div_unsign_rlh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_rlh.tdf     ;         ;
+; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_sve.tdf           ;         ;
+; db/lpm_divide_32m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_32m.tdf          ;         ;
+; db/sign_div_unsign_6kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_6kh.tdf     ;         ;
+; db/alt_u_div_ise.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_ise.tdf           ;         ;
+; db/lpm_divide_22m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_22m.tdf          ;         ;
+; db/sign_div_unsign_5kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_5kh.tdf     ;         ;
+; db/alt_u_div_gse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_gse.tdf           ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 703       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1202      ;
+;     -- 7 input functions                    ; 8         ;
+;     -- 6 input functions                    ; 189       ;
+;     -- 5 input functions                    ; 129       ;
+;     -- 4 input functions                    ; 213       ;
+;     -- <=3 input functions                  ; 663       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 183       ;
+;                                             ;           ;
+; I/O pins                                    ; 46        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 4         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 163       ;
+; Total fan-out                               ; 5103      ;
+; Average fan-out                             ; 3.45      ;
++---------------------------------------------+-----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                     ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                ; Entity Name              ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |Topmodule                                      ; 1202 (4)            ; 183 (0)                   ; 0                 ; 4          ; 46   ; 0            ; |Topmodule                                                                                                                                                         ; Topmodule                ; work         ;
+;    |Board_Manager:board_logic|                  ; 119 (119)           ; 84 (84)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Board_Manager:board_logic                                                                                                                               ; Board_Manager            ; work         ;
+;    |FSM_Game_Controller:fsm|                    ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|FSM_Game_Controller:fsm                                                                                                                                 ; FSM_Game_Controller      ; work         ;
+;    |Player1_Input:p1_input|                     ; 1 (1)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Player1_Input:p1_input                                                                                                                                  ; Player1_Input            ; work         ;
+;    |Player2_Input:p2_input|                     ; 6 (6)               ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Player2_Input:p2_input                                                                                                                                  ; Player2_Input            ; work         ;
+;    |Random_Move_Generator:random_move_gen|      ; 129 (50)            ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen                                                                                                                   ; Random_Move_Generator    ; work         ;
+;       |lpm_divide:Mod0|                         ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod0                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_22m:auto_generated|        ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod0|lpm_divide_22m:auto_generated                                                                     ; lpm_divide_22m           ; work         ;
+;             |sign_div_unsign_5kh:divider|       ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod0|lpm_divide_22m:auto_generated|sign_div_unsign_5kh:divider                                         ; sign_div_unsign_5kh      ; work         ;
+;                |alt_u_div_gse:divider|          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod0|lpm_divide_22m:auto_generated|sign_div_unsign_5kh:divider|alt_u_div_gse:divider                   ; alt_u_div_gse            ; work         ;
+;       |lpm_divide:Mod1|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod1                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod1|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod1|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod1|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;       |lpm_divide:Mod2|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod2                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod2|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod2|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod2|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;       |lpm_divide:Mod3|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod3                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod3|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod3|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod3|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;       |lpm_divide:Mod4|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod4                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod4|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod4|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod4|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;       |lpm_divide:Mod5|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod5                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod5|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod5|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod5|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;       |lpm_divide:Mod6|                         ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod6                                                                                                   ; lpm_divide               ; work         ;
+;          |lpm_divide_32m:auto_generated|        ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod6|lpm_divide_32m:auto_generated                                                                     ; lpm_divide_32m           ; work         ;
+;             |sign_div_unsign_6kh:divider|       ; 12 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod6|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider                                         ; sign_div_unsign_6kh      ; work         ;
+;                |alt_u_div_ise:divider|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Random_Move_Generator:random_move_gen|lpm_divide:Mod6|lpm_divide_32m:auto_generated|sign_div_unsign_6kh:divider|alt_u_div_ise:divider                   ; alt_u_div_ise            ; work         ;
+;    |SevenSeg_Controller:seg_disp|               ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|SevenSeg_Controller:seg_disp                                                                                                                            ; SevenSeg_Controller      ; work         ;
+;    |Turn_Timer:timer|                           ; 49 (49)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Turn_Timer:timer                                                                                                                                        ; Turn_Timer               ; work         ;
+;    |Win_Checker:win_check|                      ; 221 (221)           ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|Win_Checker:win_check                                                                                                                                   ; Win_Checker              ; work         ;
+;    |vga:vga_inst|                               ; 654 (0)             ; 22 (0)                    ; 0                 ; 4          ; 0    ; 0            ; |Topmodule|vga:vga_inst                                                                                                                                            ; vga                      ; work         ;
+;       |board_drawer:brd_drwr|                   ; 623 (0)             ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr                                                                                                                      ; board_drawer             ; work         ;
+;          |grid_calculator:grid|                 ; 441 (105)           ; 0 (0)                     ; 0                 ; 4          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid                                                                                                 ; grid_calculator          ; work         ;
+;             |lpm_divide:Div0|                   ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0                                                                                 ; lpm_divide               ; work         ;
+;                |lpm_divide_lbm:auto_generated|  ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm           ; work         ;
+;                   |sign_div_unsign_rlh:divider| ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh      ; work         ;
+;                      |alt_u_div_sve:divider|    ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve            ; work         ;
+;             |lpm_divide:Div1|                   ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1                                                                                 ; lpm_divide               ; work         ;
+;                |lpm_divide_lbm:auto_generated|  ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated                                                   ; lpm_divide_lbm           ; work         ;
+;                   |sign_div_unsign_rlh:divider| ; 168 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider                       ; sign_div_unsign_rlh      ; work         ;
+;                      |alt_u_div_sve:divider|    ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1|lpm_divide_lbm:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_sve:divider ; alt_u_div_sve            ; work         ;
+;          |pixel_drawer:drawer|                  ; 60 (60)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer                                                                                                  ; pixel_drawer             ; work         ;
+;          |player_labels_calculator:labels|      ; 67 (67)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|player_labels_calculator:labels                                                                                      ; player_labels_calculator ; work         ;
+;          |select_calculator:select|             ; 55 (55)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|select_calculator:select                                                                                             ; select_calculator        ; work         ;
+;       |clock_divider:clk_div|                   ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|clock_divider:clk_div                                                                                                                      ; clock_divider            ; work         ;
+;       |vga_controller:vga_ctrl|                 ; 30 (30)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |Topmodule|vga:vga_inst|vga_controller:vga_ctrl                                                                                                                    ; vga_controller           ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary           ;
++------------------------------------------+-------------+
+; Statistic                                ; Number Used ;
++------------------------------------------+-------------+
+; Independent 18x18 plus 36                ; 2           ;
+; Independent 27x27                        ; 2           ;
+; Total number of DSP blocks               ; 4           ;
+;                                          ;             ;
+; Fixed Point Unsigned Multiplier          ; 4           ;
+; Fixed Point Dedicated Output Adder Chain ; 1           ;
++------------------------------------------+-------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Topmodule|FSM_Game_Controller:fsm|state                                                                                                                                                                                                 ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+; Name                  ; state.GAME_RESET ; state.DRAW ; state.PLAYER2_WINS ; state.PLAYER1_WINS ; state.TIMEOUT_ERROR ; state.CHECK_WINNER ; state.PLAYER2_PROCESS ; state.PLAYER2_WAIT ; state.PLAYER1_PROCESS ; state.PLAYER1_WAIT ; state.INIT_SCREEN ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+; state.INIT_SCREEN     ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 0                 ;
+; state.PLAYER1_WAIT    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 1                  ; 1                 ;
+; state.PLAYER1_PROCESS ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 1                     ; 0                  ; 1                 ;
+; state.PLAYER2_WAIT    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 1                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER2_PROCESS ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 1                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.CHECK_WINNER    ; 0                ; 0          ; 0                  ; 0                  ; 0                   ; 1                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.TIMEOUT_ERROR   ; 0                ; 0          ; 0                  ; 0                  ; 1                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER1_WINS    ; 0                ; 0          ; 0                  ; 1                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.PLAYER2_WINS    ; 0                ; 0          ; 1                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.DRAW            ; 0                ; 1          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
+; state.GAME_RESET      ; 1                ; 0          ; 0                  ; 0                  ; 0                   ; 0                  ; 0                     ; 0                  ; 0                     ; 0                  ; 1                 ;
++-----------------------+------------------+------------+--------------------+--------------------+---------------------+--------------------+-----------------------+--------------------+-----------------------+--------------------+-------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; vga:vga_inst|clock_divider:clk_div|counter[1] ; Stuck at GND due to stuck port data_in ;
+; FSM_Game_Controller:fsm|state~4               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~5               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~6               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state~7               ; Lost fanout                            ;
+; FSM_Game_Controller:fsm|state.PLAYER2_WAIT    ; Stuck at GND due to stuck port data_in ;
+; FSM_Game_Controller:fsm|state.DRAW            ; Stuck at GND due to stuck port data_in ;
+; Player2_Input:p2_input|valid_move             ; Lost fanout                            ;
+; Total Number of Removed Registers = 8         ;                                        ;
++-----------------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                   ;
++---------------------------------+--------------------+----------------------------------------+
+; Register name                   ; Reason for Removal ; Registers Removed due to This Register ;
++---------------------------------+--------------------+----------------------------------------+
+; FSM_Game_Controller:fsm|state~4 ; Lost Fanouts       ; Player2_Input:p2_input|valid_move      ;
++---------------------------------+--------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 183   ;
+; Number of registers using Synchronous Clear  ; 53    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 160   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 142   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------+
+; Inverted Register Statistics                                ;
++---------------------------------------------------+---------+
+; Inverted Register                                 ; Fan out ;
++---------------------------------------------------+---------+
+; SevenSeg_Controller:seg_disp|segments[0]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[1]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[2]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[3]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[4]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[5]          ; 1       ;
+; SevenSeg_Controller:seg_disp|segments[6]          ; 1       ;
+; vga:vga_inst|clock_divider:clk_div|counter[0]     ; 2       ;
+; Random_Move_Generator:random_move_gen|rand_col[0] ; 30      ;
+; Total number of inverted registers = 9            ;         ;
++---------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Topmodule|Player2_Input:p2_input|valid_move                                      ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Topmodule|Turn_Timer:timer|seconds_cnt[1]                                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |Topmodule|Turn_Timer:timer|counter_1sec[28]                                      ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; Yes        ; |Topmodule|Random_Move_Generator:random_move_gen|valid_col[1]                     ;
+; 36:1               ; 2 bits    ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |Topmodule|Win_Checker:win_check|winner_id[0]                                     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer|pixel_color     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Topmodule|comb                                                                   ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |Topmodule|Board_Manager:board_logic|Mux7                                         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux0                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux2                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux4                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux7                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux8                             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux11                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Topmodule|Random_Move_Generator:random_move_gen|Mux13                            ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer|pixel_color[1]  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer|pixel_color[22] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |Topmodule|FSM_Game_Controller:fsm|Selector6                                      ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |Topmodule|FSM_Game_Controller:fsm|Selector4                                      ;
+; 50:1               ; 2 bits    ; 66 LEs        ; 64 LEs               ; 2 LEs                  ; No         ; |Topmodule|vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer|Mux13           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Turn_Timer:timer ;
++----------------+----------+-----------------------------------+
+; Parameter Name ; Value    ; Type                              ;
++----------------+----------+-----------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                    ;
++----------------+----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|clock_divider:clk_div ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; DIV            ; 2     ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vga:vga_inst|vga_controller:vga_ctrl ;
++----------------+------------+-----------------------------------------------------+
+; Parameter Name ; Value      ; Type                                                ;
++----------------+------------+-----------------------------------------------------+
+; H_ACTIVE       ; 1010000000 ; Unsigned Binary                                     ;
+; H_FP           ; 0000010000 ; Unsigned Binary                                     ;
+; H_SYN          ; 0001100000 ; Unsigned Binary                                     ;
+; H_BP           ; 0000110000 ; Unsigned Binary                                     ;
+; H_MAX          ; 1100100000 ; Unsigned Binary                                     ;
+; V_BP           ; 0000100000 ; Unsigned Binary                                     ;
+; V_ACTIVE       ; 0111100000 ; Unsigned Binary                                     ;
+; V_FP           ; 0000001011 ; Unsigned Binary                                     ;
+; V_SYN          ; 0000000010 ; Unsigned Binary                                     ;
+; V_MAX          ; 1000001101 ; Unsigned Binary                                     ;
++----------------+------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                        ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                           ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                                                                        ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                                        ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                        ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; lpm_divide_lbm ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                 ;
++------------------------+----------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod6 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod5 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 3              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_22m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod1 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod2 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod3 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Random_Move_Generator:random_move_gen|lpm_divide:Mod4 ;
++------------------------+----------------+--------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                         ;
++------------------------+----------------+--------------------------------------------------------------+
+; LPM_WIDTHN             ; 4              ; Untyped                                                      ;
+; LPM_WIDTHD             ; 3              ; Untyped                                                      ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                      ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                      ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                      ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                      ;
+; CBXI_PARAMETER         ; lpm_divide_32m ; Untyped                                                      ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                      ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                               ;
++------------------------+----------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM_Game_Controller:fsm"                                                                                            ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                                                  ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; enable_input_p1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; enable_input_p2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; reset_inputs    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; seg_display     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
+; seg_enable      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "Board_Manager:board_logic" ;
++----------+--------+----------+------------------------+
+; Port     ; Type   ; Severity ; Details                ;
++----------+--------+----------+------------------------+
+; col_full ; Output ; Info     ; Explicitly unconnected ;
++----------+--------+----------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Random_Move_Generator:random_move_gen"                                                ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; enable ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; valid  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 183                         ;
+;     CLR               ; 27                          ;
+;     CLR SCLR          ; 1                           ;
+;     ENA CLR           ; 100                         ;
+;     ENA CLR SCLR      ; 32                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 1212                        ;
+;     arith             ; 412                         ;
+;         0 data inputs ; 56                          ;
+;         1 data inputs ; 150                         ;
+;         2 data inputs ; 51                          ;
+;         3 data inputs ; 88                          ;
+;         4 data inputs ; 67                          ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 776                         ;
+;         1 data inputs ; 55                          ;
+;         2 data inputs ; 129                         ;
+;         3 data inputs ; 128                         ;
+;         4 data inputs ; 146                         ;
+;         5 data inputs ; 129                         ;
+;         6 data inputs ; 189                         ;
+;     shared            ; 16                          ;
+;         0 data inputs ; 6                           ;
+;         1 data inputs ; 10                          ;
+; arriav_mac            ; 4                           ;
+; boundary_port         ; 46                          ;
+;                       ;                             ;
+; Max LUT depth         ; 25.60                       ;
+; Average LUT depth     ; 11.39                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Wed May  7 05:48:26 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Game -c Topmodule
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file board_manager.sv
+    Info (12023): Found entity 1: Board_Manager File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb_board_manager.sv
+    Info (12023): Found entity 1: tb_Board_Manager File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Board_Manager.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file player1_input.sv
+    Info (12023): Found entity 1: Player1_Input File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_player1_input.sv
+    Info (12023): Found entity 1: tb_Player1_Input File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Player1_Input.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file tb_win_checker.sv
+    Info (12023): Found entity 1: tb_Win_Checker File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Win_Checker.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file win_checker.sv
+    Info (12023): Found entity 1: Win_Checker File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file turn_timer.sv
+    Info (12023): Found entity 1: Turn_Timer File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_turn_timer.sv
+    Info (12023): Found entity 1: tb_Turn_Timer File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Turn_Timer.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file random_move_generator.sv
+    Info (12023): Found entity 1: Random_Move_Generator File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb_random_move_generator.sv
+    Info (12023): Found entity 1: tb_Random_Move_Generator File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Random_Move_Generator.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file sevenseg_controller.sv
+    Info (12023): Found entity 1: SevenSeg_Controller File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb_sevenseg_controller.sv
+    Info (12023): Found entity 1: tb_SevenSeg_Controller File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_SevenSeg_Controller.sv Line: 4
+Warning (12019): Can't analyze file -- file VGA_Controller.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file status_register.sv
+    Info (12023): Found entity 1: Status_Register File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file tb_status_register.sv
+    Info (12023): Found entity 1: tb_Status_Register File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Status_Register.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file player2_input.sv
+    Info (12023): Found entity 1: Player2_Input File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file fsm_game_controller.sv
+    Info (12023): Found entity 1: FSM_Game_Controller File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file tb_fsm_game_controller.sv
+    Info (12023): Found entity 1: tb_FSM_Game_Controller File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_FSM_Game_Controller.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file topmodule.sv
+    Info (12023): Found entity 1: Topmodule File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb_topmodule.sv
+    Info (12023): Found entity 1: tb_TopModule File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/tb_Topmodule.sv Line: 9
+Info (12021): Found 9 design units, including 8 entities, in source file vga.sv
+    Info (12022): Found design unit 1: BoardConstants (SystemVerilog) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 2
+    Info (12023): Found entity 1: vga File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 36
+    Info (12023): Found entity 2: clock_divider File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 82
+    Info (12023): Found entity 3: vga_controller File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 102
+    Info (12023): Found entity 4: grid_calculator File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 148
+    Info (12023): Found entity 5: player_labels_calculator File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 213
+    Info (12023): Found entity 6: select_calculator File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 325
+    Info (12023): Found entity 7: pixel_drawer File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 392
+    Info (12023): Found entity 8: board_drawer File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 441
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(224): created implicit net for "in_p1_label_area" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 224
+Warning (10236): Verilog HDL Implicit Net warning at vga.sv(228): created implicit net for "in_p2_label_area" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 228
+Info (12127): Elaborating entity "Topmodule" for the top level hierarchy
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "Player1_Input" for hierarchy "Player1_Input:p1_input" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 54
+Info (12128): Elaborating entity "Player2_Input" for hierarchy "Player2_Input:p2_input" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 64
+Warning (10230): Verilog HDL assignment warning at Player2_Input.sv(40): truncated value with size 32 to match size of target (3) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv Line: 40
+Info (12128): Elaborating entity "Random_Move_Generator" for hierarchy "Random_Move_Generator:random_move_gen" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 74
+Warning (10230): Verilog HDL assignment warning at Random_Move_Generator.sv(34): truncated value with size 32 to match size of target (3) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "Turn_Timer" for hierarchy "Turn_Timer:timer" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 84
+Warning (10230): Verilog HDL assignment warning at Turn_Timer.sv(35): truncated value with size 32 to match size of target (4) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv Line: 35
+Info (12128): Elaborating entity "Board_Manager" for hierarchy "Board_Manager:board_logic" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 97
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "Win_Checker" for hierarchy "Win_Checker:win_check" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 106
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "Status_Register" for hierarchy "Status_Register:status_reg" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 114
+Info (12128): Elaborating entity "SevenSeg_Controller" for hierarchy "SevenSeg_Controller:seg_disp" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 122
+Info (12128): Elaborating entity "FSM_Game_Controller" for hierarchy "FSM_Game_Controller:fsm" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 145
+Info (12128): Elaborating entity "vga" for hierarchy "vga:vga_inst" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv Line: 162
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "clock_divider" for hierarchy "vga:vga_inst|clock_divider:clk_div" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 54
+Warning (10230): Verilog HDL assignment warning at vga.sv(86): truncated value with size 32 to match size of target (2) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 86
+Warning (10230): Verilog HDL assignment warning at vga.sv(90): truncated value with size 32 to match size of target (2) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 90
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga:vga_inst|vga_controller:vga_ctrl" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 64
+Info (12128): Elaborating entity "board_drawer" for hierarchy "vga:vga_inst|board_drawer:brd_drwr" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 75
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (12128): Elaborating entity "grid_calculator" for hierarchy "vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 466
+Warning (10230): Verilog HDL assignment warning at vga.sv(166): truncated value with size 32 to match size of target (3) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 166
+Warning (10230): Verilog HDL assignment warning at vga.sv(167): truncated value with size 32 to match size of target (3) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 167
+Warning (10230): Verilog HDL assignment warning at vga.sv(168): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 168
+Warning (10230): Verilog HDL assignment warning at vga.sv(169): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 169
+Warning (10230): Verilog HDL assignment warning at vga.sv(189): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 189
+Warning (10230): Verilog HDL assignment warning at vga.sv(190): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 190
+Info (12128): Elaborating entity "player_labels_calculator" for hierarchy "vga:vga_inst|board_drawer:brd_drwr|player_labels_calculator:labels" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 474
+Warning (10230): Verilog HDL assignment warning at vga.sv(233): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 233
+Warning (10230): Verilog HDL assignment warning at vga.sv(234): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 234
+Warning (10230): Verilog HDL assignment warning at vga.sv(235): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 235
+Warning (10230): Verilog HDL assignment warning at vga.sv(236): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 236
+Info (12128): Elaborating entity "select_calculator" for hierarchy "vga:vga_inst|board_drawer:brd_drwr|select_calculator:select" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 482
+Warning (10230): Verilog HDL assignment warning at vga.sv(340): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 340
+Warning (10230): Verilog HDL assignment warning at vga.sv(341): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 341
+Warning (10230): Verilog HDL assignment warning at vga.sv(342): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 342
+Warning (10230): Verilog HDL assignment warning at vga.sv(343): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 343
+Warning (10230): Verilog HDL assignment warning at vga.sv(344): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 344
+Warning (10230): Verilog HDL assignment warning at vga.sv(345): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 345
+Warning (10230): Verilog HDL assignment warning at vga.sv(346): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 346
+Warning (10230): Verilog HDL assignment warning at vga.sv(354): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 354
+Warning (10230): Verilog HDL assignment warning at vga.sv(355): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 355
+Warning (10230): Verilog HDL assignment warning at vga.sv(362): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 362
+Warning (10230): Verilog HDL assignment warning at vga.sv(363): truncated value with size 32 to match size of target (10) File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 363
+Info (12128): Elaborating entity "pixel_drawer" for hierarchy "vga:vga_inst|board_drawer:brd_drwr|pixel_drawer:drawer" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 497
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "board" into its bus
+Info (278001): Inferred 9 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|Div1" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 167
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|Div0" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 166
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod6" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod5" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod0" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod1" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod2" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod3" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Random_Move_Generator:random_move_gen|Mod4" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+Info (12130): Elaborated megafunction instantiation "vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 167
+Info (12133): Instantiated megafunction "vga:vga_inst|board_drawer:brd_drwr|grid_calculator:grid|lpm_divide:Div1" with the following parameter: File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/vga.sv Line: 167
+    Info (12134): Parameter "LPM_WIDTHN" = "32"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lbm.tdf
+    Info (12023): Found entity 1: lpm_divide_lbm File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_lbm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_rlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_rlh File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_rlh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
+    Info (12023): Found entity 1: alt_u_div_sve File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_sve.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Random_Move_Generator:random_move_gen|lpm_divide:Mod6" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+Info (12133): Instantiated megafunction "Random_Move_Generator:random_move_gen|lpm_divide:Mod6" with the following parameter: File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (12134): Parameter "LPM_WIDTHN" = "4"
+    Info (12134): Parameter "LPM_WIDTHD" = "3"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_32m.tdf
+    Info (12023): Found entity 1: lpm_divide_32m File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_32m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_6kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_6kh File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_6kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ise.tdf
+    Info (12023): Found entity 1: alt_u_div_ise File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_ise.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "Random_Move_Generator:random_move_gen|lpm_divide:Mod0" File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+Info (12133): Instantiated megafunction "Random_Move_Generator:random_move_gen|lpm_divide:Mod0" with the following parameter: File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/Random_Move_Generator.sv Line: 34
+    Info (12134): Parameter "LPM_WIDTHN" = "3"
+    Info (12134): Parameter "LPM_WIDTHD" = "3"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_22m.tdf
+    Info (12023): Found entity 1: lpm_divide_22m File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/lpm_divide_22m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5kh File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/sign_div_unsign_5kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_gse.tdf
+    Info (12023): Found entity 1: alt_u_div_gse File: C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/db/alt_u_div_gse.tdf Line: 23
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/output_files/Topmodule.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1330 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 10 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 1280 logic cells
+    Info (21062): Implemented 4 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Wed May  7 05:48:40 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:30
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/DEV/Laboratorios-CE3201/Laboratorio #3/Game/output_files/Topmodule.map.smsg.
+
+
