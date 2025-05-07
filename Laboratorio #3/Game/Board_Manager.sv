@@ -10,8 +10,8 @@ module Board_Manager (
 );
 
     // Inicializar la matriz del tablero
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             integer i, j;
             for (i = 0; i < 6; i = i + 1) begin
                 for (j = 0; j < 7; j = j + 1) begin

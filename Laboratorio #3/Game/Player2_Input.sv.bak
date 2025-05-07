@@ -29,8 +29,8 @@ module Player2_Input (
 
     wire spi_clk_rising = (spi_clk == 1) && (spi_clk_prev == 0);
 
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             shift_reg     <= 8'd0;
             bit_count     <= 0;
             selected_col  <= 3'd0;

@@ -17,6 +17,9 @@ module Topmodule (
     output logic [7:0] red,
     output logic [7:0] green,
     output logic [7:0] blue,
+    output logic vga_clk,   // VGA clock output
+    output logic sync_b,    // Sync signal (active low)
+    output logic blank_b,   // Blank signal (active low)
 
     // Display 7 segmentos
     output logic [6:0] seg
@@ -125,12 +128,21 @@ module Topmodule (
         .turn(turn)
     );
 
-    // VGA (Placeholder)
-    VGA_Controller vga (
-        .clk(clk), .rst(rst),
-        .board(board),
-        .hsync(hsync), .vsync(vsync),
-        .red(red), .green(green), .blue(blue)
+    // VGA
+    vga vga_inst (
+        .ref_clk(clk), 
+        .rst(rst),
+        .board(board),// Tablero desde Board_Manager
+        .player_selected(turn),      // Turno del jugador actual
+        .column_selected(random_col), // Columna seleccionada (puede ser random o actual)
+        .vga_clk(vga_clk),           // Connected to output
+        .h_sync(hsync), 
+        .v_sync(vsync),
+        .sync_b(sync_b),             // Connected to output
+        .blank_b(blank_b),           // Connected to output
+        .r(red), 
+        .g(green), 
+        .b(blue)
     );
 
 endmodule

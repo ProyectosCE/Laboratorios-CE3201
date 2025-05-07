@@ -42,8 +42,8 @@ module FSM_Game_Controller (
     state_t state, next_state;
 
     // Estado actual
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst)
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst)
             state <= INIT_SCREEN;
         else
             state <= next_state;

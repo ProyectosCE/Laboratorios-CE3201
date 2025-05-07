@@ -14,8 +14,8 @@ module Random_Move_Generator (
 
     // LFSR pseudoaleatorio de 3 bits (0–6)
 	 // Referencia: https://www.analog.com/en/resources/design-notes/random-number-generation-using-lfsr.html
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             rand_col <= 3'd1;
         end else if (enable) begin
             rand_col <= {rand_col[1:0], rand_col[2] ^ rand_col[1]};
@@ -23,8 +23,8 @@ module Random_Move_Generator (
     end
 
     // Selección de columna válida
-    always_ff @(posedge clk or posedge rst) begin
-        if (rst) begin
+    always_ff @(posedge clk or negedge rst) begin
+        if (!rst) begin
             valid_col <= 3'd0;
             valid     <= 0;
         end else if (enable) begin

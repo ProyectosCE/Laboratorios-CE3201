@@ -1,6 +1,6 @@
 Flow report for Topmodule
-Wed Apr 30 22:39:31 2025
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Tue May  6 21:39:08 2025
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,25 +41,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Apr 30 22:39:31 2025          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Flow Status                     ; Successful - Tue May  6 21:39:08 2025          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; Topmodule                                      ;
 ; Top-level Entity Name           ; Topmodule                                      ;
 ; Family                          ; Cyclone V                                      ;
-; Device                          ; 5CGXFC7C7F23C8                                 ;
+; Device                          ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 149                                            ;
-; Total pins                      ; 43                                             ;
+; Logic utilization (in ALMs)     ; 601 / 41,910 ( 1 % )                           ;
+; Total registers                 ; 238                                            ;
+; Total pins                      ; 46 / 499 ( 9 % )                               ;
 ; Total virtual pins              ; 0                                              ;
-; Total block memory bits         ; 0                                              ;
-; Total DSP Blocks                ; 0                                              ;
-; Total HSSI RX PCSs              ; 0                                              ;
-; Total HSSI PMA RX Deserializers ; 0                                              ;
-; Total HSSI TX PCSs              ; 0                                              ;
-; Total HSSI PMA TX Serializers   ; 0                                              ;
-; Total PLLs                      ; 0                                              ;
-; Total DLLs                      ; 0                                              ;
+; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                          ;
+; Total DSP Blocks                ; 4 / 112 ( 4 % )                                ;
+; Total HSSI RX PCSs              ; 0 / 9 ( 0 % )                                  ;
+; Total HSSI PMA RX Deserializers ; 0 / 9 ( 0 % )                                  ;
+; Total HSSI TX PCSs              ; 0 / 9 ( 0 % )                                  ;
+; Total HSSI PMA TX Serializers   ; 0 / 9 ( 0 % )                                  ;
+; Total PLLs                      ; 0 / 15 ( 0 % )                                 ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                  ;
 +---------------------------------+------------------------------------------------+
 
 
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2025 22:39:17 ;
+; Start date & time ; 05/06/2025 21:37:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Topmodule           ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 53671021772497.174607435714036         ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 145320169156502.174658906718956        ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -101,8 +101,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4871 MB             ; 00:00:31                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:31                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4856 MB             ; 00:00:25                           ;
+; Fitter               ; 00:00:50     ; 1.1                     ; 6548 MB             ; 00:01:59                           ;
+; Assembler            ; 00:00:06     ; 1.0                     ; 4873 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.6                     ; 5160 MB             ; 00:00:10                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4737 MB             ; 00:00:01                           ;
+; Total                ; 00:01:16     ; --                      ; --                  ; 00:02:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,7 +115,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-O3JV5RJ  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; ALEXPB           ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -119,6 +127,10 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Game -c Topmodule
+quartus_fit --read_settings_files=off --write_settings_files=off Game -c Topmodule
+quartus_asm --read_settings_files=off --write_settings_files=off Game -c Topmodule
+quartus_sta Game -c Topmodule
+quartus_eda --read_settings_files=off --write_settings_files=off Game -c Topmodule
 
 
 
