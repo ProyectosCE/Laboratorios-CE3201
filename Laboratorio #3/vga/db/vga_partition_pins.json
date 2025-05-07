@@ -24,103 +24,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "r[0]",
-					"strict" : false
-				},
-				{
-					"name" : "r[1]",
-					"strict" : false
-				},
-				{
-					"name" : "r[2]",
-					"strict" : false
-				},
-				{
-					"name" : "r[3]",
-					"strict" : false
-				},
-				{
-					"name" : "r[4]",
-					"strict" : false
-				},
-				{
-					"name" : "r[5]",
-					"strict" : false
-				},
-				{
-					"name" : "r[6]",
-					"strict" : false
-				},
-				{
-					"name" : "r[7]",
-					"strict" : false
-				},
-				{
-					"name" : "g[0]",
-					"strict" : false
-				},
-				{
-					"name" : "g[1]",
-					"strict" : false
-				},
-				{
-					"name" : "g[2]",
-					"strict" : false
-				},
-				{
-					"name" : "g[3]",
-					"strict" : false
-				},
-				{
-					"name" : "g[4]",
-					"strict" : false
-				},
-				{
-					"name" : "g[5]",
-					"strict" : false
-				},
-				{
-					"name" : "g[6]",
-					"strict" : false
-				},
-				{
-					"name" : "g[7]",
-					"strict" : false
-				},
-				{
 					"name" : "b[0]",
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
-					"strict" : false
-				},
-				{
-					"name" : "b[2]",
-					"strict" : false
-				},
-				{
-					"name" : "b[3]",
-					"strict" : false
-				},
-				{
-					"name" : "b[4]",
-					"strict" : false
-				},
-				{
-					"name" : "b[5]",
-					"strict" : false
-				},
-				{
-					"name" : "b[6]",
-					"strict" : false
-				},
-				{
-					"name" : "b[7]",
-					"strict" : false
-				},
-				{
 					"name" : "ref_clk",
+					"strict" : false
+				},
+				{
+					"name" : "game_state[0]",
+					"strict" : false
+				},
+				{
+					"name" : "game_state[1]",
+					"strict" : false
+				},
+				{
+					"name" : "player_selected[1]",
+					"strict" : false
+				},
+				{
+					"name" : "player_selected[0]",
+					"strict" : false
+				},
+				{
+					"name" : "column_selected[2]",
+					"strict" : false
+				},
+				{
+					"name" : "column_selected[0]",
+					"strict" : false
+				},
+				{
+					"name" : "column_selected[1]",
 					"strict" : false
 				}
 			]

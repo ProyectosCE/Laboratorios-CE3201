@@ -8,7 +8,7 @@ package BoardConstants;
     parameter GRID_WIDTH = 7 * CELL_WIDTH;      // Total grid width for 7 columns
     parameter GRID_HEIGHT = 6 * CELL_HEIGHT;    // Total grid height for 6 rows
     parameter CIRCLE_RADIUS = 25;               // Radius of the game pieces
-    // 165 235 305 375 445 515 585 655
+
     // Player labels
     parameter P1_LABEL_X = 20;      // X position for P1 label
     parameter P1_LABEL_Y = 100;     // Y position for P1 label
@@ -36,36 +36,28 @@ endpackage
 module vga(
     input logic ref_clk, // 50 MHz clock from FPGA
     input logic rst,
-	 
-	 // UNCOMMENT WHEN CONNECTING! Cables for communication, replaces the hardwire below
-	 /*
+	
 	 input logic [1:0] board [0:5][0:6],
 	 input logic [1:0] player_selected,
     input logic [2:0] column_selected,
-    */
+	 input logic [1:0] game_state,
+
 	 
 	 output logic vga_clk, // 25.175 MHz clock for VGA
     output logic h_sync, v_sync,  // Sync signals for resetting laser
     output logic sync_b, blank_b, // To FPGA video DAC (_b = active low)
     output logic [7:0] r, g, b    // Colors for DAC
 	 );
-    // Positions
+    import BoardConstants::*;
+	 
+	 // Positions
     logic [9:0] x, y;
 	 
-	 // /* COMMENT THIS WHEN CONNECTING! Changed to inputs
-	 // Initialize selects
-	 logic [1:0] player_selected;
-	 logic [2:0] column_selected;
-	 
-	 assign player_selected = 2'b01;
-	 assign column_selected = 3'b100;
+
+	 logic [1:0] pixel_color;
 	 
 	 
-	 // Initialize board
-	 logic [1:0] board [0:5][0:6];
-    board_init board_initializer(.board(board));
-    // */ 
-	  
+	 assign {r, g, b} = game_state[0] ? (game_state[1] ? ({r, g, b} <= BG_COLOR) : ({r, g, b} <= P2_COLOR )) : (game_state[1] ? ({r, g, b} <= P1_COLOR) : ({r, g, b} <= pixel_color));
 	  
     // Clock divider converts the reference clock to a suitable VGA one, 50 to 25 MHz, ideally it should be 25.175 MHz
     clock_divider clk_div(
@@ -86,12 +78,11 @@ module vga(
     board_drawer brd_drwr(
         .x(x),
         .y(y),
-		  
 		  .board(board), 
         .blank_b(blank_b),
 		  .player_selected(player_selected),
 		  .column_selected(column_selected),
-        .pixel_color({r, g, b})
+        .pixel_color(pixel_color)
     ); 
 endmodule
 
