@@ -1,0 +1,74 @@
+// Módulo que detecta si hay 4 fichas iguales alineadas (jugador gana)
+module Win_Checker (
+    input  logic clk,
+    input  logic rst,
+    input  logic check_en,
+    input  logic [1:0] board [0:5][0:6],
+    output logic win_flag,
+    output logic [1:0] winner_id
+);
+
+    logic [1:0] cell;
+    integer row, col;
+    logic found;
+
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            win_flag   <= 0;
+            winner_id  <= 2'b00;
+        end else if (check_en) begin
+            found = 0;
+            // Recorremos cada celda del tablero
+            for (row = 0; row < 6; row = row + 1) begin
+                for (col = 0; col < 7; col = col + 1) begin
+                    cell = board[row][col];
+                    if (cell != 2'b00) begin
+
+                        // Horizontal (izq a der)
+                        if (col <= 3 &&
+                            cell == board[row][col+1] &&
+                            cell == board[row][col+2] &&
+                            cell == board[row][col+3]) begin
+                            found = 1;
+                        end
+
+                        // Vertical (up a down)
+                        if (row <= 2 &&
+                            cell == board[row+1][col] &&
+                            cell == board[row+2][col] &&
+                            cell == board[row+3][col]) begin
+                            found = 1;
+                        end
+
+                        // Diagonal (up e iqz a down y der)
+                        if (row <= 2 && col <= 3 &&
+                            cell == board[row+1][col+1] &&
+                            cell == board[row+2][col+2] &&
+                            cell == board[row+3][col+3]) begin
+                            found = 1;
+                        end
+
+                        // Diagonal (down y der a up e iqz a)
+                        if (row >= 3 && col <= 3 &&
+                            cell == board[row-1][col+1] &&
+                            cell == board[row-2][col+2] &&
+                            cell == board[row-3][col+3]) begin
+                            found = 1;
+                        end
+
+                        if (found) begin
+                            win_flag  <= 1;
+                            winner_id <= cell;
+                        end
+                    end
+                end
+            end
+
+            if (!found) begin
+                win_flag <= 0;
+                winner_id <= 2'b00;
+            end
+        end
+    end
+
+endmodule

@@ -1,0 +1,281 @@
+m255
+K4
+z2
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/simulation/questa
+vBoard_Manager
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv
+Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z2 !s110 1746074966
+!i10b 1
+!s100 Lj32G9GYUG>CmMfk1A4RT3
+IECiHo1LZDYUj>MIBJgXb31
+S1
+R0
+w1745986656
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv
+!i122 0
+L0 2 44
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1746074965.000000
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Board_Manager.sv|
+!i113 0
+Z5 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -sv -work work {+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@board_@manager
+vFSM_Game_Controller
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv
+R1
+Z8 !s110 1746074967
+!i10b 1
+!s100 BM]2N]YWC5iWm>=;U3DAE0
+IHmlX;HG:<f19J5H8f[0VG2
+S1
+R0
+w1746046679
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv
+!i122 8
+L0 3 167
+R3
+R4
+r1
+!s85 0
+31
+Z9 !s108 1746074967.000000
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/FSM_Game_Controller.sv|
+!i113 0
+R5
+R6
+R7
+n@f@s@m_@game_@controller
+vPlayer1_Input
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv
+R1
+R2
+!i10b 1
+!s100 UbeI5Z_MfH1ELEDSe]ZY_3
+Ik@cIeSWgRJf6MD7zIno;21
+S1
+R0
+w1745988250
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv
+!i122 1
+L0 3 31
+R3
+R4
+r1
+!s85 0
+31
+Z10 !s108 1746074966.000000
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player1_Input.sv|
+!i113 0
+R5
+R6
+R7
+n@player1_@input
+vPlayer2_Input
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv
+R1
+R8
+!i10b 1
+!s100 0?ci?6Va=3QR`8FIjbJ6C1
+IKBjIkRj0AVOOb=@=UhE8n3
+S1
+R0
+w1746044979
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv
+!i122 7
+L0 10 47
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Player2_Input.sv|
+!i113 0
+R5
+R6
+R7
+n@player2_@input
+vSevenSeg_Controller
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv
+R1
+R8
+!i10b 1
+!s100 bjCC9]]]=m=FQF_:_[<=W1
+I0OA3JToGb2@glW:^WLVL62
+S1
+R0
+w1746042554
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv
+!i122 4
+L0 2 29
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/SevenSeg_Controller.sv|
+!i113 0
+R5
+R6
+R7
+n@seven@seg_@controller
+vStatus_Register
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv
+R1
+R8
+!i10b 1
+!s100 67_ce:B@6JjEIi@>eR5k`1
+IPYjD`c?ZM?6i=CG5POja31
+S1
+R0
+w1746043282
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv
+!i122 6
+L0 6 17
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Status_Register.sv|
+!i113 0
+R5
+R6
+R7
+n@status_@register
+vTopmodule
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv
+R1
+R8
+!i10b 1
+!s100 ?B4PV2zAZh5I7jIc5V9DE3
+I4cYoffUh[8UO?8_Wn0o3V3
+S1
+R0
+w1746055314
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv
+!i122 9
+L0 2 135
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Topmodule.sv|
+!i113 0
+R5
+R6
+R7
+n@topmodule
+vTurn_Timer
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv
+R1
+R2
+!i10b 1
+!s100 WlzSeAgkT5Y9Xf`IS:33f3
+Io^P=[l=`CBmMTWe6VdWiY1
+S1
+R0
+w1746055892
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv
+!i122 3
+L0 2 47
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Turn_Timer.sv|
+!i113 0
+R5
+R6
+R7
+n@turn_@timer
+vVGA_Controller
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv
+R1
+R8
+!i10b 1
+!s100 gCI[d8@]XSCgTYVa=aN?l1
+IzR^>GzN<HOi2_n`bz:3h73
+S1
+R0
+w1746043187
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv
+!i122 5
+L0 2 19
+R3
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/VGA_Controller.sv|
+!i113 0
+R5
+R6
+R7
+n@v@g@a_@controller
+vWin_Checker
+2C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv
+R1
+R2
+!i10b 1
+!s100 9Kl>3k[:JGZTOa`z0izlN0
+IA^cXJaPOUE=GXmDa4G_2E2
+S1
+R0
+w1746074354
+8C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv
+FC:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv
+!i122 2
+L0 2 75
+R3
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game|C:/Users/joseb/Documents/GitHub/Laboratorios-CE3201/Laboratorio #3/Game/Win_Checker.sv|
+!i113 0
+R5
+R6
+R7
+n@win_@checker
